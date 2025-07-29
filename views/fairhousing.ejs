@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fair Housing Act: The Basics of Fair Housing Laws | Zillow</title>
+    <link rel="stylesheet" href="/css/buy.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+
+    <!-- <link rel="stylesheet" href="/css/home.css" /> -->
+
+    <!-- <link rel="stylesheet" href="/css/home.css" /> -->
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Gideon Roman -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        color: #333;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .main-content2 {
+        flex: 2;
+        padding-right: 30px;
+      }
+
+      .sidebar {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .category-link {
+        color: #5b5b5b;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      }
+
+      .author-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .author-image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      .author-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .author-name {
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .publish-date {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .share-container {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+      }
+
+      .share-text {
+        margin-right: 10px;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .social-icons {
+        display: flex;
+      }
+
+      .social-icon {
+        width: 25px;
+        height: 25px;
+        margin-left: 8px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+      }
+
+      .facebook {
+        background-color: #3b5998;
+      }
+
+      .twitter {
+        background-color: #1da1f2;
+      }
+
+      .linkedin {
+        background-color: #0077b5;
+      }
+
+      .pinterest {
+        background-color: #bd081c;
+      }
+
+      .article-intro {
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .article-section {
+        margin-bottom: 30px;
+      }
+
+      .topics-list {
+        list-style-position: inside;
+        margin: 15px 0;
+      }
+
+      .topics-list li {
+        margin-bottom: 10px;
+      }
+
+      .topics-list a {
+        color: #0066c0;
+        text-decoration: none;
+      }
+
+      .topics-list a:hover {
+        text-decoration: underline;
+      }
+
+      .section-heading {
+        font-size: 24px;
+        color: #2a2a2a;
+        margin: 30px 0 15px;
+      }
+
+      .paragraph {
+        margin-bottom: 20px;
+      }
+
+      .highlight {
+        font-weight: bold;
+      }
+
+      /* Sidebar Styles */
+      .sidebar-card {
+        background: white;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        overflow: hidden;
+      }
+
+      .sidebar-header {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .sidebar-links {
+        padding: 0;
+      }
+
+      .sidebar-link {
+        padding: 15px 20px;
+        display: block;
+        color: #0066c0;
+        text-decoration: none;
+        border-bottom: 1px solid #eee;
+        transition: background-color 0.2s;
+      }
+
+      .sidebar-link:hover {
+        background-color: #f5f8fa;
+      }
+
+      .sidebar-link:last-child {
+        border-bottom: none;
+      }
+
+      .listing-card {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .listing-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .listing-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .create-button {
+        background-color: #006aff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 12px 24px;
+        font-weight: bold;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .create-button:hover {
+        background-color: #0055cc;
+      }
+
+      .app-promo {
+        background-color: #006aff;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+        color: white;
+      }
+
+      .app-promo img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .promo-title {
+        color: #ffcc00;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .promo-features {
+        text-align: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+      }
+
+      .promo-features li {
+        margin-bottom: 8px;
+        list-style-type: none;
+        position: relative;
+      }
+
+      .promo-features li:before {
+        content: "•";
+        color: #ffcc00;
+        font-weight: bold;
+        position: absolute;
+        left: -15px;
+      }
+
+      .learn-more-btn {
+        background-color: #ffcc00;
+        color: #006aff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 24px;
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .tags-container {
+        margin-top: 30px;
+      }
+
+      .tags-label {
+        font-weight: bold;
+        color: #555;
+        margin-bottom: 10px;
+      }
+
+      .tag {
+        display: inline-block;
+        background-color: #f2f2f2;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 6px 15px;
+        margin: 5px;
+        font-size: 14px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .tag:hover {
+        background-color: #e5e5e5;
+      }
+
+      .banner-container2 {
+        margin-top: 5rem;
+      }
+      .banner2 {
+        background-color: #f5f5f5;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 40px;
+        border-radius: 4px;
+      }
+
+      .banner-text {
+        margin-bottom: 15px;
+      }
+
+      .banner-action {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+      }
+
+      .go-button {
+        background-color: #0078e7;
+        color: white;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+        margin: 30px 0;
+        color: #432818;
+      }
+
+      .article-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+
+      .article-card {
+        border-radius: 4px;
+        overflow: hidden;
+        transition: transform 0.3s;
+        padding: 0rem;
+      }
+
+      .article-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .article-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .article-category {
+        font-size: 0.8rem;
+        color: #666;
+        margin: 10px 0 5px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .article-h {
+        font-size: 40px;
+        font-family: "Lato", serif;
+
+        margin-bottom: 10px;
+        color: #222;
+        font-weight: 600;
+      }
+      .fea-rea {
+        display: flex;
+        justify-content: space-between; /* Space between the two columns */
+        margin-top: 3rem;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        padding: 0 6rem; /* Add some padding for better spacing */
+      }
+
+      .featured,
+      .recent {
+        flex: 1; /* Allow both columns to grow equally */
+        min-width: 10%; /* Set a minimum width for each column */
+        margin: 1rem; /* Add some margin for spacing */
+      }
+
+      .featured h1 {
+        width: auto; /* Allow the width to adjust automatically */
+        border-bottom: 2px solid #ffc107;
+        height: 3rem;
+        margin-bottom: 1rem; /* Add some space below the heading */
+      }
+
+      .featured p {
+        margin: 0.5rem 0; /* Add some margin between paragraphs */
+      }
+
+      /* Tablets and smaller desktops */
+      @media (max-width: 1024px) {
+        .container {
+          padding: 15px;
+        }
+
+        .main-content2 {
+          flex: 1 100%;
+          padding-right: 0;
+        }
+
+        .sidebar {
+          flex: 1 100%;
+          margin-top: 30px;
+        }
+
+        .article-h {
+          font-size: 32px;
+        }
+
+        .fea-rea {
+          padding: 0 3rem;
+        }
+      }
+
+      /* Tablets */
+      @media (max-width: 768px) {
+        .article-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .author-container {
+          flex-wrap: wrap;
+        }
+
+        .share-container {
+          margin-left: 0;
+          margin-top: 15px;
+          width: 100%;
+        }
+
+        .fea-rea {
+          padding: 0 1rem;
+        }
+
+        .banner-container2 {
+          margin-top: 3rem;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* Large mobile devices */
+      @media (max-width: 576px) {
+        .article-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .article-h {
+          font-size: 28px;
+        }
+
+        .topics-list {
+          margin-left: 0;
+        }
+
+        .fea-rea {
+          flex-direction: column;
+          padding: 0;
+        }
+
+        .featured,
+        .recent {
+          width: 100%;
+          margin: 0.5rem 0;
+        }
+
+        .zillow-logo {
+          position: static;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+
+        .footer-container .links-row {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .footer-container .links-row a {
+          margin: 5px 0;
+        }
+
+        .article-image {
+          height: 160px;
+        }
+      }
+
+      /* Small mobile devices */
+      @media (max-width: 375px) {
+        .container {
+          padding: 10px;
+        }
+
+        .article-h {
+          font-size: 24px;
+        }
+
+        .section-heading {
+          font-size: 20px;
+        }
+
+        .sidebar-card {
+          padding: 10px;
+        }
+
+        .author-image {
+          width: 30px;
+          height: 30px;
+        }
+
+        .author-info {
+          font-size: 14px;
+        }
+
+        .social-icon {
+          width: 20px;
+          height: 20px;
+          font-size: 12px;
+        }
+
+        .article-image {
+          height: 140px;
+        }
+
+        .banner2 {
+          padding: 15px 10px;
+        }
+
+        .go-button {
+          padding: 6px 15px;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        .sidebar,
+        .banner-container2,
+        .footer-wrapper,
+        .article-grid,
+        .fea-rea {
+          display: none;
+        }
+
+        .container,
+        .main-content2 {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+
+        .social-icons,
+        .author-container {
+          display: none;
+        }
+
+        .article-h {
+          font-size: 24px;
+        }
+
+        body {
+          font-size: 12pt;
+          line-height: 1.5;
+          color: #000;
+          background: #fff;
+        }
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+
+        .article-image {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <h2>Menu</h2>
+        <button class="close-menu">&times;</button>
+      </div>
+      <div class="mobile-menu-items">
+        <ul>
+          <li><a href="/buy">Buy</a></li>
+          <li><a href="/rent">Rent</a></li>
+          <li><a href="/sell">Sell</a></li>
+          <li><a href="/homeloans">Home Loans</a></li>
+          <li><a href="/findagent">Find an Agent</a></li>
+          <li><a href="/rentals">Manage Rentals</a></li>
+          <li><a href="/advertise">Advertise</a></li>
+          <li><a href="/help">Help</a></li>
+          <li><a href="/signup">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <nav>
+      <div class="nav-content">
+        <div class="mobile-nav">
+          <div>
+            <i
+              class="fa-solid fa-bars bars"
+              id="menu-toggle"
+              style="color: #000; font-size: 2rem"
+            ></i>
+          </div>
+          <div class="logo-con">
+            <a href="/"
+              ><img class="logo" src="/image/logo.png" alt="Logo" />
+              <h2 class="xzillow-logo">XZillow</h2></a
+            >
+          </div>
+          <div>
+            <a class="login-btn" href="/signup"
+              ><i
+                class="fa-regular fa-user"
+                style="color: #000; font-size: 2rem"
+              ></i
+            ></a>
+          </div>
+        </div>
+        <ul class="first-ul">
+          <li><a href="/buy">Buy</a></li>
+          <li><a href="/rent">Rent</a></li>
+          <li><a href="/sell">Sell</a></li>
+          <li><a href="/homeloans">Home Loans</a></li>
+          <li><a href="/findagent">Find an Agent</a></li>
+        </ul>
+        <div class="logo-con desk">
+          <a href="/"
+            ><img class="logo" src="/image/logo.png" alt="Logo" />
+            <h2 class="xzillow-logo">XZillow</h2></a
+          >
+        </div>
+        <div class="hide-major">
+          <ul class="second-ul">
+            <li><a href="/rentals">Manage Rentals</a></li>
+            <li><a href="/advertise">Advertise</a></li>
+            <li><a href="/help">Help</a></li>
+            <li class="login-text"><a href="/signup">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Main content area -->
+      <div class="main-content2">
+        <a href="#" class="category-link">PROPERTY MANAGEMENT</a>
+
+        <h1 class="article-h">
+          Fair Housing Act: The Basics of Fair Housing Laws
+        </h1>
+
+        <img
+          src="/image/Blog-FairHousing.webp"
+          alt="Colorful row houses showing diversity in housing"
+          class="article-image"
+        />
+
+        <div class="author-container">
+          <img
+            src="/image/profile.jpg"
+            alt="Alycia Lucio"
+            class="author-image"
+          />
+          <div class="author-info">
+            <a href="#" class="author-name">Alycia Lucio</a>
+            <span class="publish-date">• APR 03 2021</span>
+          </div>
+
+          <div class="share-container">
+            <span class="share-text">Share</span>
+            <div class="social-icons">
+              <a href="#" class="social-icon facebook">f</a>
+              <a href="#" class="social-icon twitter">t</a>
+              <a href="#" class="social-icon linkedin">in</a>
+              <a href="#" class="social-icon pinterest">p</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-intro">
+          <p>In this article:</p>
+        </div>
+
+        <ul class="topics-list">
+          <li>
+            <a href="#equal-housing"
+              >What does equal housing opportunity mean?</a
+            >
+          </li>
+          <li>
+            <a href="#rental-discrimination">What is rental discrimination?</a>
+          </li>
+          <li>
+            <a href="#protected-classes"
+              >What classes are protected from rental discrimination?</a
+            >
+          </li>
+          <li>
+            <a href="#housing-laws">What do fair housing laws prohibit?</a>
+          </li>
+          <li>
+            <a href="#reasonable-accommodation"
+              >What is reasonable accommodation?</a
+            >
+          </li>
+          <li>
+            <a href="#reasonable-modification"
+              >What is reasonable modification?</a
+            >
+          </li>
+          <li><a href="#">How should you determine max occupancy?</a></li>
+          <li>
+            <a href="#"
+              >What should you consider when renting to families with
+              children?</a
+            >
+          </li>
+          <li><a href="#">Who is exempt from fair housing laws?</a></li>
+        </ul>
+
+        <div class="article-section">
+          <p>
+            Whether you own one investment property or manage 200 units, it's
+            important for you and your team to understand and abide by
+            applicable federal, state and local fair housing laws; promote an
+            equal housing opportunity for tenants; and run a compliant rental
+            business.
+          </p>
+
+          <p>
+            The Fair Housing Act is the federal law that prohibits
+            discrimination because of a person's protected class when renting or
+            buying a home, getting a mortgage, seeking housing assistance or
+            engaging in other housing-related activities. The act was originally
+            adopted as part of the Civil Rights Act of 1968. It was broadened in
+            1988 to prohibit discrimination on the basis of disability and
+            familial status.
+          </p>
+        </div>
+
+        <h2 id="equal-housing" class="section-heading">
+          What does equal housing opportunity mean?
+        </h2>
+        <div class="article-section">
+          <p>
+            Equal housing opportunity is the notion that all persons should be
+            granted the same chances when it comes to choosing housing. This law
+            is administered and enforced by the Office of Fair Housing and Equal
+            Opportunity (FHEO), an office within the U.S. Department of Housing
+            and Urban Development (HUD). HUD was given enforcement
+            responsibility by the Fair Housing Act of 1968.*
+          </p>
+        </div>
+
+        <h2 id="rental-discrimination" class="section-heading">
+          What is rental discrimination?
+        </h2>
+        <div class="article-section">
+          <p>
+            Rental discrimination is when a landlord or property manager treats
+            an applicant differently based on the applicant's inclusion in a
+            protected class. Courts recognize that discrimination may result
+            from both
+            <span class="highlight">intentional and unintentional conduct</span
+            >.
+          </p>
+
+          <p>
+            <span class="highlight">Intentional discrimination</span> (called
+            "disparate treatment" discrimination) occurs when someone treats a
+            renter adversely because of their status in a protected class.
+          </p>
+
+          <p>
+            <span class="highlight">Unintentional discrimination</span> (called
+            “disparate impact” discrimination) occurs when an action or policy
+            triggers adversely affects members of a protected class, even if
+            there was no intention to discriminate. The U.S. Supreme Court has
+            recently confirmed that the Fair Housing Act recognizes disparate
+            impact liability. As a result, landlords and property managers
+            should be aware that they may be liable for policies and practices
+            that, even unintentionally, have a materially adverse impact on
+            people in protected classes. Such disparate impact liability is
+            often recognized under state law as well, and landlords and property
+            managers should research state and local anti-discrimination laws to
+            ensure their compliance.
+          </p>
+        </div>
+        <h2 id="equal-housing" class="section-heading">
+          Examples of rental discrimination
+        </h2>
+        <div class="article-section">
+          <p>
+            An example of intentional discrimination is posting a sign that says
+            “No [insert protected class] need apply.” Such overt discrimination
+            is relatively rare today, but other practices — such as imposing
+            restrictions on families with children — still occur.
+          </p>
+          <p>
+            An example of unintentional discrimination may be when a landlord or
+            property manager applies a “one strike” tenant screening rule for
+            arrests. HUD guidance explains that because people of color are
+            disproportionately arrested, and being arrested may have no
+            relationship with your ability to be a good tenant, then people of
+            color may be disproportionately disqualified from housing by tenant
+            screening policies despite those policies not serving any legitimate
+            business justification.
+          </p>
+        </div>
+        <h2 id="equal-housing" class="section-heading">
+          What classes are protected from rental discrimination?
+        </h2>
+        <div class="article-section">
+          <p>
+            In fair housing terms, discrimination means treating someone
+            differently because they are part of a protected class. Beyond the
+            federal fair housing laws, state and local laws may provide further
+            protection to renters in additional protected classes, some of which
+            are summarized below.
+          </p>
+          <p>
+            An example of unintentional discrimination may be when a landlord or
+            property manager applies a “one strike” tenant screening rule for
+            arrests. HUD guidance explains that because people of color are
+            disproportionately arrested, and being arrested may have no
+            relationship with your ability to be a good tenant, then people of
+            color may be disproportionately disqualified from housing by tenant
+            screening policies despite those policies not serving any legitimate
+            business justification.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <h3 class="sidebar-header">USEFUL TOOLS & FORMS</h3>
+          <div class="sidebar-links">
+            <a href="#" class="sidebar-link">ZILLOW RENTAL MANAGER</a>
+            <a href="#" class="sidebar-link">ONLINE LEASE AGREEMENTS</a>
+            <a href="#" class="sidebar-link"
+              >RENTAL APPLICATION AND SCREENING</a
+            >
+            <a href="#" class="sidebar-link">COLLECT RENT ONLINE</a>
+            <a href="#" class="sidebar-link">MOVE-IN AND MOVE-OUT CHECKLIST</a>
+            <a href="#" class="sidebar-link"
+              >ZILLOW RESPECTFUL RENTING PLEDGE</a
+            >
+          </div>
+        </div>
+
+        <div class="sidebar-card listing-card">
+          <h3 class="listing-title">CREATE OR MANAGE YOUR LISTINGS</h3>
+          <p class="listing-description">
+            Post your listing quickly and easily! Your listing will appear on
+            Zillow, Trulia and HotPads.
+          </p>
+          <a href="#" class="create-button">Create Listing</a>
+        </div>
+        <div class="app-promo">
+          <img src="image/Rentals_phone.webp" />
+        </div>
+      </div>
+      <div class="banner-container2">
+        <div class="zillow-logo">
+          <span>Zillow</span>
+        </div>
+        <div class="banner2">
+          <p class="banner-text">Thanks for your response.</p>
+          <p class="banner-action">
+            Post a listing, screen tenants, sign a lease, and collect payments
+            with Zillow Rental Manager:
+          </p>
+          <a href="#" class="go-button">GO</a>
+        </div>
+        <h2 class="section-title">Read Next</h2>
+      </div>
+
+      <div class="article-grid">
+        <div class="article-card">
+          <img
+            src="/image/StrugglingRenter.png"
+            alt="Money jar filled with cash"
+            class="article-image"
+          />
+          <p class="article-category">PROPERTY MANAGEMENT</p>
+          <h3 class="article-title">How Much Is a Security Deposit?</h3>
+        </div>
+
+        <div class="article-card">
+          <img
+            src="/image/security-deposit-featured-image.jpg"
+            alt="Small cottage home with garden"
+            class="article-image"
+          />
+          <p class="article-category">PROPERTY MANAGEMENT</p>
+          <h3 class="article-title">
+            Top 10 Places Renting Out Your Home May Help You
+          </h3>
+        </div>
+
+        <div class="article-card">
+          <img
+            src="/image/GettyImages.jpg"
+            alt="Worried man sitting on porch steps"
+            class="article-image"
+          />
+          <p class="article-category">PROPERTY MANAGEMENT</p>
+          <h3 class="article-title">
+            Worried About Paying Your Mortgage? You Have
+          </h3>
+        </div>
+      </div>
+      <div class="fea-rea">
+        <div class="featured">
+          <h3
+            style="width: 13rem; border-bottom: 2px solid #ffc107; height: 3rem"
+          >
+            FEATURED
+          </h3>
+
+          <p>Inflation Pressures Keep Mortgage Rates Elevated</p>
+          <p>
+            Sellers ramp up price cuts to woo struggling buyers (January 2025
+            Market Report)
+          </p>
+          <p>
+            As Renters Reemerge from Winter Doldrums, Rent Growth Holds Steady
+            (January 2025 Rental Market Report)
+          </p>
+          <p>
+            Zillow’s Insights on CPI and ZORI: A day ahead of shelter inflation
+            release
+          </p>
+          <p>Fed Starts 2025 With a Pause</p>
+        </div>
+        <div class="recent">
+          <h3
+            style="width: 13rem; border-bottom: 2px solid #ffc107; height: 3rem"
+          >
+            RECENT
+          </h3>
+
+          <p>
+            Almost 1 in 5 homeowners are considering selling in the next three
+            years
+          </p>
+          <p>
+            December 2024: New Home Sales Finished The Year Strong, Increasing
+            Again in 2024
+          </p>
+          <p>
+            Inventory continues to climb, giving buyers more options (December
+            2024 Market Report)
+          </p>
+          <p>
+            Mortgage rate volatility drives single-family rent growth, while
+            multifamily moderates (December 2024 Rental Market Report)
+          </p>
+          <p>
+            Home Sellers and Private Listing Networks: Insights From a Recent
+            Survey
+          </p>
+        </div>
+      </div>
+
+      <footer class="footer-wrapper">
+        <div class="footer-container">
+          <div class="links-row">
+            <a href="/about">About</a>
+            <a href="/zestimate">Zestimates</a>
+            <a href="/research">Research</a>
+            <a href="/careers">Careers</a>
+            <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+            <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+            <a href="/help">Help</a>
+            <a href="/advertise">Advertise</a>
+            <a href="/fair">Fair Housing Guide</a>
+            <a href="/advocacy">Advocacy</a>
+          </div>
+
+          <div class="links-row">
+            <a href="/terms">Terms of use</a>
+            <a href="/privacy">Privacy Portal</a>
+            <a href="/cookie">Cookie Preference</a>
+            <a href="/learn">Learn</a>
+            <a href="/ai">AI</a>
+            <a href="/mobile">Mobile Apps</a>
+          </div>
+
+          <div class="links-row">
+            <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+            <a href="https://streeteasy.com/">StreetEasy</a>
+            <a href="https://hotpads.com/">HotPads</a>
+            <a href="https://showingtimeplus.com/">Out East</a>
+            <a href="https://outeast.com/">ShowingTime+</a>
+          </div>
+
+          <div class="do-not-sell">
+            <a href="#">Do Not Sell or Share My Personal Information→</a>
+          </div>
+
+          <div class="accessibility-notice">
+            Zillow Group is committed to ensuring digital accessibility for
+            individuals with disabilities. We are continuously working to
+            improve the accessibility of our web experience for everyone, and we
+            welcome feedback and accommodation requests. If you wish to report
+            an issue or seek an accommodation, please
+            <a href="#">let us know</a>.
+          </div>
+
+          <div class="legal-info">
+            Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in
+            multiple states. Zillow (Canada), Inc. holds real estate brokerage
+            <a href="#">licenses</a> in multiple provinces.<br />
+            <a href="#">§ 442-H New York Standard Operating Procedures</a><br />
+            <a href="#">§ New York Fair Housing Notice</a><br />
+            TREC: <a href="#">Information about brokerage services</a>,
+            <a href="#">Consumer protection notice</a><br />
+            California DRE #1522444<br />
+            <a href="#">Contact Zillow, Inc. Brokerage</a>
+          </div>
+
+          <div class="legal-info">
+            For listings in Canada, the trademarks REALTOR®, REALTORS®, and the
+            REALTOR® logo are controlled by The Canadian Real Estate Association
+            (CREA) and identify real estate professionals who are members of
+            CREA. The trademarks MLS®, Multiple Listing Service® and the
+            associated logos are owned by CREA and identify the quality of
+            services provided by real estate professionals who are members of
+            CREA. Used under license.
+          </div>
+
+          <div class="app-stores">
+            <a href="#"
+              ><img src="/image/apple-icon.svg" alt="Download on the App Store"
+            /></a>
+            <a href="#"
+              ><img src="/image/google-icon.svg" alt="Get it on Google Play"
+            /></a>
+          </div>
+          <div class="bottom-row">
+            <img
+              src="/image/blue-logo.jpg"
+              alt="Zillow logo"
+              class="zillow-logo"
+            />
+            <span>Follow us:</span>
+            <div class="social-icons">
+              <!-- Social media icons would go here -->
+            </div>
+            <span>© 2006-2025 Zillow</span>
+            <img
+              src="/image/home-icon.png"
+              alt="Equal Housing Opportunity"
+              class="equal-housing"
+            />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <img src="/image/footer-art.svg" alt="" class="footer-art" />
+
+    <script
+      src="https://kit.fontawesome.com/e1fbe49b44.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="account.js"></script>
+    <script>
+      // Mobile Menu Toggle
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.add("active");
+          document.querySelector(".overlay").style.display = "block";
+        });
+
+      document
+        .querySelector(".close-menu")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.remove("active");
+          document.querySelector(".overlay").style.display = "none";
+        });
+
+      document.querySelector(".overlay").addEventListener("click", function () {
+        document.querySelector(".mobile-menu").classList.remove("active");
+        this.style.display = "none";
+      });
+    </script>
+    <script>
+      // Mobile Menu Toggle
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.add("active");
+          document.querySelector(".overlay").style.display = "block";
+        });
+
+      document
+        .querySelector(".close-menu")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.remove("active");
+          document.querySelector(".overlay").style.display = "none";
+        });
+
+      document.querySelector(".overlay").addEventListener("click", function () {
+        document.querySelector(".mobile-menu").classList.remove("active");
+        this.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

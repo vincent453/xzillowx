@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XZillowx</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon" />
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Base styles (your existing styles) */
+      body {
+        background-color: #f9f9fb;
+      }
+
+      .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .learn {
+        justify-content: center;
+        display: flex;
+        gap: 2rem;
+        margin-top: 10rem;
+        width: 90%;
+        height: 594px;
+        padding: 3rem;
+      }
+
+      .learn-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .numbers {
+        display: flex;
+        flex-direction: column;
+        width: 900px;
+      }
+
+      .numbers h5 {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      .numbers p {
+        font-weight: 400;
+        color: #3f3f43;
+      }
+
+      .numbers a {
+        text-decoration: none;
+        color: #00498e;
+        font-size: 1rem;
+      }
+
+      .numbers h4 {
+        color: #03c04a !important;
+        font-size: 1.7rem;
+        font-weight: 400;
+      }
+
+      .learn div img {
+        max-width: 100%;
+        height: 394.45px;
+        border-radius: 5px;
+      }
+
+      .learn .text-content {
+        padding: 2rem;
+      }
+
+      .learn-content {
+        font-size: 2.3rem;
+        font-weight: 500;
+      }
+
+      .latest {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(200px, 1fr)
+        ); /* Responsive grid */
+        gap: 1rem; /* Space between grid items */
+        margin-top: 1rem;
+        padding: 0 2rem;
+      }
+
+      .cards {
+        display: flex;
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items */
+        text-align: center; /* Center text */
+      }
+
+      .latest img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 0px; /* Optional: add some rounding */
+      }
+
+      .learn-v2 {
+        background-color: #ffffff;
+        border: 1px solid #b3b3b38a;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem; /* Add some padding */
+      }
+
+      .learn-v2 h2 {
+        font-size: 1rem; /* Adjust font size */
+        margin: 0.5rem 0; /* Add margin */
+      }
+
+      .learn-v2 p {
+        font-size: 0.9rem; /* Adjust font size */
+        margin: 0.5rem 0; /* Add margin */
+      }
+
+      .fea-rea {
+        display: flex;
+        justify-content: space-between; /* Space between the two columns */
+        margin-top: 3rem;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        padding: 0 2rem; /* Add some padding for better spacing */
+      }
+
+      .featured,
+      .recent {
+        flex: 1; /* Allow both columns to grow equally */
+        min-width: 10%; /* Set a minimum width for each column */
+        margin: 1rem; /* Add some margin for spacing */
+      }
+
+      .featured h1 {
+        width: auto; /* Allow the width to adjust automatically */
+        border-bottom: 2px solid #ffc107;
+        height: 3rem;
+        margin-bottom: 1rem; /* Add some space below the heading */
+      }
+
+      .featured p {
+        margin: 0.5rem 0; /* Add some margin between paragraphs */
+      }
+
+      .down {
+        margin-top: 8rem;
+      }
+
+      .three-social {
+        margin-top: 0rem;
+      }
+
+      .foot-section-two {
+        border-top: 1px solid rgb(205, 205, 211);
+      }
+
+      .foot-section-three {
+        display: flex;
+        justify-content: center;
+      }
+
+      h1 {
+        margin-left: 2rem;
+      }
+
+      .see-more {
+        padding: 1rem 3rem;
+        border: none;
+        color: #ffffff;
+        font-weight: 400;
+        background-color: #006aff;
+        border-radius: 5px;
+        font-size: 1rem;
+        margin-top: 3rem;
+      }
+
+      .last-btn {
+        display: flex;
+        margin-top: 5rem;
+        background-color: #ffffff;
+        flex-direction: column;
+      }
+
+      .last-btn button {
+        padding: 1rem;
+      }
+
+      .btn-2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+      }
+
+      .btn-2 input {
+        padding: 1rem 3rem;
+        border: none;
+        font-weight: 500;
+        width: 200px; /* Set a specific width */
+        max-width: 100%; /* Ensure it doesn't exceed the container's width */
+      }
+      .see-more {
+        padding: 1rem 3rem;
+        border: none;
+        font-weight: 500;
+        width: 200px; /* Set a specific width */
+        max-width: 100%; /* Ensure it doesn't exceed the container's width */
+      }
+
+      /* Media Queries */
+      @media (max-width: 1200px) {
+        .learn {
+          flex-direction: column;
+          margin-top: 5rem;
+          height: auto;
+        }
+
+        .numbers {
+          width: 100%;
+        }
+
+        .latest img {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .fea-rea {
+          flex-direction: column; /* Stack columns vertically on smaller screens */
+          align-items: flex-start; /* Align items to the start */
+        }
+
+        .featured,
+        .recent {
+          width: 100%; /* Full width for each column */
+          margin: 0; /* Remove margin for full width */
+        }
+        .learn {
+          padding: 1rem;
+        }
+
+        .learn-content {
+          font-size: 1.5rem; /* Adjust font size for smaller screens */
+        }
+
+        .learn-v2 h2 {
+          font-size: 0.9rem; /* Smaller font size */
+        }
+
+        .learn-v2 p {
+          font-size: 0.8rem; /* Smaller font size */
+        }
+
+        .numbers h5 {
+          font-size: 1.2rem;
+        }
+
+        .numbers h4 {
+          font-size: 1.5rem;
+        }
+
+        .learn-v2 {
+          height: auto;
+        }
+
+        .see-more {
+          font-size: 0.9rem;
+          padding: 0.8rem 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          margin-left: 1rem;
+          font-size: 1.5rem;
+        }
+
+        .learn-content {
+          font-size: 1.5rem;
+        }
+
+        .btn-2 input {
+          padding: 0.5rem 1.5rem;
+        }
+
+        .last-btn {
+          margin-top: 3rem;
+        }
+
+        .latest {
+          grid-template-columns: 1fr; /* Stack items vertically */
+        }
+        .featured,
+        .recent {
+          width: 100%; /* Full width for each column */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <h2>Menu</h2>
+          <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-items">
+          <ul>
+            <li><a href="/buy">Buy</a></li>
+            <li><a href="/rent">Rent</a></li>
+            <li><a href="/sell">Sell</a></li>
+            <li><a href="/homeloans">Home Loans</a></li>
+            <li><a href="/findagent">Find an Agent</a></li>
+            <li><a href="/rentals">Manage Rentals</a></li>
+            <li><a href="/advertise">Advertise</a></li>
+            <li><a href="/help">Help</a></li>
+            <li><a href="/signup">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="overlay"></div>
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <h2>Menu</h2>
+          <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-items">
+          <ul>
+            <li><a href="/buy">Buy</a></li>
+            <li><a href="/rent">Rent</a></li>
+            <li><a href="/sell">Sell</a></li>
+            <li><a href="/homeloans">Home Loans</a></li>
+            <li><a href="/findagent">Find an Agent</a></li>
+            <li><a href="/rentals">Manage Rentals</a></li>
+            <li><a href="/advertise">Advertise</a></li>
+            <li><a href="/help">Help</a></li>
+            <li><a href="/signup">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <nav>
+        <div class="nav-content">
+          <div class="mobile-nav">
+            <div>
+              <i
+                class="fa-solid fa-bars bars"
+                id="menu-toggle"
+                style="color: #ffffff; font-size: 2rem"
+              ></i>
+            </div>
+            <div class="logo-con">
+              <a href="/"
+                ><img class="logo" src="/image/logo.png" alt="Logo" />
+                <h2 class="xzillow-logo">XZillow</h2></a
+              >
+            </div>
+            <div
+              class="user-dropdown"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <% if (user) { %>
+              <button
+                class="dropdown-btn"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <i
+                  class="fa-regular fa-user"
+                  style="color: #ffffff; font-size: 2rem"
+                ></i>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="/profile"><%= user.username %> Account</a></li>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+              <% } else { %>
+              <a class="login-btn" href="/signup"
+                ><i
+                  class="fa-regular fa-user"
+                  style="color: #ffffff; font-size: 2rem"
+                ></i
+              ></a>
+              <% } %>
+            </div>
+          </div>
+
+          <ul class="first-ul">
+            <li><a href="/buy">Buy</a></li>
+            <li><a href="/rent">Rent</a></li>
+            <li><a href="/sell">Sell</a></li>
+            <li><a href="/homeloans">Home Loans</a></li>
+            <li><a href="/findagent">Find an Agent</a></li>
+          </ul>
+
+          <div class="logo-con desk">
+            <a href="/"
+              ><img class="logo" src="/image/logo.png" alt="Logo" />
+              <h2 class="xzillow-logo">XZillow</h2></a
+            >
+          </div>
+
+          <div class="hide-major">
+            <ul class="second-ul">
+              <li><a href="/rentals">Manage Rentals</a></li>
+              <li><a href="/advertise">Advertise</a></li>
+              <li><a href="/help">Help</a></li>
+              <% if (user) { %>
+              <li class="login-text user-dropdown">
+                <button
+                  class="dropdown-btn"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <i style="color: #000" class="fa-regular fa-user"></i>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="/profile"><%= user.username %> Account</a></li>
+                  <li><a href="/logout">Logout</a></li>
+                </ul>
+              </li>
+              <% } else { %>
+              <li class="login-text"><a href="/signup">Sign In</a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="color-bg">
+        <div class="learn-container">
+          <div class="learn">
+            <div>
+              <img src="/image/news-1.jpg" alt="4" />
+              <div class="text-content">
+                <label for="">NEWS</label>
+                <h2 class="learn-content">
+                  Home Sellers and private listing networks: <br />
+                  Insights from a recent survey
+                </h2>
+              </div>
+            </div>
+
+            <div class="numbers">
+              <h5>The Numbers</h5>
+              <p>JANUARY 2025</p>
+              <a href="">U.S. Typical Home value(Zillow Home Value Index)</a>
+              <br />
+              <h4>$356,776 (2.6% YoY)</h4>
+              <br />
+              <p>JANUARY 2025</p>
+              <a href="">U.S. Typical Rent (Zillow Observed Rent Index)</a>
+              <br />
+              <h4>$1,968 (3.5% YOY)</h4>
+              <br />
+              <p>JANUARY 2025</p>
+              <a href="">Change in New Listings</a>
+              <br />
+              <h4>11.5% YoY</h4>
+              <br />
+              <p>JANUARY 2025</p>
+              <a href="">Typical Mortgage Payment</a>
+              <br />
+              <h4>$1,883</h4>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1>The Latest</h1>
+      <div class="latest">
+        <div class="cards">
+          <img src="/image/Market-Report-Headers-1.png" alt="4" />
+          <div class="learn-v2">
+            <h2 class="learn-lab">Buying/Selling, News</h2>
+            <p class="learn-content">
+              Inflation Pressures Keep Mortgage Rates Elevated
+            </p>
+          </div>
+        </div>
+        <div class="cards">
+          <img src="/image/Market-Report-Headers-2.png" alt="4" />
+          <div class="learn-v2">
+            <h2 class="learn-lab">Buying/Selling, Market Reports</h2>
+            <p class="learn-content">
+              Sellers ramp up price cuts to woo struggling buyers (January 2025
+              Market Report)
+            </p>
+          </div>
+        </div>
+        <div class="cards">
+          <img src="/image/Market-Report-Headers-3.png" alt="4" />
+          <div class="learn-v2">
+            <h2 class="learn-lab">Market Reports, Renting</h2>
+            <p class="learn-content">
+              As Renters Reemerge from Winter Doldrums, Rent Growth Holds
+              Steady...
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-2">
+        <input type="button" class="see-more" value="See more" />
+      </div>
+      <div class="fea-rea">
+        <div class="featured">
+          <h3
+            style="width: 13rem; border-bottom: 2px solid #ffc107; height: 3rem"
+          >
+            FEATURED
+          </h3>
+
+          <p>Inflation Pressures Keep Mortgage Rates Elevated</p>
+          <p>
+            Sellers ramp up price cuts to woo struggling buyers (January 2025
+            Market Report)
+          </p>
+          <p>
+            As Renters Reemerge from Winter Doldrums, Rent Growth Holds Steady
+            (January 2025 Rental Market Report)
+          </p>
+          <p>
+            Zillow’s Insights on CPI and ZORI: A day ahead of shelter inflation
+            release
+          </p>
+          <p>Fed Starts 2025 With a Pause</p>
+        </div>
+        <div class="recent">
+          <h3
+            style="width: 13rem; border-bottom: 2px solid #ffc107; height: 3rem"
+          >
+            RECENT
+          </h3>
+
+          <p>
+            Almost 1 in 5 homeowners are considering selling in the next three
+            years
+          </p>
+          <p>
+            December 2024: New Home Sales Finished The Year Strong, Increasing
+            Again in 2024
+          </p>
+          <p>
+            Inventory continues to climb, giving buyers more options (December
+            2024 Market Report)
+          </p>
+          <p>
+            Mortgage rate volatility drives single-family rent growth, while
+            multifamily moderates (December 2024 Rental Market Report)
+          </p>
+          <p>
+            Home Sellers and Private Listing Networks: Insights From a Recent
+            Survey
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="last-btn">
+      <div class="btn-2">
+        <input type="button" value="About us" />
+      </div>
+      <footer class="footer-wrapper">
+        <div class="footer-container">
+          <div class="links-row">
+            <a href="/about">About</a>
+            <a href="/zestimate">Zestimates</a>
+            <a href="/research">Research</a>
+            <a href="/careers">Careers</a>
+            <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+            <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+            <a href="/help">Help</a>
+            <a href="/advertise">Advertise</a>
+            <a href="/fair">Fair Housing Guide</a>
+            <a href="/advocacy">Advocacy</a>
+          </div>
+
+          <div class="links-row">
+            <a href="/terms">Terms of use</a>
+            <a href="/privacy">Privacy Portal</a>
+            <a href="/cookie">Cookie Preference</a>
+            <a href="/learn">Learn</a>
+            <a href="/ai">AI</a>
+            <a href="/mobile">Mobile Apps</a>
+          </div>
+
+          <div class="links-row">
+            <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+            <a href="https://streeteasy.com/">StreetEasy</a>
+            <a href="https://hotpads.com/">HotPads</a>
+            <a href="https://showingtimeplus.com/">Out East</a>
+            <a href="https://outeast.com/">ShowingTime+</a>
+          </div>
+
+          <div class="do-not-sell">
+            <a href="#">Do Not Sell or Share My Personal Information→</a>
+          </div>
+
+          <div class="accessibility-notice">
+            Zillow Group is committed to ensuring digital accessibility for
+            individuals with disabilities. We are continuously working to
+            improve the accessibility of our web experience for everyone, and we
+            welcome feedback and accommodation requests. If you wish to report
+            an issue or seek an accommodation, please
+            <a href="#">let us know</a>.
+          </div>
+
+          <div class="legal-info">
+            Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in
+            multiple states. Zillow (Canada), Inc. holds real estate brokerage
+            <a href="#">licenses</a> in multiple provinces.<br />
+            <a href="#">§ 442-H New York Standard Operating Procedures</a><br />
+            <a href="#">§ New York Fair Housing Notice</a><br />
+            TREC: <a href="#">Information about brokerage services</a>,
+            <a href="#">Consumer protection notice</a><br />
+            California DRE #1522444<br />
+            <a href="#">Contact Zillow, Inc. Brokerage</a>
+          </div>
+
+          <div class="legal-info">
+            For listings in Canada, the trademarks REALTOR®, REALTORS®, and the
+            REALTOR® logo are controlled by The Canadian Real Estate Association
+            (CREA) and identify real estate professionals who are members of
+            CREA. The trademarks MLS®, Multiple Listing Service® and the
+            associated logos are owned by CREA and identify the quality of
+            services provided by real estate professionals who are members of
+            CREA. Used under license.
+          </div>
+
+          <div class="app-stores">
+            <a href="#"
+              ><img src="/image/apple-icon.svg" alt="Download on the App Store"
+            /></a>
+            <a href="#"
+              ><img src="/image/google-icon.svg" alt="Get it on Google Play"
+            /></a>
+          </div>
+          <div class="bottom-row">
+            <img
+              src="/image/blue-logo.jpg"
+              alt="Zillow logo"
+              class="zillow-logo"
+            />
+            <span>Follow us:</span>
+            <div class="social-icons">
+              <!-- Social media icons would go here -->
+            </div>
+            <span>© 2006-2025 Zillow</span>
+            <img
+              src="./image/home-icon.png"
+              alt="Equal Housing Opportunity"
+              class="equal-housing"
+            />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/e1fbe49b44.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xZillowx | About</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon">
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+  /* General Styles */
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* Navigation */
+
+/* Main Content */
+.us-container {
+    max-width: 1024px;
+    margin: 40px auto;
+    margin-top: 5rem;
+    padding: 30px;
+    border-radius: 8px;
+   padding: 2rem 0;
+   
+}
+
+h1 {
+    font-size: 38px;
+    color: #222;
+    font-weight: 700;
+    font-family: "Lato", serif;
+    padding: 1rem;
+
+    
+   
+}
+
+h2 {
+    font-size: 30px;
+    padding: 1rem;
+    color: #333;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+ul {
+    margin: 20px 0;
+    padding-left: 20px;
+  
+}
+
+ul li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #000;
+    text-align: left;
+}
+
+table th {
+  background-color: #ffffff;
+    color: black;
+}
+
+table td {
+    background-color: #ffffff;
+}
+
+.last {
+  font-size: 13px;
+}
+
+.three-social{
+        margin-top: 2rem;
+      }
+      .foot-section-two{
+        border-top: 1px solid rgb(205, 205, 211);
+
+      }
+      .foot-section-three{
+        display: flex;
+        justify-content: center;
+
+      }
+     
+/* Responsive */
+@media (max-width: 768px) {
+
+    .nav-content {
+        flex-direction: column;
+    }
+
+    .nav-content ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-content ul li {
+        margin: 10px 0;
+    }
+
+    .toggleNav {
+        display: block;
+    }
+
+    .us-container {
+        padding: 20px;
+    }
+}
+
+</style>
+<body>
+  <div class="overlay"></div>
+  <div class="mobile-menu">
+      <div class="mobile-menu-header">
+          <h2>Menu</h2>
+          <button class="close-menu">&times;</button>
+      </div>
+      <div class="mobile-menu-items">
+          <ul>
+              <li><a href="/buy">Buy</a></li>
+              <li><a href="/rent">Rent</a></li>
+              <li><a href="/sell">Sell</a></li>
+              <li><a href="/homeloans">Home Loans</a></li>
+              <li><a href="/findagent">Find an Agent</a></li>
+              <li><a href="/rentals">Manage Rentals</a></li>
+              <li><a href="/advertise">Advertise</a></li>
+              <li><a href="/help">Help</a></li>
+              <li><a href="/signup">Sign In</a></li>
+          </ul>
+      </div>
+  </div>
+
+       <div class="overlay"></div>
+      <div class="mobile-menu">
+          <div class="mobile-menu-header">
+              <h2>Menu</h2>
+              <button class="close-menu">&times;</button>
+          </div>
+          <div class="mobile-menu-items">
+              <ul>
+                  <li><a href="/buy">Buy</a></li>
+                  <li><a href="/rent">Rent</a></li>
+                  <li><a href="/sell">Sell</a></li>
+                  <li><a href="/homeloans">Home Loans</a></li>
+                  <li><a href="/findagent">Find an Agent</a></li>
+                  <li><a href="/rentals">Manage Rentals</a></li>
+                  <li><a href="/advertise">Advertise</a></li>
+                  <li><a href="/help">Help</a></li>
+                  <li><a href="/signup">Sign In</a></li>
+              </ul>
+          </div>
+      </div>
+  
+      <nav>
+        <div class="nav-content">
+            <div class="mobile-nav">
+                <div style="display: flex;  align-items: center; justify-content: center;"><i class="fa-solid fa-bars bars" id="menu-toggle" style="color: #000; font-size: 1rem;"></i></div>
+                <div class="logo-con">
+                    <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+                </div>
+                 <div class="user-dropdown" style="display: flex; justify-content: center; align-items: center;">
+                    <% if (user) { %>
+                        <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                            <i class="fa-regular fa-user" style="color: #000; font-size: 2rem;"> Account</i>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile"><%= user.username %> Account</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    <% } else { %>
+                        <a class="login-btn" href="/signup">                            <i class="fa-regular fa-user" style="color: #000; font-size: 1rem;"> <span style="font-size: 10px;">Account</span></i>
+</a>
+                    <% } %>
+                </div>
+            </div>
+    
+            <ul class="first-ul">
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/rent">Rent</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/homeloans">Home Loans</a></li>
+                <li><a href="/findagent">Find an Agent</a></li>
+            </ul>
+    
+            <div class="logo-con desk">
+                <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+            </div>
+    
+            <div class="hide-major">
+                <ul class="second-ul">
+                    <li><a href="/rentals">Manage Rentals</a></li>
+                    <li><a href="/advertise">Advertise</a></li>
+                    <li><a href="/help">Help</a></li>
+                    <% if (user) { %>
+                        <li class="login-text user-dropdown">
+                            <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                                <i style="color: #000;" class="fa-regular fa-user"></i>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/profile"><%= user.username %> Account</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    <% } else { %>
+                        <li class="login-text"><a href="/signup">Sign In</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+      <div class="us-container" >
+        <h1>Personnel Privacy Notice</h1>
+        <p> <span style="font-weight: bolder;"> Last Updated:</span> November 2023</p><br>
+        <p>This Privacy Notice explains how Zillow Group, Inc., its parents, subsidiaries, affiliates, successors, and assigns (including, without limitation, Zillow, Inc. and Zillow Homes Loans, Inc.) (collectively, “Zillow Group” or “the Company”) and its affiliates (collectively, “Zillow Group,” “we,” “our,” or “us”) collects, uses, discloses, and otherwise processes personal data about our California-based employees, officers, directors, contractors, freelancers, contingent workers, consultants and other outsourced and temporary workers (collectively, “personnel”), and their family members or other individuals about whom we process personal data as a result of the relationships those individuals have with personnel (collectively, “related persons”). It is the responsibility of our personnel to make this Privacy Notice available to their related persons.
+          This Privacy Notice is not a contract and does not create any legal rights or obligations. This Privacy Notice also is not intended to replace other notices or disclosures we may provide to an individual in connection with their role in our organization, which will supersede any conflicting disclosures contained in this Privacy Notice.
+        </p>
+          <br>
+        <h2>What is Personal Data?</h2>
+        <p>When we use the term “personal data” in this Privacy Notice, we mean information that identifies, relates to, describes, is reasonably capable of being associated with, or could reasonably be linked, directly or indirectly, to an individual within the context of the individual’s role as a member of our personnel or a related person. It does not include aggregated or deidentified information that is maintained in a form that cannot reasonably be used to infer information about, or otherwise be linked to, a particular individual. Where we maintain deidentified data, we will maintain and use the data in deidentified form and not attempt to reidentify the data except as required or permitted by law.</p>
+
+        <h2>Our Collection and Use of Personal Data</h2>
+        <h4>Personal Data of Personnel</h4>
+        <h4>Collection of Personal Data</h4><br>
+        <p>In connection with an individual’s role as a member of our personnel, we may collect the following professional or employment-related personal data:</p>
+        <p><span style="font-weight: bolder;">Contact Information:</span> such as full name, email address (personal and work), home address, business address, telephone number and emergency contact information.</p>
+        <!-- <p>Contact Information: such as full name, email address (personal and work), home address, business address, telephone number and emergency contact information.</p> -->
+        <p><span style="font-weight: bolder;">Identification Materials:</span> such as image, Social Security Number or other national identification number, passport number, driver’s license number, or vehicle license plate number.</p>
+        <p><span style="font-weight: bolder;">Professional Information:</span> such as hire date, employment location, business unit, department, supervisor, job title, position/grade, hours and days worked, working arrangement, work restrictions or accommodations, employee identification number, licenses and certifications, attendance, career goals, performance reviews, disciplinary records, information needed to establish eligibility to work for us, including visa information, and information relating to potential conflicts with the individual’s role in the organization.</p>
+        <p><span style="font-weight: bolder;">Education & Training Information:</span> such as the highest level of education, schools the individual attended and when they were in attendance, degrees, certificates or other educational qualifications the individual earned, and the individual’s transcripts or training records.</p>
+        <p><span style="font-weight: bolder;">Financial Information:</span> such as hourly wage, salary, bonus, benefits, expenses, stock or equity grants, bank account and routing information, and corporate credit card number.</p>
+        <p><span style="font-weight: bolder;">Benefits Information:</span> such as eligibility for benefits, information about family members and other related persons under the individual’s benefits, and claims relating to the individual’s benefits.</p>
+        <p><span style="font-weight: bolder;">Equal Employment Opportunity Information:</span> such as age, race, ethnicity, national origin, citizenship, sex, gender identity or transgender status, sexual orientation, religion, disability or accommodation request, or marital or veteran status when an individual chooses to provide it, but it will not be used in employment-related decisions unless specifically permitted by law.</p>
+        <p><span style="font-weight: bolder;">Security Information:</span> such as work-related accounts and passwords, technical details about the individual’s use of work-related devices and information systems (including, for example, device, logs, analytics data, IP address, and general location information derived from such IP address), the content of communications sent through work-related devices and information systems, access to physical and electronic work-related locations, audio recordings and photographs, videos and other visual images of the individual.</p>
+        <p><span style="font-weight: bolder;">Other Work-Related Information:</span> We also collect any personal data the individual chooses to share with us, the individual makes publicly available or we receive from a third party in connection with the individual’s work for us, a grievance the individual is involved in, an agreement the individual enters into with us or additional roles the individual takes on as a part of our organization.</p>
+        <p><span style="font-weight: bolder;">Inferences:</span> We may generate inferences or predictions about personnel and their abilities, interests, or preferences based on the other personal data we collect and the interactions we have with them.</p>
+        <p>Although we often collect the personal data described above directly from the individual, we also collect this information from supervisors, colleagues, customers, vendors, publicly available sources, and other third parties the individual may interact with as a member of our personnel. In addition, we may also collect this information through service providers and other third parties that collect it on our behalf, such as background check providers, communications providers, payroll providers, and benefits providers.
+        </p>
+        <p>Please note that some of the personal data described above may also be classified as “sensitive” under certain privacy laws. For more information, please see the Sensitive Information of Personnel and Related Persons section below.</p>
+
+        <h4><i>Use of Personal Data</i></h4>
+        <p>We use the personal data we collect about our personnel to:</p>
+        <ul>
+          <li>Conduct organizational planning and development, including budget planning and administration;</li>
+          <li>Analyze and monitor compliance with our personnel and compliance policies and practices;</li>
+          <li>Analyze and monitor compliance with our personnel and compliance policies and practices;</li>
+          <li>Administer recruiting, onboarding, staffing, leave, personnel evaluations, promotions, performance management, training, discipline, participation in available activities or programs and any other processing in connection with work-related purposes;</li>
+          <li>Authorize, grant, administer, monitor (including by video surveillance) and terminate access to or use of company systems, facilities, records, property and infrastructure;</li>
+          <li>Communicate with and between personnel, as well as with designated emergency contacts;</li>
+          <li>Support and manage personnel, including providing resources needed for personnel to perform their roles with us;</li>
+          <li>Facilitate personnel compensation, payroll, and benefit planning and administration (e.g., salary, tax withholding, insurance);</li>
+          <li>Conduct performance reviews and evaluations, as well as make decisions about promotions and job mobility;</li>
+          <li>Manage business travel (e.g., car service/rentals, flights, hotels) and personnel expenses (e.g., reimbursement, corporate credit card);
+          </li>
+          <li>Operate our business, including marketing our personnel to customers, facilitating the work of our personnel and providing the products and services made available to our customers;</li>
+          <li>Investigate, document and report work-related injuries, illness, or grievances;
+          </li>
+          <li>Conduct internal investigations, audits, compliance, risk management, problem resolution and security operations;</li>
+          <li>Fulfill contractual obligations to personnel and other third parties;</li>
+          <li>Comply with applicable law, rule, regulation, legal proceedings and government investigations, including relating to tax reporting and immigration.</li>
+        </ul>
+
+        <h5>Personal Data of Related Persons</h5>
+        <h4>Collection of Personal Data</h4>
+        <p>At times, we receive identifiers and other personal data about our personnel’s family members and other related persons in connection with emergency contacts and the benefits and services we provide. These identifiers and other personal data include:</p>
+        <ul>
+          <li>Contact Information: such as full name, email address, home address, business address, telephone number and emergency contact information.</li>
+          <li>Other Identification Materials: such as image, Social Security Number or other national identification number, passport number, driver’s license number, or vehicle license plate number.
+          </li>
+          <li>
+            Benefits and Services Information: We also collect personal data necessary to extend benefits and benefit-related services, including insurance-related information, claims-related information, and disbursement-related information.</li>
+            <p>Although we often collect the personal data described above directly from our personnel, we also may collect this information directly from the related person, and from our benefit administrators. In addition, we may also collect this information through service providers and other third parties that collect it on our behalf, such as communications providers. Please note that some of the personal data described above may also be classified as “sensitive” under certain privacy laws. For more information, please see the Sensitive Information of Personnel and Related Persons section below.</p>
+
+            <h4>Use of Personal Data</h4>
+            <p>We use the personal data we collect about related persons to:</p>
+            <li>Communicate about eligibility benefits and services, events or activities that are happening, or in the event of an emergency;</li>
+            <li>Administer benefits and services;</li>
+            <li>Respond to requests and inquiries;</li>
+            <li>Conduct internal investigations, audits, compliance, risk management, problem resolution and security operations;</li>
+            <li>Fulfill contractual obligations;</li>
+            <li>Comply with applicable law, rule, regulation, legal proceeding and government investigations, including relating to tax reporting and immigration.</li>
+
+            <h1>Our Disclosure of Personal Data</h1>
+            <p>We may share the categories of personal data outlined above with the following third parties for the purposes described below: </p>
+
+            <ul>
+              <li>Within Zillow Group: We share personal data relating to personnel and related persons within our family of companies for internal administrative purposes and uses that are consistent with this Privacy Notice. For example, the Zillow Group entity responsible for payroll may receive personal data about personnel employed by another Zillow Group entity in order to determine the proper compensation to be provided.</li>
+              <li>Within Zillow Group: We share personal data relating to personnel and related persons within our family of companies for internal administrative purposes and uses that are consistent with this Privacy Notice. For example, the Zillow Group entity responsible for payroll may receive personal data about personnel employed by another Zillow Group entity in order to determine the proper compensation to be provided.</li>
+              <li>Benefit Administrators: In order to provide our personnel and related persons benefits and services available to them, we share personal data with the third parties we engage to offer and administer benefits and services on our behalf. These third parties may also collect additional personal data directly from our personnel and their related persons in connection with these benefits and services, which will be subject to the relevant third party’s own privacy policies and notices.</li>
+              <li>Compensation, Payroll, and Tax Providers: We share personal data with third parties who assist us in processing our payroll and other compensation-related obligations, including our tax withholding and reporting obligations.</li>
+              <li>Other Service Providers: In addition to the third parties identified above, we engage other third parties to perform certain functions on our behalf in connection with the uses of personal data described in the Our Collection and Use of Personal Data section above, including assisting us with our personnel management, benefits and services offerings and other related business operations. Depending on the function the third party serves, the service provider may process personal data on our behalf or have access to personal data while performing functions on our behalf.</li>
+              <li>Customers: We share personal data about our personnel with prospective and actual customers in connection with the marketing, negotiation, sale, delivery and provision of the products and services we make available. For example, we may share the images and contact information for the team of personnel who will be responsible for handling a specific customer’s account. </li>
+              <li>Public Disclosure: We may disclose certain personal data about our personnel, such as name, job title, work-related contact information and experience, publicly in connection with our recruiting and business operations.</li>
+              <li>Business Transaction or Reorganization: We may take part in or be involved with a corporate business transaction, such as a merger, acquisition, joint venture, or financing or sale of company assets. We may disclose personal data to a third party during negotiation of, in connection with or as an asset in such a corporate business transaction. Personal data may also be disclosed in the event of insolvency, bankruptcy, or receivership.</li>
+              <li>Legal Obligations and Rights: We may disclose personal data to third parties, such as legal advisors and law enforcement:
+  
+                 <br>
+                  <li class="Legal">in connection with the establishment, exercise, or defense of legal claims;
+                  </li>
+                  <li class="Legal">to comply with laws and regulations or to respond to lawful requests and legal process;</li>
+                  <li class="Legal">to protect our rights and property and the rights and property of our agents, customers, and others, including to enforce our agreements, policies, and terms of use;</li>
+                  <li class="Legal">to detect, suppress, or prevent fraud;</li>
+                  <li class="Legal">to reduce credit risk and collect debts owed to us;</li>
+                  <li class="Legal">to protect the health and safety of us, our personnel, their related persons, our customers, or any person; or</li>
+                  <li class="Legal">as otherwise required by applicable law.</li>
+        
+
+              </li>
+
+              <li>Otherwise with Consent or Direction: We may disclose personal data about our personnel or their related persons to certain other third parties or publicly with their consent or direction.</li>
+
+             
+            </ul>
+
+
+        </ul>
+
+        <h4>Sales, Sharing or Targeted Advertising</h4>
+        <p>Except as otherwise described in our Privacy Notice in connection with personnel acting in their capacity as website visitors, we do not sell personal data about individuals acting in their capacity as personnel, and we do not share or otherwise disclose personal data about individuals acting in their capacity as personnel to third parties for the purpose of displaying advertisements that are selected based on personal data obtained or inferred over time from an individual’s activities across businesses or distinctly-branded websites, applications, or other services (otherwise known as “targeted advertising” or “cross-context behavioral advertising”).</p>
+
+        <h1>Our Retention of Personal Data
+        </h1>
+        <p>We strive to retain personal data only for as long as is reasonably necessary to fulfill the purpose for which it was collected. However, if necessary, we may retain personal data for longer periods of time, until set retention periods and deadlines expire, for instance where we are required to do so in accordance with legal, tax, and/or accounting requirements set by a legislature, regulator, or other government authority.</p>
+        <p>To determine the appropriate duration of the retention of personal data, we consider the amount, nature and sensitivity of the personal data, the potential risk of harm from unauthorized use or disclosure of personal data and if we can attain our objectives by other means, as well as our legal, regulatory, tax, accounting, and other applicable obligations.</p>
+        <p>Once retention of the personal data is no longer necessary for the purposes outlined above, we will either delete/destroy or deidentify the personal data or, if this is not possible (for example, because personal data has been stored in backup archives), then we will securely store the personal data and isolate it from further processing until deletion or deidentification is possible.
+        </p>
+
+        <h1>Sensitive Information of Personnel and Related Persons</h1>
+        <p>The following personal data elements we collect about our personnel and our personnel’s family members and other related persons may be classified as “sensitive” under certain privacy laws (“sensitive information”):</p>
+        <ul>
+          <li>Social Security Number, driver’s license number, passport number;</li>
+          <li>Work-related accounts and passwords;</li>
+          <li>Financial account information;</li>
+          <li>Credit/debit card number plus expiration date and security code (CVV); and</li>
+          <li>Information relating to racial and ethnic origin, religious beliefs, health, disabilities, sexual orientation, gender identity and transgender status.</li>
+        </ul>
+
+        <p>We use this sensitive information for the purposes set forth in the Our Collection and Use of Personal Data section above.
+          </p>
+          <p>We do not sell sensitive information, and we do not process or otherwise share sensitive information for the purpose of targeted advertising. However, subject to certain legal limitations and exceptions, you may be able to limit our processing of sensitive information (as described in the Your Privacy Choices section below).</p>
+          
+          <h1>Your Privacy Choices</h1>
+          <p>California Privacy Rights</p><br>
+          <p>As a California resident, you may be able to exercise the following rights (subject to certain limitations at law):</p>
+
+          
+          <table>
+            
+            <tr>
+              <th>The Right to Know</th>
+              <td>The right to confirm whether we are processing personal data about you and, under California law only, to obtain certain personalized details about the personal data we have collected about you, including: <br>
+                ●  The categories of personal data collected;
+                ●  The categories of sources of the personal data;
+                ●  The purposes for which the personal data were collected;
+                ●  The categories of personal data disclosed to third parties (if any), and the categories of recipients to whom the personal data were disclosed;
+                ●  The categories of personal data shared for cross-context behavioral advertising purposes (if any), and the categories of recipients to whom the personal data were disclosed for those purposes; and
+                ● The categories of personal data sold (if any), and the categories of third parties to whom the personal data were sold.
+              </td>
+            </tr>
+
+            <tr>
+              <th>The Right to Access & Portability</th>
+              <td>The right to obtain access to the personal data we have collected about you and, where required by law, the right to obtain a copy of the personal data in a portable and, to the extent technically feasible, readily usable format that allows you to transmit the data to another entity without hindrance.</td>
+            </tr>
+            <tr>
+              <th>The Right to Correction</th>
+              <td>The right to correct inaccuracies in your personal data, taking into account the nature of the personal data and the purposes of the processing of the personal data.</td>
+            </tr>
+            <tr>
+            <th>The Right to Control Over Sensitive Information</th>
+              <td>the right to exercise control over our collection and processing of certain sensitive information.</td>
+            </tr>
+            <tr>
+              <th>The Right to Deletion</th>
+              <td>the right to have us delete the personal data we maintain about you.</td>
+            </tr>
+            <tr>
+              <th>The Right to Control Over Automated Decision-Making Profiling</th>
+              <td>he right to direct us not to use automated decision-making or profiling for certain purposes.</td>
+            </tr>
+          </table>
+
+
+          <p>You also have the right to not receive retaliatory or discriminatory treatment in connection with a request to exercise the above rights. However, please note that if the exercise of these rights limits our ability to process personal data, we may no longer be able to engage with you in the same manner.</p>
+
+          <h3>Submitting Privacy Rights Request</h3>
+          <p>To submit a request to exercise one of the privacy rights identified above, please:</p>
+
+          <ul>
+            <li>Contact your HRBP; or</li>
+            <li>Email <a href="">privacy@zillow.com</a> </li>
+          </ul>
+
+
+          <p>Before processing your request, we will need to verify your identity and confirm you are a resident of the State of California. In order to verify your identity, we will generally either require the successful authentication of your work-related account, or the matching of sufficient information you provide us to the information we maintain about you in our systems. As a result, we require requests to include: your name, dates of employment, and (if available) employee ID number. We may at times need to request additional personal data from you, taking into consideration our relationship with you and the sensitivity of your request. 
+          </p>
+
+          <p>In certain circumstances, we may decline a privacy rights request, particularly where you are not a resident of the State of California or where we are unable to verify your identity. </p>
+
+          <h3>Submitting Authorized Agent Requests</h3>
+          <p>In certain circumstances, you are permitted to use an authorized agent to submit requests on your behalf through the designated methods set forth above where we can verify the authorized agent’s authority to act on your behalf. In order to verify the authorized agent’s authority, we generally require evidence of either (i) a valid power of attorney or (ii) a signed letter containing your name and contact information, the name and contact information of the authorized agent, and a statement of authorization for the request. Depending on the evidence provided, we may still need to separately reach out to you to confirm the authorized agent has permission to act on your behalf and to verify your identity in connection with the request.
+          </p>
+
+          <h3>Appealing Privacy Rights Decisions</h3>
+          <p>Depending on your state of residency, you may be able to appeal a decision we have made in connection with your privacy rights request. All appeal requests should be submitted via email to <a href="">zgprivacy@zillowgroup.com</a> or to your HRBP.</p>
+
+          <h1>Updates to This Privacy Notice</h1>
+          <p>We will update this Privacy Notice from time to time. When we make changes to this Privacy Notice, we will change the “Last Updated” date at the beginning of this Privacy Notice. If we make material changes to this Privacy Notice, we will notify you by email, by prominent posting on our corporate intranet, or through other appropriate communication channels. All changes shall be effective from the date of publication unless otherwise provided in the notification.</p>
+
+          <h2>Contact Us</h2>
+          <p>If you have any questions or requests in connection with this Privacy Notice or other privacy-related matters, please send an email to privacy@zillow.com. </p>
+
+
+          <p>Zillow Group is an equal opportunity employer and is committed to working with and providing reasonable accommodations to applicants with disabilities. If you have a disability and require a reasonable accommodation related to applying for employment at our company, please contact us.</p>
+          <hr>
+          <footer class="footer-wrapper" >
+            <div class="footer-container">
+              <div class="links-row">
+                   <a href="/about">About</a>
+                  <a href="/zestimate">Zestimates</a>
+                  <a href="/research">Research</a>
+                  <a href="/careers">Careers</a>
+                  <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+                  <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+                  <a href="/help">Help</a>
+                  <a href="/advertise">Advertise</a>
+                  <a href="/fair">Fair Housing Guide</a>
+                  <a href="/advocacy">Advocacy</a>
+              </div>
+          
+              <div class="links-row">
+                  <a href="/terms">Terms of use</a>
+                  <a href="/privacy">Privacy Portal</a>
+                  <a href="/cookie">Cookie Preference</a>
+                  <a href="/learn">Learn</a>
+                  <a href="/ai">AI</a>
+                  <a href="/mobile">Mobile Apps</a>
+              </div>
+          
+              <div class="links-row">
+               <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+                  <a  href="https://streeteasy.com/">StreetEasy</a>
+                  <a  href="https://hotpads.com/">HotPads</a>
+                  <a  href="https://showingtimeplus.com/">Out East</a>
+                  <a  href="https://outeast.com/">ShowingTime+</a>
+              </div>
+          
+              <div class="do-not-sell">
+                <a href="#">Do Not Sell or Share My Personal Information→</a>
+              </div>
+          
+              <div class="accessibility-notice">
+                Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please <a href="#">let us know</a>.
+              </div>
+          
+              <div class="legal-info">
+                Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in multiple states. Zillow (Canada), Inc. holds real estate brokerage <a href="#">licenses</a> in multiple provinces.<br>
+                <a href="#">§ 442-H New York Standard Operating Procedures</a><br>
+                <a href="#">§ New York Fair Housing Notice</a><br>
+                TREC: <a href="#">Information about brokerage services</a>, <a href="#">Consumer protection notice</a><br>
+                California DRE #1522444<br>
+                <a href="#">Contact Zillow, Inc. Brokerage</a>
+              </div>
+          
+              <div class="legal-info">
+                For listings in Canada, the trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.
+              </div>
+          
+              <div class="app-stores">
+                <a href="#"><img src="/image/apple-icon.svg" alt="Download on the App Store"></a>
+                <a href="#"><img src="/image/google-icon.svg" alt="Get it on Google Play"></a>
+              </div>
+              <div class="bottom-row">
+                <img src="/image/blue-logo.jpg" alt="Zillow logo" class="zillow-logo">
+                <span>Follow us:</span>
+                <div class="social-icons">
+                  <!-- Social media icons would go here -->
+                </div>
+                <span>© 2006-2025 Zillow</span>
+                <img src="./image/home-icon.png" alt="Equal Housing Opportunity" class="equal-housing">
+              </div>
+            </div>
+
+          </footer>  
+        
+
+      </div>
+      <img class="footer-art" src="/image/footer-art.svg" alt="">
+
+      <script src="https://kit.fontawesome.com/e1fbe49b44.js" crossorigin="anonymous"></script>
+      <script src="account.js"></script>  
+<script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('active');
+            document.querySelector('.overlay').style.display = 'block';
+        });
+
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.overlay').style.display = 'none';
+        });
+
+        document.querySelector('.overlay').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            this.style.display = 'none';
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  const userDropdown = document.querySelector(".user-dropdown");
+
+  if (dropdownBtn) {
+      dropdownBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          userDropdown.classList.toggle("active");
+      });
+
+      document.addEventListener("click", () => {
+          userDropdown.classList.remove("active");
+      });
+  }
+});
+
+  </script>
+
+
+      </body>
+      </html>
+      

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xZillowx | Browse home</title>
+    <link rel="stylesheet" href="/css/home.css"> 
+            <!-- Inter font family -->
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+              rel="stylesheet"
+            />
+            <!-- Montserrat font family -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+            <!-- Gideon Roman -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet"> 
+    <style>
+        .browse-homes{
+            margin-top: 7rem;
+            margin-left: 4rem;
+        }
+        .united-states{
+            display: flex;
+            justify-content: center;
+            gap: 8rem;
+            margin-top: 2rem;
+            position: relative;
+            margin-left: -5.9rem;
+        }
+        .united-states li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .united-states li a{
+            color: #006aff;
+            text-decoration: none;
+
+        }
+        .most-populous{
+            width: 610px;
+            height: 1438.39px;
+        }
+        .canada{
+            display: flex;
+            justify-content: center;
+            gap: 11rem;
+            margin-top: -49rem;
+            position: relative;
+            margin-left: -46rem;
+        }
+        .canada li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .canada li a{
+            color: #006aff;
+            text-decoration: none;
+
+        }
+        .down{
+            margin-top: 10rem;
+        }
+        .three-social{
+    margin-top: 0rem;
+  }
+  .foot-section-two{
+    border-top: 1px solid rgb(205, 205, 211);
+
+  }
+  .foot-section-three{
+    display: flex;
+    justify-content: center;
+
+  }
+  .search-container {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 380px;
+    height: 30px;
+    margin-top: 1rem;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-container button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>Menu</h2>
+            <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-items">
+            <ul>
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/rent">Rent</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/homeloans">Home Loans</a></li>
+                <li><a href="/findagent">Find an Agent</a></li>
+                <li><a href="/rentals">Manage Rentals</a></li>
+                <li><a href="/advertise">Advertise</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/signup">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+
+      <div class="overlay"></div>
+      <div class="mobile-menu">
+          <div class="mobile-menu-header">
+              <h2>Menu</h2>
+              <button class="close-menu">&times;</button>
+          </div>
+          <div class="mobile-menu-items">
+              <ul>
+                  <li><a href="/buy">Buy</a></li>
+                  <li><a href="/rent">Rent</a></li>
+                  <li><a href="/sell">Sell</a></li>
+                  <li><a href="/homeloans">Home Loans</a></li>
+                  <li><a href="/findagent">Find an Agent</a></li>
+                  <li><a href="/rentals">Manage Rentals</a></li>
+                  <li><a href="/advertise">Advertise</a></li>
+                  <li><a href="/help">Help</a></li>
+                  <li><a href="/signup">Sign In</a></li>
+              </ul>
+          </div>
+      </div>
+  
+      <nav>
+        <div class="nav-content">
+            <div class="mobile-nav">
+                <div style="display: flex;  align-items: center; justify-content: center;"><i class="fa-solid fa-bars bars" id="menu-toggle" style="color: #000; font-size: 1rem;"></i></div>
+                <div class="logo-con">
+                    <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+                </div>
+                 <div class="user-dropdown" style="display: flex; justify-content: center; align-items: center;">
+                    <% if (user) { %>
+                        <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                            <i class="fa-regular fa-user" style="color: #000; font-size: 2rem;"> Account</i>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile"><%= user.username %> Account</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    <% } else { %>
+                        <a class="login-btn" href="/signup">                            <i class="fa-regular fa-user" style="color: #000; font-size: 1rem;"> <span style="font-size: 10px;">Account</span></i>
+</a>
+                    <% } %>
+                </div>
+            </div>
+    
+            <ul class="first-ul">
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/rent">Rent</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/homeloans">Home Loans</a></li>
+                <li><a href="/findagent">Find an Agent</a></li>
+            </ul>
+    
+            <div class="logo-con desk">
+                <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+            </div>
+    
+            <div class="hide-major">
+                <ul class="second-ul">
+                    <li><a href="/rentals">Manage Rentals</a></li>
+                    <li><a href="/advertise">Advertise</a></li>
+                    <li><a href="/help">Help</a></li>
+                    <% if (user) { %>
+                        <li class="login-text user-dropdown">
+                            <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                                <i style="color: #000;" class="fa-regular fa-user"></i>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/profile"><%= user.username %> Account</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    <% } else { %>
+                        <li class="login-text"><a href="/signup">Sign In</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    </div>
+    <div class="browse-homes">
+        <div class="browse-homes-content">
+            <h1>Browse Zillow by State/Province</h1>
+            <p>Find homes in popular cities or search by region, city or neighborhood.</p>
+        </div>
+        <div class="united-states">
+            <ul>
+                <h1>United States</h2>
+            <li><a href="">Alaska</a></li>
+            <li><a href="">Alabama</a></li>
+            <li><a href="">Arkansas</a></li>
+            <li><a href="">American Samoa</a></li>
+            <li><a href="">Arizona</a></li>
+            <li><a href="">California</a></li>
+            <li><a href="">Colorado</a></li>
+            <li><a href="">Connecticut</a></li>
+            <li><a href="">Delaware</a></li>
+            <li><a href="">Florida</a></li>
+            <li><a href="">Georgia</a></li>
+            <li><a href="">Guam</a></li>
+            <li><a href="">Hawaii</a></li>
+            <li><a href="">Iowa</a></li>
+            <li><a href="">Idaho</a></li>
+            <li><a href="">Illinois</a></li>
+            <li><a href="">Indiana</a></li>
+            <li><a href="">Kansas</a></li>
+            <li><a href="">Kentucky</a></li>
+            <li><a href="">Louisiana</a></li>
+            <li><a href="">Massachusetts</a></li>
+            <li><a href="">Maryland</a></li>
+            <li><a href="">Maine</a></li>
+            <li><a href="">Michigan</a></li>
+            <li><a href="">Minnesota</a></li>
+            <li><a href="">Missouri</a></li>
+            <li><a href="">Northern Mariana Islands</a></li>
+            <li><a href="">Mississippi</a></li>
+            </ul>
+            <ul>
+            <li><a href="">Montana</a></li>
+            <li><a href="">North Carolina</a></li>
+            <li><a href="">North Dakota</a></li>
+            <li><a href="">Nebraska</a></li>
+            <li><a href="">New Hampshire</a></li>
+            <li><a href="">New Jersey</a></li>
+            <li><a href="">New Mexico</a></li>
+            <li><a href="">Nevada</a></li>
+            <li><a href="">New York</a></li>
+            <li><a href="">Ohio</a></li>
+            <li><a href="">Oklahoma</a></li>
+            <li><a href="">Oregon</a></li>
+            <li><a href="">Pennsylvania</a></li>
+            <li><a href="">Puerto Rico</a></li>
+            <li><a href="">Rhode Island</a></li>
+            <li><a href="">South Carolina</a></li>
+            <li><a href="">South Dakota</a></li>
+            <li><a href="">Tennessee</a></li>
+            <li><a href="">Texas</a></li>
+            <li><a href="">Utah</a></li>
+            <li><a href="">Virginia</a></li>
+            <li><a href="">Virgin Islands</a></li>
+            <li><a href="">Vermont</a></li>
+            <li><a href="">Washington</a></li>
+            <li><a href="">Washington, DC</a></li>
+            <li><a href="">Wisconsin</a></li>
+            <li><a href="">West Virginia</a></li>
+            <li><a href="">Wyoming</a></li>
+            </ul>
+            <div class="most-populous">
+              
+            </div>
+
+        </div>
+        <div class="canada">
+            <ul>
+                <h2>Canada</h2>
+                <li><a href="">Alberta</a></li>
+                <li><a href="">British Columbia</a></li>
+                <li><a href="">Manitoba</a></li>
+                <li><a href="">Northwest Territories</a></li>
+                <li><a href="">Nunavut</a></li>
+                <li><a href="">Saskatchewan</a></li>
+                <li><a href="">New Brunswick</a></li>
+            </ul>
+            <ul>
+            <li><a href="">Nova Scotia</a></li>
+            <li><a href="">Newfoundland and Labrador</a></li>
+            <li><a href="">Prince Edward Island</a></li>
+            <li><a href="">Quebec</a></li>
+            <li><a href="">Ontario</a></li>
+            <li><a href="">Yukon</a></li>
+            </ul>
+    </div>
+    </div>
+    <div class="down" id="move-down">
+        <div class="foot-section-two">
+            <ul>
+              <a href="/about">About</a>
+              <a href="/zestimate">Zestimates</a>
+              <a href="/research">Research</a>
+              <a href="/careers">Careers</a>
+              <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+              <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+              <a href="/help">Help</a>
+              <a href="/advertise">Advertise</a>
+              <a href="/fair">Fair Housing Guide</a>
+              <a href="/advocacy">Advocacy</a>
+            
+            </ul>
+            <ul>  
+              <a href="/terms">Terms of use</a>
+              <a href="/privacy">Privacy Portal</a>
+              <a href="/cookie">Cookie Preference</a>
+              <a href="/learn">Learn</a>
+              <a href="/ai">AI</a>
+              <a href="/mobile">Mobile Apps</a>
+            </ul>
+            <ul>
+              <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+              <a  href="https://streeteasy.com/">StreetEasy</a>
+              <a  href="https://hotpads.com/">HotPads</a>
+              <a  href="https://showingtimeplus.com/">Out East</a>
+              <a  href="https://outeast.com/">ShowingTime+</a>
+            </ul>
+            <p><a href="">Do Not Sell or Share My Personal Information<span> →</span></a></p>
+     
+      </div>
+      <div class="three-social">
+        <div class="foot-section-three">
+          <div class="all-width">
+          <p>XZillowx Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please <a href="">let us know.</a></p>
+          <p>XZillowx, Inc. holds real estate brokerage <a href="">licenses</a> in multiple states. xzillow (Canada), Inc. holds real estate brokerage  <a href="">licenses</a> in multiple provinces.<br>
+           <a href=""> § 442-H New York Standard Operating Procedures<br></a>
+           <a href="">§ New York Fair Housing Notice<br></a>
+            TREC: <a href="">Information about brokerage services</a>, <a href="">Consumer protection notice<br></a>
+            California DRE #1522444<br>
+            <a href="" class="diff">Contact xzillow, Inc. Brokerage</a></p>
+            <p>For listings in Canada, the trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.</p>
+            <ul class="social"><a href=""><img src="./image/apple-icon.svg" alt=""></a><a href=""></a><a href=""><img src="./image/google-icon.svg" alt=""></a><a href=""></a></ul>
+    
+        <div class="social-icon">
+          <div><img src="/image/logo.png"><h2>XZillowx</h2></div>
+          <div class="follow-us">
+          <span>Follow Us:</span>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-tiktok"></i>
+          <span>© 2006-2025 xzillow</span>
+          <img src="/image/home-icon.png" alt="">
+        </div>
+      </div>
+    </div>
+    </div>
+      </div>
+      </div>
+      <script src="https://kit.fontawesome.com/e1fbe49b44.js" crossorigin="anonymous"></script>
+      <script src="account.js"></script>  
+<script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('active');
+            document.querySelector('.overlay').style.display = 'block';
+        });
+
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.overlay').style.display = 'none';
+        });
+
+        document.querySelector('.overlay').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            this.style.display = 'none';
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  const userDropdown = document.querySelector(".user-dropdown");
+
+  if (dropdownBtn) {
+      dropdownBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          userDropdown.classList.toggle("active");
+      });
+
+      document.addEventListener("click", () => {
+          userDropdown.classList.remove("active");
+      });
+  }
+});
+
+  </script>
+
+</body>
+</html>

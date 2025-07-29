@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+  
+   
+}
+body{
+    text-align: center;
+    justify-content: center;
+     font-family: "Lato", serif;
+   
+}
+
+
+.about-container{
+    background-image: url('/image/about-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 670px;
+}
+
+input{
+    background-color: rgb(13, 69, 153);
+    padding: 20px 50px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    outline: none; /* Removes default blue outline on focus */
+    transition: border-color 0.9s ease;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+input:focus{
+    border-color: #1041db;
+    box-shadow: 0 0 10px 2px #1041db;
+}
+
+
+.about-container-4{
+    display: flex;
+    justify-content: center;
+    margin: 10px ;
+    gap: 1.5rem;
+}
+
+.slideshow{
+    height: 500px;
+}
+
+.card{
+    width: 446px;
+    height: 486px;
+    border-radius: 0;
+    background-color: #ffffff;
+    border: 1px solid #eeeef0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items:first baseline;
+    box-shadow: 0 0 10px 3px #605d5d29;
+    margin: 40px 0;
+    text-align: left;
+    padding: 2rem;
+    row-gap: 1rem;
+
+}
+.card ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 60%;
+    
+}
+
+.card ul li{
+    font-size: 15px;
+}
+.card-2{
+    width: 395px;
+    height: 486px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: 1px solid #eeeef0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+
+
+    box-shadow: 0 0 10px 0px #605d5d29;
+    /* margin: 40px 0; */
+
+}
+table{
+    /* border-collapse: collapse;
+     */
+     display: grid;
+     grid-template-columns: 16fr 1fr;
+     gap: 10px;
+     padding: 30px;
+
+}
+table th{
+    border: 1px solid black;
+    padding: 30px;
+}
+table td {
+    border: 1px solid black;
+    padding: 30px;
+    
+}
+
+.Legal{
+    list-style-type: disc;
+}
+
+.us-container{
+    text-align: center;
+}
+
+
+.us-container :is(h1,h2,h3,h5,h6){
+    text-align: center!important;
+}
+
+.us-container p, .us-container ul, .us-container li, .us-container h2{
+    text-align: justify;
+    margin: 0;
+}
+
+.help-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.help-section a{
+    border: 1px solid blue;
+    width: 100px;
+    padding: 20px 100px;
+    margin: 20px;
+    text-decoration: none;
+    color: #1041db;
+}
+
+.learn-container{
+    overflow-x: auto;
+    /* scrollbar-color: none; */
+    white-space: nowrap;
+    /* display: flex; */
+}
+
+.learn-container .learn-v2, .fairh2{
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    display: inline-block;
+    background-color: #f3f6ff;
+    position: relative;
+    box-shadow: 0 0 10px 2px #000000;
+}
+.learnz{
+    background-color: #91a5e7;
+}
+
+.fairh2 input{
+    border: 2px solid grey;
+    background-color: white;
+    color: #000000;
+    border-radius: 3rem;
+    margin: 10px;
+    font-weight: bolder;
+}
+
+.fairh2 input:hover{
+    border: 2px solid #000000;
+}
+
+.learn-container .learn-v2 img{
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.learn-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+}
+
+.learn-lab{
+    position: absolute;
+    bottom: 0;
+    left: -2rem;
+    padding: 56px;
+}
+
+.learn-container .article{
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    display: inline-block;
+    background-color: rgb(197, 193, 193);
+}
+
+
+
+/* h1,h2,h3,h4,h5,h6{
+    text-align: center;
+    
+} */
+
+
+@media  (max-width: 480px){
+    body{
+        width: 100%;
+    }
+    .about-container-4{
+        display: block;
+        
+    }
+    .card, .card-2{
+        width: 90%;
+    }
+    .card-2{
+        margin: 20px;
+    }
+ 
+}

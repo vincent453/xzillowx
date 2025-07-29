@@ -1,0 +1,680 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Austin TX Real Estate & Homes For Sale</title>
+      <!-- Font imports -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Gideon+Roman&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet"
+      />
+      <!-- Font Awesome -->
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+      <link rel="stylesheet" href="/css/buy.css" />
+      
+    </head>
+    <body>
+      <div class="overlay"></div>
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <h2>Menu</h2>
+          <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-items">
+          <ul>
+            <li><a href="/buy">Buy</a></li>
+            <li><a href="/rent">Rent</a></li>
+            <li><a href="/sell">Sell</a></li>
+            <li><a href="/homeloans">Home Loans</a></li>
+            <li><a href="/findagent">Find an Agent</a></li>
+            <li><a href="/rentals">Manage Rentals</a></li>
+            <li><a href="/advertise">Advertise</a></li>
+            <li><a href="/help">Help</a></li>
+            <li><a href="/signup">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="overlay"></div>
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <h2>Menu</h2>
+          <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-items">
+          <ul>
+            <li><a href="/buy">Buy</a></li>
+            <li><a href="/rent">Rent</a></li>
+            <li><a href="/sell">Sell</a></li>
+            <li><a href="/homeloans">Home Loans</a></li>
+            <li><a href="/findagent">Find an Agent</a></li>
+            <li><a href="/rentals">Manage Rentals</a></li>
+            <li><a href="/advertise">Advertise</a></li>
+            <li><a href="/help">Help</a></li>
+            <li><a href="/signup">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <nav>
+        <div class="nav-content">
+          <div class="mobile-nav">
+            <div>
+              <i
+                class="fa-solid fa-bars bars"
+                id="menu-toggle"
+                style="color: #000; font-size: 2rem"
+              ></i>
+            </div>
+            <div class="logo-con">
+              <a href="/"
+                ><img class="logo" src="/image/logo.png" alt="Logo" />
+                <h2 class="xzillow-logo">XZillow</h2></a
+              >
+            </div>
+            <div class="user-dropdown" style="display: flex; justify-content: center; align-items: center;">
+              <% if (user) { %>
+              <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                <i
+                  class="fa-regular fa-user"
+                  style="color: #ffffff; font-size: 2rem"
+                ></i>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="/profile"><%= user.username %> Account</a></li>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+              <% } else { %>
+              <a class="login-btn" href="/signup"
+                ><i
+                  class="fa-regular fa-user"
+                  style="color: #000; font-size: 2rem"
+                ></i
+              ></a>
+              <% } %>
+            </div>
+          </div>
+
+          <ul class="first-ul">
+            <li><a href="/buy">Buy</a></li>
+            <li><a href="/rent">Rent</a></li>
+            <li><a href="/sell">Sell</a></li>
+            <li><a href="/homeloans">Home Loans</a></li>
+            <li><a href="/findagent">Find an Agent</a></li>
+          </ul>
+
+          <div class="logo-con desk">
+            <a href="/"
+              ><img class="logo" src="/image/logo.png" alt="Logo" />
+              <h2 class="xzillow-logo">XZillow</h2></a
+            >
+          </div>
+
+          <div class="hide-major">
+            <ul class="second-ul">
+              <li><a href="/rentals">Manage Rentals</a></li>
+              <li><a href="/advertise">Advertise</a></li>
+              <li><a href="/help">Help</a></li>
+              <% if (user) { %>
+              <li class="login-text user-dropdown">
+                <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                  <i style="color: #000" class="fa-regular fa-user"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="/profile"><%= user.username %> Account</a></li>
+                  <li><a href="/logout">Logout</a></li>
+                </ul>
+              </li>
+              <% } else { %>
+              <li class="login-text"><a href="/signup">Sign In</a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Search Header -->
+      <div class="search-header">
+        <div class="search-input-container">
+          <input
+            type="text"
+            class="search-input"
+            id="search-input"
+            placeholder="Address, neighborhood, city, ZIP"
+          />
+          <div class="search-results" id="search-results"></div>
+        </div>
+
+        <div class="filter-dropdown">
+          <button class="filter-button" id="status-filter">For Sale ▼</button>
+          <div class="filter-content" id="status-filter-content">
+            <label
+              ><input type="radio" name="status" value="forSale" checked /> For
+              Sale</label
+            >
+            <label
+              ><input type="radio" name="status" value="forRent" /> For
+              Rent</label
+            >
+            <label><input type="radio" name="status" value="sold" /> Sold</label>
+            <div class="filter-actions">
+              <button class="reset-filter">Reset</button>
+              <button class="apply-filter">Apply</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-dropdown">
+          <button class="filter-button" id="price-filter">Price ▼</button>
+          <div class="filter-content" id="price-filter-content">
+            <div class="price-range">
+              <input type="text" placeholder="Min" id="min-price" />
+              <input type="text" placeholder="Max" id="max-price" />
+            </div>
+            <div class="filter-actions">
+              <button class="reset-filter">Reset</button>
+              <button class="apply-filter">Apply</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-dropdown">
+          <button class="filter-button" id="beds-filter">Beds & Baths ▼</button>
+          <div class="filter-content" id="beds-filter-content">
+            <h4>Bedrooms</h4>
+            <label><input type="checkbox" name="beds" value="1" /> 1+</label>
+            <label><input type="checkbox" name="beds" value="2" /> 2+</label>
+            <label><input type="checkbox" name="beds" value="3" /> 3+</label>
+            <label><input type="checkbox" name="beds" value="4" /> 4+</label>
+            <h4>Bathrooms</h4>
+            <label><input type="checkbox" name="baths" value="1" /> 1+</label>
+            <label><input type="checkbox" name="baths" value="2" /> 2+</label>
+            <label><input type="checkbox" name="baths" value="3" /> 3+</label>
+            <div class="filter-actions">
+              <button class="reset-filter">Reset</button>
+              <button class="apply-filter">Apply</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-dropdown">
+          <button class="filter-button" id="type-filter">Home Type ▼</button>
+          <div class="filter-content" id="type-filter-content">
+            <label
+              ><input type="checkbox" name="type" value="house" /> House</label
+            >
+            <label
+              ><input type="checkbox" name="type" value="apartment" />
+              Apartment</label
+            >
+            <label
+              ><input type="checkbox" name="type" value="condo" /> Condo</label
+            >
+            <label
+              ><input type="checkbox" name="type" value="townhouse" />
+              Townhouse</label
+            >
+            <div class="filter-actions">
+              <button class="reset-filter">Reset</button>
+              <button class="apply-filter">Apply</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-dropdown">
+          <button class="filter-button" id="more-filter">More ▼</button>
+          <div class="filter-content" id="more-filter-content">
+            <label
+              ><input type="checkbox" name="features" value="garage" />
+              Garage</label
+            >
+            <label
+              ><input type="checkbox" name="features" value="pool" /> Pool</label
+            >
+            <label
+              ><input type="checkbox" name="features" value="ac" /> Air
+              Conditioning</label
+            >
+            <label
+              ><input type="checkbox" name="features" value="newConstruction" />
+              New Construction</label
+            >
+            <div class="filter-actions">
+              <button class="reset-filter">Reset</button>
+              <button class="apply-filter">Apply</button>
+            </div>
+          </div>
+        </div>
+
+        <button class="save-search-btn">Save search</button>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <!-- Map Section -->
+        <div class="map-container">
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe
+  id="property-map"
+  class="gmap_iframe"
+  frameborder="0"
+  scrolling="no"
+  marginheight="0"
+  marginwidth="0"
+  src="https://maps.google.com/maps?q=Austin, TX&t=h&z=12&ie=UTF8&iwloc=B&output=embed">
+</iframe>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Listings Section -->
+        <div class="listings">
+          <div class="listings-header">
+            <h2>Real Estate & Homes For Sale</h2>
+            <div>11,564 results</div>
+          </div>
+          
+  
+      <!-- Dynamic Properties from Database -->
+      <% if (properties && properties.length > 0) { %>
+        <% properties.forEach(property => { %>
+          <div class="property-grid" >
+          <div 
+          
+            class="property-card"
+            data-price="<%= property.price %>"
+            data-beds="<%= property.bedrooms %>"
+            data-baths="<%= property.bathrooms %>"
+            data-type="<%= property.propertyType %>"
+            data-location="<%= property.city %>, <%= property.state %> <%= property.zipcode %>"
+          >
+          <div class="image-slider"  >
+            <div class="slider-images" data-id="<%= property._id %>" >
+              <img src="<%= property.mainImage %>" alt="<%= property.title %>" class="active" />
+              <% property.additionalImages.forEach(image => { %>
+                <img src="<%= image %>" alt="<%= property.title %>" />
+              <% }) %>
+            </div>
+            <div class="slider-nav">
+              <div class="slider-dot active"></div>
+              <% for(let i = 0; i < property.additionalImages.length; i++) { %>
+                <div class="slider-dot"></div>
+              <% } %>
+            </div>
+            <div class="slider-arrows">
+              <div class="slider-arrow">←</div>
+              <div class="slider-arrow">→</div>
+            </div>
+            <div class="heart-button">♡</div>
+            <% if (property.priceCut) { %>
+              <div class="price-cut">Price cut: $<%= property.priceCut.amount.toLocaleString() %> (<%= property.priceCut.date %>)</div>
+            <% } %>
+          </div>
+            <div class="property-info">
+              <div class="property-info">
+                <div class="property-price">$<%= property.price.toLocaleString() %></div>
+                <div class="property-details">
+                  <span><%= property.bedrooms %> bds</span>
+                  <span><%= property.bathrooms %> ba</span>
+                  <span><%= property.squareFeet.toLocaleString() %> sqft</span>
+                </div>
+                <div class="property-type">- <%= property.propertyType.charAt(0).toUpperCase() + property.propertyType.slice(1) %> for <%= property.listingType %></div>
+                <div class="property-address">
+                  <%= property.address %>, <%= property.city %>, <%= property.state %> <%= property.zipcode %>              </div>
+                <div class="property-broker"><%= property.contactName %></div>
+              </div>
+            </div>
+          </div>
+    
+        <% }) %>
+      <% } else { %>
+        <div class="no-listings">
+          <p>No properties available at this time.</p>
+        </div>
+      <% } %>
+        
+    </div>
+  </div>
+  </div>
+ 
+  
+      <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("search-input");
+    const searchResults = document.getElementById("search-results");
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const filterContents = document.querySelectorAll(".filter-content");
+    const propertyCards = document.querySelectorAll(".property-card");
+    const resetButtons = document.querySelectorAll(".reset-filter");
+    const applyButtons = document.querySelectorAll(".apply-filter");
+
+    // ✅ Search Functionality (Dynamically filters listings)
+    searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        searchResults.innerHTML = "";
+
+        if (query.length < 2) {
+            searchResults.style.display = "none";
+            return;
+        }
+
+        const filteredProperties = [...propertyCards].filter(card =>
+            card.getAttribute("data-location").toLowerCase().includes(query)
+        );
+
+        if (filteredProperties.length > 0) {
+            filteredProperties.forEach(card => {
+                const div = document.createElement("div");
+                div.className = "search-result-item";
+                div.textContent = card.getAttribute("data-location");
+                div.addEventListener("click", function () {
+                    searchInput.value = card.getAttribute("data-location");
+                    searchResults.style.display = "none";
+                    filterProperties("location", searchInput.value);
+                });
+                searchResults.appendChild(div);
+            });
+        } else {
+            searchResults.innerHTML = '<div class="search-result-item">No results found</div>';
+        }
+
+        searchResults.style.display = "block";
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+            searchResults.style.display = "none";
+        }
+    });
+
+    // ✅ Dropdown Filters (Show/Hide)
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            filterContents.forEach(content => {
+                if (content !== this.nextElementSibling) {
+                    content.style.display = "none";
+                }
+            });
+
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        });
+    });
+
+    // ✅ Hide dropdowns when clicking outside
+    document.addEventListener("click", function (e) {
+        if (![...filterButtons].some(btn => btn.contains(e.target)) &&
+            ![...filterContents].some(content => content.contains(e.target))) {
+            filterContents.forEach(content => content.style.display = "none");
+        }
+    });
+
+    // ✅ Apply Filters (Status, Price, Beds/Baths, Type, Features)
+    applyButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const filterType = this.closest(".filter-content").id;
+            let selectedValues = [];
+
+            if (filterType === "status-filter-content") {
+                selectedValues = document.querySelector("input[name='status']:checked").value;
+                filterProperties("status", selectedValues);
+            } else if (filterType === "price-filter-content") {
+                const minPrice = parseFloat(document.getElementById("min-price").value) || 0;
+                const maxPrice = parseFloat(document.getElementById("max-price").value) || Infinity;
+                filterByPrice(minPrice, maxPrice);
+            } else if (filterType === "beds-filter-content") {
+                selectedValues = [...document.querySelectorAll("input[name='beds']:checked")]
+                    .map(checkbox => checkbox.value);
+                filterProperties("beds", selectedValues);
+            } else if (filterType === "type-filter-content") {
+                selectedValues = [...document.querySelectorAll("input[name='type']:checked")]
+                    .map(checkbox => checkbox.value);
+                filterProperties("type", selectedValues);
+            } else if (filterType === "more-filter-content") {
+                selectedValues = [...document.querySelectorAll("input[name='features']:checked")]
+                    .map(checkbox => checkbox.value);
+                filterProperties("features", selectedValues);
+            }
+
+            this.closest(".filter-content").style.display = "none";
+        });
+    });
+
+    // ✅ Reset Filters
+    resetButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            document.querySelectorAll(".filter-content input").forEach(input => {
+                if (input.type === "checkbox" || input.type === "radio") {
+                    input.checked = false;
+                } else {
+                    input.value = "";
+                }
+            });
+            resetFilters();
+            this.closest(".filter-content").style.display = "none";
+        });
+    });
+
+    // ✅ Property Filtering
+    function filterProperties(type, values) {
+        if (!Array.isArray(values)) values = [values];
+
+        propertyCards.forEach(card => {
+            const cardValue = card.getAttribute(`data-${type}`).toLowerCase();
+            const match = values.some(value => cardValue.includes(value.toLowerCase()));
+            card.style.display = match ? "block" : "none";
+        });
+    }
+
+    // ✅ Filter by Price Range
+    function filterByPrice(min, max) {
+        propertyCards.forEach(card => {
+            const price = parseFloat(card.getAttribute("data-price")) || 0;
+            card.style.display = (price >= min && price <= max) ? "block" : "none";
+        });
+    }
+
+    // ✅ Reset Filters
+    function resetFilters() {
+        propertyCards.forEach(card => card.style.display = "block");
+    }
+
+    // ✅ Sorting Functionality
+    function sortProperties(criteria, ascending = true) {
+        const listings = document.querySelector(".listings");
+        const sortedProperties = [...propertyCards].sort((a, b) => {
+            const valA = parseFloat(a.getAttribute(`data-${criteria}`)) || 0;
+            const valB = parseFloat(b.getAttribute(`data-${criteria}`)) || 0;
+            return ascending ? valA - valB : valB - valA;
+        });
+
+        listings.innerHTML = "";
+        sortedProperties.forEach(card => listings.appendChild(card));
+    }
+
+    document.getElementById("sort-price").addEventListener("click", () => sortProperties("price"));
+    document.getElementById("beds-filter").addEventListener("click", () => sortProperties("beds"));
+});
+
+        // Mobile Menu Toggle
+        document
+          .getElementById("menu-toggle")
+          .addEventListener("click", function () {
+            document.querySelector(".mobile-menu").classList.add("active");
+            document.querySelector(".overlay").style.display = "block";
+          });
+
+        document
+          .querySelector(".close-menu")
+          .addEventListener("click", function () {
+            document.querySelector(".mobile-menu").classList.remove("active");
+            document.querySelector(".overlay").style.display = "none";
+          });
+
+        document.querySelector(".overlay").addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.remove("active");
+          this.style.display = "none";
+        });
+
+        // Slideshow functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all image sliders
+    const imageSliders = document.querySelectorAll('.image-slider');
+    
+    imageSliders.forEach(slider => {
+      const images = slider.querySelectorAll('.slider-images img');
+      const dots = slider.querySelectorAll('.slider-dot');
+      const arrowLeft = slider.querySelector('.slider-arrows').children[0];
+      const arrowRight = slider.querySelector('.slider-arrows').children[1];
+      let currentIndex = 0;
+      
+      // Function to show a specific image
+      function showImage(index) {
+        // Hide all images
+        images.forEach(img => img.classList.remove('active'));
+        // Hide all dots
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        // Show the selected image and dot
+        images[index].classList.add('active');
+        dots[index].classList.add('active');
+        
+        currentIndex = index;
+      }
+      
+      // Add click event to dots
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+          showImage(index);
+        });
+      });
+      
+      // Add click event to arrows
+      arrowLeft.addEventListener('click', function() {
+        let newIndex = currentIndex - 1;
+        if (newIndex < 0) newIndex = images.length - 1;
+        showImage(newIndex);
+      });
+      
+      arrowRight.addEventListener('click', function() {
+        let newIndex = currentIndex + 1;
+        if (newIndex >= images.length) newIndex = 0;
+        showImage(newIndex);
+      });
+      
+      // Heart button toggle
+      const heartButton = slider.querySelector('.heart-button');
+      if (heartButton) {
+        heartButton.addEventListener('click', function() {
+          // Toggle between filled and outlined heart
+          if (this.textContent === '♡') {
+            this.textContent = '♥';
+            this.classList.add('active');
+          } else {
+            this.textContent = '♡';
+            this.classList.remove('active');
+          }
+        });
+      }
+    });
+  });
+  // Property Card Click Handler
+  document.addEventListener('DOMContentLoaded', function() {
+  console.log("DOM fully loaded and parsed"); // ✅ Debugging: Check if script runs
+
+  // Select all property cards
+  const propertyCards = document.querySelectorAll('.slider-images');
+
+  if (propertyCards.length === 0) {
+    console.error("No property cards found on the page.");
+    return;
+  }
+
+  // Add click event listener to each card
+  propertyCards.forEach(card => {
+    card.addEventListener('click', function(event) {
+      console.log("Property card clicked"); // ✅ Debugging
+
+      // Prevent click handling on interactive elements
+      if (
+        event.target.classList.contains('heart-button') || 
+        event.target.classList.contains('nav-arrow') ||
+        event.target.closest('.nav-arrows') ||
+        event.target.closest('.image-dots')
+      ) {
+        console.log("Click ignored: UI element clicked.");
+        return;
+      }
+
+      // ✅ Get property ID
+      const propertyId = card.getAttribute('data-id');
+
+      if (propertyId) {
+        console.log("Redirecting to:", `/listings/${propertyId}`); // ✅ Debugging
+        window.location.href = `/listings/${propertyId}`;
+      } else {
+        console.error("No property ID found for this card.");
+      }
+    });
+  });
+
+  // ✅ Add hover effect for better UX
+  const style = document.createElement('style');
+  style.textContent = `
+    .property-card {
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .property-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  `;
+  document.head.appendChild(style);
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const propertyCards = document.querySelectorAll(".property-card");
+    const mapIframe = document.getElementById("property-map");
+
+    propertyCards.forEach(card => {
+        card.addEventListener("mouseenter", function () {
+            const location = card.getAttribute("data-location"); // Get City, State
+            const zipcode = card.getAttribute("data-zipcode"); // Get Zip Code
+            
+            let mapQuery = location || zipcode; // Use location first, fallback to zip
+            
+            if (mapQuery) {
+                console.log("Updating map for:", mapQuery);
+                mapIframe.src = `https://maps.google.com/maps?q=${encodeURIComponent(mapQuery)}&t=h&z=12&ie=UTF8&iwloc=B&output=embed`;
+            }
+        });
+    });
+});
+
+</script>
+      <script
+        src="https://kit.fontawesome.com/e1fbe49b44.js"
+        crossorigin="anonymous"
+      ></script>
+      <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/67bf97b0d4d18b1910cdea64/1il26h2pu';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
+        
+    </body>
+  </html>

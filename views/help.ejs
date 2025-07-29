@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XZillowx Help Center</title>
+
+    <!-- Consolidated Stylesheets -->
+    <link rel="stylesheet" href="/css/help.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+
+    <!-- Fonts (Inter and Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-content">
+        <div class="image">
+          <a href="/"><img src="/image/blue-logo.png" alt="XZillowx Logo" /></a>
+        </div>
+        <div class="text">
+          <% if (!user) { %>
+          <li class="login-text"><a href="/signup">Sign In</a></li>
+
+          <% } else { %>
+          <li class="dropdown">
+            <button class="dropbtn">
+              <img
+                src="/image/profile-pic.svg"
+                alt="User"
+                class="profile-icon"
+              />
+            </button>
+            <div class="dropdown-content">
+              <a href="/profile">Profile</a>
+              <form action="/logout" method="POST">
+                <button type="submit">Logout</button>
+              </form>
+            </div>
+          </li>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg">
+      <div class="input-btn2">
+        <input
+          class="search-label"
+          id="search-input-2"
+          type="text"
+          placeholder="Search"
+        />
+        <img src="/image/search.png" />
+      </div>
+    </div>
+
+    <div class="lists-container">
+      <div class="lists">
+        <ul class="blocks-list">
+          <li class="blocks-item">
+            <a href="#" class="blocks-item-link"
+              ><span class="blocks-item-title">Landlords</span></a
+            >
+          </li>
+          <li class="blocks-item">
+            <a href="#" class="blocks-item-link"
+              ><span class="blocks-item-title">Agents</span></a
+            >
+          </li>
+          <li class="blocks-item">
+            <a href="#" class="blocks-item-link"
+              ><span class="blocks-item-title">Lenders</span></a
+            >
+          </li>
+          <li class="blocks-item">
+            <a href="#" class="blocks-item-link"
+              ><span class="blocks-item-title">xzillow Home Loans</span></a
+            >
+          </li>
+          <li class="blocks-item">
+            <a href="#" class="blocks-item-link"
+              ><span class="blocks-item-title">Renters</span></a
+            >
+          </li>
+          <li class="blocks-item">
+            <a href="#" class="blocks-item-link"
+              ><span class="blocks-item-title">Homebuyers</span></a
+            >
+          </li>
+          <li class="blocks-item">
+            <a href="#" class="blocks-item-link"
+              ><span class="blocks-item-title">Homeowners</span></a
+            >
+          </li>
+          <li class="blocks-item">
+            <a href="#" class="blocks-item-link"
+              ><span class="blocks-item-title">Home Sellers</span></a
+            >
+          </li>
+          <li class="blocks-item">
+            <a href="#" class="blocks-item-link"
+              ><span class="blocks-item-title">Privacy</span></a
+            >
+          </li>
+          <li class="blocks-item">
+            <a href="#" class="blocks-item-link"
+              ><span class="blocks-item-title">Mobile Apps</span></a
+            >
+          </li>
+          <li class="blocks-item">
+            <a href="#" class="blocks-item-link"
+              ><span class="blocks-item-title">xzillow Canada</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="help-footer">
+      <div class="footer-content">
+        <a href="#">XZillowx Help Center</a>
+        <a href="#">Privacy Policy</a>
+        <button
+          class="dropdown-toggle"
+          aria-haspopup="true"
+          onclick="toggleMenu()"
+        >
+          English (US)
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            focusable="false"
+            viewBox="0 0 12 12"
+            class="dropdown-chevron-icon"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"
+            ></path>
+          </svg>
+        </button>
+        <span class="dropdown-menu" role="menu" aria-expanded="false">
+          <a href="#" role="menuitem">Español</a>
+          <a href="#" role="menuitem">简体中文</a>
+        </span>
+      </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="account.js"></script>
+    <script>
+      // Mobile Menu Toggle
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.add("active");
+          document.querySelector(".overlay").style.display = "block";
+        });
+
+      document
+        .querySelector(".close-menu")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.remove("active");
+          document.querySelector(".overlay").style.display = "none";
+        });
+
+      document.querySelector(".overlay").addEventListener("click", function () {
+        document.querySelector(".mobile-menu").classList.remove("active");
+        this.style.display = "none";
+      });
+    </script>
+        <script type="text/javascript">
+          var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+          (function(){
+          var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+          s1.async=true;
+          s1.src='https://embed.tawk.to/67bf97b0d4d18b1910cdea64/1il26h2pu';
+          s1.charset='UTF-8';
+          s1.setAttribute('crossorigin','*');
+          s0.parentNode.insertBefore(s1,s0);
+          })();
+          </script>
+  </body>
+</html>

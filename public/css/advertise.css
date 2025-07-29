@@ -1,0 +1,295 @@
+/* Base styles */
+.partner-content {
+    width: 100%;
+    background-color: rgb(249, 249, 251);
+    display: flex;
+    height: 40rem;
+    justify-content: center;
+}
+
+.blue-img img {
+    width: 10rem;
+}
+
+.footer-art {
+    margin-top: 13rem;
+}
+
+nav {
+    border-bottom: 1px solid rgb(205, 205, 211);
+}
+
+.partner-with-xzillow {
+    width: 60rem; /* Fixed width for larger screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    margin-top: 10rem;
+}
+
+.partner-with-xzillow h1 {
+    font-family: "Gideon Roman", serif;
+    font-size: 46px;
+    line-height: 55.2px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.partner-with-xzillow p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.partner-with-xzillow .line {
+    background-color: rgb(255, 210, 55);
+    width: 144px;
+    height: 2px;
+}
+
+.partner-with-xzillow h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr)); /* Responsive grid */
+    row-gap: 0rem; /* Adjust gap between rows */
+    margin-top: -9rem; /* Adjust margin */
+}
+
+.cards {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-container .cards .card {
+    max-width: 100%; /* Ensure card does not exceed container width */
+    width: 100%; /* Full width for responsiveness */
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0px #605d5d7a;
+    background-color: #fffffc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+.card img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 6px 6px 0px 0px;
+}
+
+
+.card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2a2a33;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.get-started-btn {
+    width: 124.5px;
+    height: 56px;
+    background-color: rgb(0, 106, 255);
+    border-color: rgb(0, 106, 255);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.target-audience {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+
+.target-text-image {
+    width: 80%; /* Full width for responsiveness */
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    height:14rem;
+}
+
+.target-text-image h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+}
+
+.xzillowx-group-audience {
+    width: 100%;
+    background-color: rgb(0, 23, 81);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.xzillowx-group-audience h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin: 2rem 0; /* Adjust margin for spacing */
+}
+
+.audience-number {
+    width: 100%; /* Full width for responsiveness */
+    display: flex;
+    justify-content: center;
+}
+
+.number {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    justify-content: center;
+    text-align: center;
+    gap: 2rem; /* Adjust gap */
+    color: #ffffff;
+}
+
+.number div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Source{
+   
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 2rem 0;
+}
+.Source p{
+    width: 50rem;
+    font-size:10px;
+    line-height: 13px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.three-social{
+    margin-top: 2rem;
+  }
+  .foot-section-two{
+    border-top: 1px solid rgb(205, 205, 211);
+
+  }
+  .foot-section-three{
+    display: flex;
+    justify-content: center;
+
+  }
+
+/* Base styles (your existing styles) */
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .partner-with-xzillow {
+        width: 80%; /* Adjust width for medium screens */
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid for smaller screens */
+        row-gap: 2rem; /* Reduce gap between rows */
+        margin-top: 20rem; /* Adjust margin */
+    }
+
+    .xzillowx-group-audience h3 {
+        font-size: 20px; /* Adjust font size for headings */
+    }
+
+    .number div h4 {
+        font-size: 20px; /* Adjust font size for numbers */
+    }
+
+    .number div p {
+        font-size: 14px; /* Adjust font size for descriptions */
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-with-xzillow {
+        width: 90%; /* Further adjust width for smaller screens */
+        margin-top: 5rem; /* Adjust margin */
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+        margin-top: -4rem; /* Adjust margin */
+        row-gap: 5rem;
+    }
+
+    .target-text-image {
+        width: 100%; /* Full width for target audience section */
+        margin-top: 2rem; /* Adjust margin */
+    }
+
+    .xzillowx-group-audience h3 {
+        font-size: 18px; /* Smaller font size for headings */
+    }
+
+    .number {
+        grid-template-columns: 1fr; /* Stack number sections vertically */
+        gap: 2rem; /* Adjust gap */
+    }
+
+    .Source p {
+        font-size: 6px; /* Smaller font size for source text */
+        width: 90%; /* Adjust width */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .partner-with-xzillow h1 {
+        font-size: 24px; /* Smaller font size for main heading */
+    }
+
+    .partner-with-xzillow p {
+        font-size: 14px; /* Smaller font size for paragraph */
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr; /* Stack cards vertically on small screens */
+        margin-top: 5rem; /* Adjust margin */
+    }
+
+    .partner-with-xzillow {
+        width: 90%; /* Further adjust width for smaller screens */
+        margin-top: 5rem; /* Adjust margin */
+    }
+
+    .xzillowx-group-audience h3 {
+        font-size: 16px; /* Smaller font size for headings */
+    }
+
+    .number div h4 {
+        font-size: 18px; /* Smaller font size for numbers */
+    }
+
+    .number div p {
+        font-size: 12px; /* Smaller font size for descriptions */
+    }
+
+    .Source p {
+        font-size: 5px; /* Smaller font size for source text */
+        width: 100%; /* Full width for source text */
+    }
+}

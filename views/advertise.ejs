@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="advertise.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+    <link rel="stylesheet" href="/css/advertise.css" />
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Zillow Home Loans</title>
+          <link rel="stylesheet" href="/css/home.css" />
+          <link rel="stylesheet" href="/css/buy.css" />
+      
+          <style>
+            /* Reset and Base Styles */
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              font-family: "Arial", sans-serif;
+            }
+      
+            body {
+              color: #2a2a2a;
+              line-height: 1.5;
+              overflow-x: hidden;
+            }
+      
+            .container {
+              width: 100%;
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 0 24px;
+            }
+      
+            h1,
+            h2,
+            h3 {
+              color: #1a1f36;
+            }
+      
+            a {
+              text-decoration: none;
+              color: #0066cc;
+            }
+      
+            .btn-primary {
+              background-color: #0068ff;
+              color: white;
+              border: none;
+              padding: 12px 24px;
+              border-radius: 4px;
+              font-weight: bold;
+              cursor: pointer;
+              display: inline-block;
+              text-align: center;
+              transition: background-color 0.3s ease;
+            }
+      
+            .btn-primary:hover {
+              background-color: #0052cc;
+            }
+      
+            section {
+              margin: 48px 0;
+            }
+      
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+      
+            /* Header Styles */
+            header {
+              padding: 12px 0;
+              border-bottom: 1px solid #e5e5e5;
+              background-color: white;
+            }
+      
+            .header-content {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+      
+            .logo {
+              height: 24px;
+            }
+      
+            /* Navigation Styles */
+            nav {
+              width: 100%;
+              background-color: white;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              position: sticky;
+              top: 0;
+              z-index: 1000;
+            }
+      
+            .nav-content {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 0 24px;
+              max-width: 1200px;
+              margin: 0 auto;
+            }
+      
+            .mobile-nav {
+              display: none;
+              width: 100%;
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px 0;
+            }
+      
+            .logo-con {
+              display: flex;
+              align-items: center;
+            }
+      
+            .logo-con a {
+              display: flex;
+              align-items: center;
+              color: #000;
+              text-decoration: none;
+            }
+      
+            .logo {
+              height: 30px;
+              margin-right: 10px;
+            }
+      
+            .xzillow-logo {
+              font-size: 20px;
+            }
+      
+            .first-ul,
+            .second-ul {
+              display: flex;
+              list-style: none;
+              gap: 20px;
+            }
+      
+            .first-ul li a,
+            .second-ul li a {
+              color: #2a2a2a;
+              text-decoration: none;
+              font-size: 14px;
+              transition: color 0.3s ease;
+            }
+      
+            .first-ul li a:hover,
+            .second-ul li a:hover {
+              color: #0068ff;
+            }
+      
+            .login-text {
+              margin-left: 20px;
+            }
+      
+            /* Mobile Menu */
+            .overlay {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
+              z-index: 1001;
+            }
+      
+            .mobile-menu {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 80%;
+              max-width: 300px;
+              height: 100%;
+              background-color: white;
+              z-index: 1002;
+              overflow-y: auto;
+              transform: translateX(-100%);
+              transition: transform 0.3s ease;
+            }
+      
+            .mobile-menu.active {
+              transform: translateX(0);
+            }
+      
+            .mobile-menu-header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 20px;
+              border-bottom: 1px solid #e5e5e5;
+            }
+      
+            .close-menu {
+              background: none;
+              border: none;
+              font-size: 24px;
+              cursor: pointer;
+            }
+      
+            .mobile-menu-items ul {
+              list-style: none;
+            }
+      
+            .mobile-menu-items ul li {
+              border-bottom: 1px solid #e5e5e5;
+            }
+      
+            .mobile-menu-items ul li a {
+              display: block;
+              padding: 15px 20px;
+              color: #2a2a2a;
+              text-decoration: none;
+            }
+      
+            /* User Dropdown */
+      
+            /* Hero Section */
+            .hero {
+              padding: 48px 0;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 32px;
+            }
+      
+            .hero-content {
+              width: 48%;
+            }
+      
+            .hero-image {
+              width: 48%;
+            }
+      
+            .hero-image img {
+              width: 100%;
+              border-radius: 12px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+      
+            .hero h1 {
+              font-size: 32px;
+              margin-bottom: 16px;
+            }
+      
+            .hero p {
+              margin-bottom: 24px;
+              font-size: 16px;
+              color: #424770;
+            }
+      
+            .already-working {
+              margin-top: 16px;
+              font-size: 14px;
+            }
+      
+            /* Features Section */
+            .why-zillow {
+              text-align: center;
+              margin: 64px 0;
+            }
+      
+            .why-zillow h2 {
+              margin-bottom: 48px;
+              font-size: 28px;
+            }
+      
+            .features {
+              display: flex;
+              justify-content: space-between;
+              gap: 24px;
+            }
+      
+            .feature {
+              flex: 1;
+              text-align: center;
+              padding: 24px;
+              border-radius: 8px;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+      
+            .feature:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            }
+      
+            .feature img {
+              width: 64px;
+              height: 64px;
+              margin-bottom: 16px;
+            }
+      
+            .feature h3 {
+              margin-bottom: 8px;
+              font-size: 18px;
+            }
+      
+            .feature p {
+              font-size: 14px;
+              color: #424770;
+            }
+      
+            /* Journey Section */
+            .journey-section {
+              background-color: #006e63;
+              color: white;
+              padding: 48px 0;
+              border-radius: 8px;
+            }
+      
+            .journey-section h2 {
+              color: white;
+              margin-bottom: 32px;
+              text-align: center;
+              font-size: 24px;
+            }
+      
+            .steps {
+              display: flex;
+              justify-content: space-between;
+              gap: 24px;
+            }
+      
+            .step {
+              background-color: white;
+              color: #2a2a2a;
+              border-radius: 8px;
+              padding: 24px;
+              flex: 1;
+              transition: transform 0.3s ease;
+            }
+      
+            .step:hover {
+              transform: translateY(-5px);
+            }
+      
+            .step img {
+              width: 48px;
+              height: 48px;
+              margin-bottom: 16px;
+            }
+      
+            .step h3 {
+              color: #006e63;
+              margin-bottom: 16px;
+              font-size: 18px;
+            }
+      
+            .step p {
+              font-size: 14px;
+              margin-bottom: 16px;
+            }
+      
+            .step a {
+              font-weight: bold;
+              font-size: 14px;
+              color: #006e63;
+            }
+      
+            .step-number {
+              display: block;
+              color: #006e63;
+              margin-bottom: 16px;
+              font-size: 14px;
+              font-weight: bold;
+            }
+      
+            /* BuyAbility Section */
+            .buyability {
+              background-color: #001751;
+              color: white;
+              padding: 48px 0;
+              border-radius: 8px;
+              margin: 64px 0;
+            }
+      
+            .buyability-content {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 32px;
+            }
+      
+            .buyability-text {
+              width: 48%;
+            }
+      
+            .buyability-image {
+              width: 48%;
+            }
+      
+            .buyability-image img {
+              width: 100%;
+              border-radius: 8px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+      
+            .buyability h2 {
+              color: white;
+              margin-bottom: 24px;
+              font-size: 24px;
+            }
+      
+            .buyability p {
+              margin-bottom: 16px;
+              font-size: 16px;
+            }
+      
+            .qr-code {
+              width: 150px;
+              margin: 16px 0;
+            }
+      
+            /* Loan Options Section */
+            .loan-options {
+              text-align: center;
+              margin: 64px 0;
+            }
+      
+            .loan-options h2 {
+              margin-bottom: 32px;
+              font-size: 28px;
+            }
+      
+            .loan-tabs {
+              display: flex;
+              justify-content: center;
+              margin-bottom: 32px;
+            }
+      
+            .loan-tab {
+              padding: 8px 16px;
+              cursor: pointer;
+              border-bottom: 2px solid transparent;
+              margin: 0 8px;
+              transition: all 0.3s ease;
+            }
+      
+            .loan-tab:hover {
+              color: #0068ff;
+            }
+      
+            .loan-tab.active {
+              border-bottom: 2px solid #0068ff;
+              color: #0068ff;
+              font-weight: bold;
+            }
+      
+            .loans-grid {
+              display: flex;
+              justify-content: space-between;
+              gap: 24px;
+            }
+      
+            .loan-card {
+              border: 1px solid #e5e5e5;
+              border-radius: 8px;
+              padding: 24px;
+              flex: 1;
+              text-align: left;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+      
+            .loan-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            }
+      
+            .loan-card h3 {
+              margin-bottom: 16px;
+              font-size: 20px;
+            }
+      
+            .loan-tag {
+              display: inline-block;
+              background-color: #dbf4eb;
+              color: #006e63;
+              padding: 4px 8px;
+              border-radius: 4px;
+              font-size: 12px;
+              margin-bottom: 16px;
+            }
+      
+            .loan-features {
+              list-style: none;
+              margin: 24px 0;
+            }
+      
+            .loan-features li {
+              margin-bottom: 8px;
+              display: flex;
+              align-items: flex-start;
+            }
+      
+            .loan-features li::before {
+              content: "•";
+              color: #0068ff;
+              margin-right: 8px;
+            }
+      
+            /* Testimonials Section */
+            .testimonials {
+              margin: 64px 0;
+            }
+      
+            .testimonials h2 {
+              text-align: center;
+              margin-bottom: 32px;
+              font-size: 28px;
+            }
+      
+            .testimonials-carousel {
+              display: flex;
+              overflow-x: auto;
+              scroll-snap-type: x mandatory;
+              gap: 16px;
+              padding: 16px 0;
+              height: 25rem;
+              scrollbar-width: none;
+            }
+      
+            .testimonials-carousel::-webkit-scrollbar {
+              display: none;
+            }
+      
+            .testimonial-card {
+              flex: 0 0 auto;
+              width: 300px;
+              height: 100%;
+              scroll-snap-align: center;
+              border-radius: 8px;
+              overflow: hidden;
+            }
+      
+            .testimonial-card img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+      
+            .carousel-nav {
+              display: flex;
+              justify-content: center;
+              gap: 8px;
+              margin-top: 24px;
+            }
+      
+            .carousel-dot {
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background-color: #e5e5e5;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+            }
+      
+            .carousel-dot.active {
+              background-color: #0068ff;
+            }
+      
+            /* Team Section */
+            .team-section {
+              margin: 64px 0;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 32px;
+            }
+      
+            .team-section div {
+              display: flex;
+              align-items: flex-start;
+              flex-direction: column;
+              text-align: left;
+            }
+      
+            .team-section h2 {
+              margin-bottom: 24px;
+              font-size: 28px;
+            }
+      
+            .team-section p {
+              margin-bottom: 32px;
+              max-width: 600px;
+            }
+      
+            .video-container {
+              width: 100%;
+              max-width: 500px;
+              position: relative;
+            }
+      
+            .video-placeholder {
+              width: 100%;
+              border-radius: 8px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+      
+            .play-button {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 64px;
+              height: 64px;
+              background-color: rgba(0, 104, 255, 0.8);
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+            }
+      
+            .play-button:hover {
+              background-color: rgba(0, 104, 255, 1);
+            }
+      
+            .play-button::after {
+              content: "";
+              width: 0;
+              height: 0;
+              border-top: 12px solid transparent;
+              border-left: 20px solid white;
+              border-bottom: 12px solid transparent;
+              margin-left: 5px;
+            }
+      
+            /* Learn More Section */
+            .learn-more {
+              margin: 64px 0;
+              text-align: center;
+            }
+      
+            .learn-more h2 {
+              margin-bottom: 32px;
+              font-size: 28px;
+            }
+      
+            .articles {
+              display: flex;
+              justify-content: space-between;
+              gap: 24px;
+            }
+      
+            .article-card {
+              border: 1px solid #e5e5e5;
+              border-radius: 8px;
+              overflow: hidden;
+              flex: 1;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+      
+            .article-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            }
+      
+            .article-image {
+              width: 100%;
+              height: 160px;
+              object-fit: cover;
+            }
+      
+            .article-content {
+              padding: 16px;
+              text-align: left;
+            }
+      
+            .article-title {
+              font-weight: bold;
+              margin-bottom: 8px;
+              font-size: 16px;
+            }
+      
+            .article-link {
+              margin-top: 16px;
+              display: inline-block;
+              font-weight: bold;
+            }
+      
+            .learning-center {
+              margin-top: 32px;
+              font-size: 14px;
+            }
+      
+            /* CTA Section */
+            .cta-section {
+              background-color: #f5f5f5;
+              padding: 48px 0;
+              text-align: center;
+              border-radius: 8px;
+              margin: 64px 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 50px;
+            }
+      
+            .cta-section h2 {
+              margin-bottom: 16px;
+              font-size: 24px;
+            }
+      
+            .cta-section p {
+              margin-bottom: 24px;
+              max-width: 600px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+      
+            .cta-image {
+              width: 100%;
+              max-width: 300px;
+              margin: 24px auto 0;
+            }
+      
+            /* Footer */
+            footer {
+              padding: 48px 0;
+              border-top: 1px solid #e5e5e5;
+            }
+      
+            .footer-content {
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+            }
+      
+            .footer-links {
+              display: flex;
+              gap: 16px;
+            }
+      
+            .footer-links a {
+              color: #2a2a2a;
+              font-size: 14px;
+            }
+      
+            .footer-text {
+              font-size: 12px;
+              color: #424770;
+              margin-bottom: 8px;
+            }
+      
+            .copyright {
+              font-size: 12px;
+              color: #424770;
+              margin-top: 16px;
+            }
+      
+            .footer-art {
+              width: 100%;
+              margin-top: 32px;
+            }
+      
+            /* Responsive Styles */
+            @media (max-width: 1024px) {
+              .container {
+                padding: 0 20px;
+              }
+      
+              .features,
+              .steps,
+              .loans-grid,
+              .articles {
+                gap: 20px;
+              }
+      
+              .team-section h2 {
+                font-size: 24px;
+              }
+            }
+      
+            @media (max-width: 960px) {
+              /* Navigation */
+              .first-ul,
+              .second-ul,
+              .logo-con.desk {
+                display: none;
+              }
+      
+              .mobile-nav {
+                display: flex;
+              }
+      
+              .bars {
+                display: block;
+                cursor: pointer;
+              }
+      
+              /* Hero section */
+              .hero {
+                flex-direction: column;
+                padding: 32px 0;
+              }
+      
+              .hero-content,
+              .hero-image {
+                width: 100%;
+              }
+      
+              .hero h1 {
+                font-size: 28px;
+              }
+      
+              /* Features section */
+              .features {
+                flex-direction: column;
+              }
+      
+              .feature {
+                margin-bottom: 32px;
+              }
+      
+              /* Steps section */
+              .steps {
+                flex-direction: column;
+              }
+      
+              .step {
+                margin-bottom: 20px;
+              }
+      
+              /* BuyAbility section */
+              .buyability-content {
+                flex-direction: column;
+              }
+      
+              .buyability-text,
+              .buyability-image {
+                width: 100%;
+              }
+      
+              /* Loan options */
+              .loans-grid {
+                flex-direction: column;
+              }
+      
+              .loan-card {
+                margin-bottom: 20px;
+              }
+      
+              /* Team section */
+              .team-section {
+                flex-direction: column;
+              }
+      
+              /* Articles */
+              .articles {
+                flex-direction: column;
+              }
+      
+              /* CTA section */
+              .cta-section {
+                flex-direction: column;
+                padding: 32px 20px;
+              }
+            }
+      
+            @media (max-width: 768px) {
+              /* General spacing adjustment */
+              section {
+                margin: 32px 0;
+              }
+      
+              .container {
+                padding: 0 16px;
+              }
+      
+              .hero h1 {
+                font-size: 24px;
+              }
+      
+              .why-zillow h2,
+              .loan-options h2,
+              .testimonials h2,
+              .learn-more h2 {
+                font-size: 24px;
+              }
+      
+              /* Testimonials */
+              .testimonials-carousel {
+                height: 20rem;
+              }
+      
+              .testimonial-card {
+                width: 250px;
+              }
+      
+              /* Footer */
+              .footer-content {
+                flex-direction: column;
+                gap: 32px;
+              }
+      
+              .footer-links {
+                flex-direction: column;
+                gap: 16px;
+              }
+            }
+      
+            @media (max-width: 480px) {
+              .hero h1 {
+                font-size: 22px;
+              }
+      
+              .testimonials-carousel {
+                height: 16rem;
+              }
+      
+              .testimonial-card {
+                width: 200px;
+              }
+      
+              .video-container {
+                max-width: 100%;
+              }
+      
+              .step,
+              .loan-card,
+              .article-card {
+                padding: 16px;
+              }
+            }
+      
+            /* Mobile Menu Activation */
+            .overlay.active {
+              display: block;
+            }
+      
+            .mobile-menu.active {
+              display: block;
+            }
+          </style>
+        </head>
+        <body>
+          <!-- Overlay and Mobile Menu -->
+          <div class="overlay"></div>
+          <div class="mobile-menu">
+              <div class="mobile-menu-header">
+                  <h2>Menu</h2>
+                  <button class="close-menu">&times;</button>
+              </div>
+              <div class="mobile-menu-items">
+                  <ul>
+                      <li><a href="/buy">Buy</a></li>
+                      <li><a href="/rent">Rent</a></li>
+                      <li><a href="/sell">Sell</a></li>
+                      <li><a href="/homeloans">Home Loans</a></li>
+                      <li><a href="/findagent">Find an Agent</a></li>
+                      <li><a href="/rentals">Manage Rentals</a></li>
+                      <li><a href="/advertise">Advertise</a></li>
+                      <li><a href="/help">Help</a></li>
+                      <li><a href="/signup">Sign In</a></li>
+                  </ul>
+              </div>
+          </div>
+      
+          <nav>
+            <div class="nav-content">
+                <div class="mobile-nav">
+                    <div style="display: flex;  align-items: center; justify-content: center;"><i class="fa-solid fa-bars bars" id="menu-toggle" style="color: #000; font-size: 1rem;"></i></div>
+                    <div class="logo-con">
+                        <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+                    </div>
+                     <div class="user-dropdown" style="display: flex; justify-content: center; align-items: center;">
+                        <% if (user) { %>
+                            <button class="dropdown-btn">
+                                <i class="fa-regular fa-user" style="color: #000; font-size: 1rem;"> <span style="font-size: 10px;">Account</span></i>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/profile"><%= user.username %> Account</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        <% } else { %>
+                            <a class="login-btn" style="color: #000; text-decoration: none;" href="/signup">Sign in</a>
+                        <% } %>
+                    </div>
+                </div>
+        
+                <ul class="first-ul">
+                    <li><a href="/buy">Buy</a></li>
+                    <li><a href="/rent">Rent</a></li>
+                    <li><a href="/sell">Sell</a></li>
+                    <li><a href="/homeloans">Home Loans</a></li>
+                    <li><a href="/findagent">Find an Agent</a></li>
+                </ul>
+        
+                <div class="logo-con desk">
+                    <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+                </div>
+        
+                <div class="hide-major">
+                    <ul class="second-ul">
+                        <li><a href="/rentals">Manage Rentals</a></li>
+                        <li><a href="/advertise">Advertise</a></li>
+                        <li><a href="/help">Help</a></li>
+                        <% if (user) { %>
+                            <li class="login-text user-dropdown">
+                                  <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                                    <i style="color: #000;" class="fa-regular fa-user"></i>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/profile"><%= user.username %> Account</a></li>
+                                    <li><a href="/logout">Logout</a></li>
+                                </ul>
+                            </li>
+                        <% } else { %>
+                            <li class="login-text"><a href="/signup">Sign In</a></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      
+          <!-- Home Loans Hero Section -->
+          <section class="container">
+            <div class="hero">
+              <div class="hero-content">
+                <h1>Get the loan that gets you home</h1>
+                <p>
+                  We offer mortgage rates up to 0.50% lower (0.5 points on a 30-year
+                  fixed-rate loan) than the industry average.
+                </p>
+                <a href="#" class="btn-primary">See your options</a>
+                <p class="already-working">
+                  Already working with us? <a href="#">Access your dashboard</a>
+                </p>
+              </div>
+              <div class="hero-image">
+                <img
+                  src="/image/happy-home-owner.jpeg"
+                  alt="Happy couple with new home"
+                />
+              </div>
+            </div>
+          </section>
+      
+          <!-- Why Zillow Section -->
+          <section class="container why-zillow">
+            <h2>Why Zillow Home Loans?</h2>
+            <div class="features">
+              <div class="feature">
+                <img src="/image/graph.svg" alt="Competitive rates" />
+                <h3>Competitive rates</h3>
+                <p>
+                  Here's a look at today's rates and the competitive advantages we
+                  offer vs. other lenders.
+                </p>
+              </div>
+              <div class="feature">
+                <img src="/image/hand-money.svg" alt="Low down payment options" />
+                <h3>Low down payment options</h3>
+                <p>
+                  Get in a home with as little as 3% down and explore loan options
+                  customized for your situation.
+                </p>
+              </div>
+              <div class="feature">
+                <img src="/image/man-paperwork.svg" alt="Top-rated loan officers" />
+                <h3>Top-rated loan officers</h3>
+                <p>
+                  Work with experienced loan officers with an average rating of 4.9/5
+                  stars who guide you through every part of the process.
+                </p>
+              </div>
+            </div>
+          </section>
+      
+          <!-- Journey Section -->
+          <section class="container">
+            <div class="journey-section">
+              <div class="container">
+                <h2>Your home financing journey starts here</h2>
+                <div class="steps">
+                  <div class="step">
+                    <img src="/image/step-1.svg" alt="Step 1" />
+                    <span class="step-number">Step 1 of 3</span>
+                    <h3>Get pre-qualified</h3>
+                    <p>
+                      Answer a few quick questions about your income, assets, and debt
+                      to see if you might qualify for a loan—no credit check needed.
+                    </p>
+                    <a href="#">See your outcomes →</a>
+                  </div>
+                  <div class="step">
+                    <img src="/image/step-2.svg" alt="Step 2" />
+                    <span class="step-number">Step 2 of 3</span>
+                    <h3>Get pre-approved</h3>
+                    <p>
+                      Take the next step and get verified. Submit documents and
+                      complete a credit check to get a pre-approval letter to show
+                      sellers.
+                    </p>
+                    <a href="#">See details →</a>
+                  </div>
+                  <div class="step">
+                    <img src="/image/step-3.svg" alt="Step 3" />
+                    <span class="step-number">Step 3 of 3</span>
+                    <h3>Get to a completed loan</h3>
+                    <p>
+                      Your loan officer helps you finalize your loan once your offer
+                      is accepted. We close on time and make the process seamless.
+                    </p>
+                    <a href="#">See details →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          <!-- BuyAbility Section -->
+          <section class="container
+          <!-- BuyAbility Section -->
+          <section class="container">
+            <div class="buyability">
+              <div class="container">
+                <div class="buyability-content">
+                  <div class="buyability-text">
+                    <h2>Track your BuyAbility™</h2>
+                    <p>
+                      Understand where you stand today and the real cost of a new home
+                      in your area.
+                    </p>
+                    <p>Scan the QR code to get the Zillow app</p>
+                    <img src="/image/scan.png" alt="QR Code" class="qr-code" />
+                    <p>Use the home loans tab to get started</p>
+                  </div>
+                  <div class="buyability-image">
+                    <img
+                      src="/image/buyability-img-lg.jpg"
+                      alt="Couple checking their phone"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          <!-- Loan Options Section -->
+          <section class="container loan-options">
+            <h2>Find the right loan option for you</h2>
+            <div class="loan-tabs">
+              <div class="loan-tab active" data-tab="purchase">Purchase</div>
+              <div class="loan-tab" data-tab="refinance">Refinance</div>
+            </div>
+            <div class="loans-grid">
+              <div class="loan-card">
+                <div class="loan-tag">MOST POPULAR</div>
+                <h3>Conventional loan</h3>
+                <div class="loan-features">
+                  <li>3% min down payment</li>
+                  <li>Wider range of property types</li>
+                  <li>No upfront mortgage insurance</li>
+                  <li>Lower costs than FHA or VA loans</li>
+                </div>
+                <a href="#">See specific terms →</a>
+                <div style="margin-top: 24px">
+                  <a href="#" class="btn-primary">Get pre-qualified</a>
+                </div>
+              </div>
+              <div class="loan-card">
+                <div class="loan-tag">GOVERNMENT BACKED</div>
+                <h3>FHA loan</h3>
+                <div class="loan-features">
+                  <li>3.5% min down payment</li>
+                  <li>Lower credit score needs</li>
+                  <li>580, 600, or 620 credit min</li>
+                  <li>Mortgage insurance required</li>
+                </div>
+                <a href="#">See specific terms →</a>
+                <div style="margin-top: 24px">
+                  <a href="#" class="btn-primary">Get pre-qualified</a>
+                </div>
+              </div>
+              <div class="loan-card">
+                <div class="loan-tag">MILITARY & VETERANS</div>
+                <h3>VA loan</h3>
+                <div class="loan-features">
+                  <li>0% min down payment</li>
+                  <li>Competitive interest rates</li>
+                  <li>No mortgage insurance</li>
+                  <li>For qualified veterans/military</li>
+                </div>
+                <a href="#">See specific terms →</a>
+                <div style="margin-top: 24px">
+                  <a href="#" class="btn-primary">Get pre-qualified</a>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          <!-- Testimonials Section -->
+          <section class="container testimonials">
+            <h2>Real people making home a reality</h2>
+            <div class="testimonials-carousel">
+              <div class="testimonial-card">
+                <img src="/image/quoteone.svg" alt="" />
+              </div>
+              <div class="testimonial-card">
+                <img class="thest-image" src="/image/thest-image.webp" alt="" />
+              </div>
+              <div class="testimonial-card">
+                <img src="/image/quotethree.svg" alt="" />
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <div class="carousel-dot active"></div>
+              <div class="carousel-dot"></div>
+              <div class="carousel-dot"></div>
+            </div>
+          </section>
+      
+          <!-- Team Section -->
+          <section class="container team-section">
+            <div>
+              <h2>Meet the team who'll take you from dreaming to closing</h2>
+              <p>
+                Here's a look at what our team does to help you find the right
+                mortgage solution for your needs
+              </p>
+            </div>
+            <div class="video-container">
+              <img
+                src="/image/lo-video-img-sm@2x.webp"
+                alt="Team video"
+                class="video-placeholder"
+              />
+            </div>
+          </section>
+      
+          <!-- Learn More Section -->
+          <section class="container learn-more">
+            <h2>Learn more about home financing</h2>
+            <div class="articles">
+              <div class="article-card">
+                <img
+                  src="/image/resources-article-1@2x.webp"
+                  alt="Pre-qualification"
+                  class="article-image"
+                />
+                <div class="article-content">
+                  <div class="article-title">
+                    Pre-qualified vs. pre-approved: What's the difference?
+                  </div>
+                  <a href="#" class="article-link">Read article →</a>
+                </div>
+              </div>
+              <div class="article-card">
+                <img
+                  src="/image/resources-article-2@2x.webp"
+                  alt="Credit score"
+                  class="article-image"
+                />
+                <div class="article-content">
+                  <div class="article-title">
+                    How your credit score relates to mortgage qualification
+                  </div>
+                  <a href="#" class="article-link">Read article →</a>
+                </div>
+              </div>
+              <div class="article-card">
+                <img
+                  src="/image/resources-article-3@2x.webp"
+                  alt="Mortgage rates"
+                  class="article-image"
+                />
+                <div class="article-content">
+                  <div class="article-title">
+                    What are mortgage rates and how do they work?
+                  </div>
+                  <a href="#" class="article-link">Read article →</a>
+                </div>
+              </div>
+            </div>
+            <p class="learning-center">
+              Want more content? Visit our <a href="#">Learning Center</a>
+            </p>
+          </section>
+      
+          <!-- CTA Section -->
+          <section class="container">
+            <div class="cta-section">
+              <div>
+                <h2>Ready to take the first step?</h2>
+                <p>See how much you can afford with a free qualification check</p>
+                <a href="#" class="btn-primary">Get started</a>
+              </div>
+              <div>
+                <img
+                  src="/image/Group-634105.svg"
+                  alt="Family illustration"
+                  class="cta-image"
+                />
+              </div>
+            </div>
+          </section>
+      
+          <!-- Footer -->
+          <footer>
+            <div class="container">
+              <div class="footer-content">
+                <div>
+                  <img
+                    src="/image/blue-logo.jpg"
+                    style="width: 9rem"
+                    alt="Zillow logo"
+                    class="zillow-logo"
+                  />
+      
+                  <p class="footer-text">Zillow Group Marketplace, Inc.</p>
+                  <p class="footer-text">NMLS #1303160</p>
+                  <p class="footer-text">844-698-0681</p>
+                </div>
+                <div>
+                  <div class="footer-links">
+                    <a href="#">Terms of use</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Preference</a>
+                  </div>
+                  <p class="copyright">© 2024 Zillow</p>
+                </div>
+              </div>
+            </div>
+            <img src="/image/footer-art.svg" alt="" class="footer-art" />
+          </footer>
+      
+          <script>
+              // Mobile Menu Toggle
+              document.getElementById('menu-toggle').addEventListener('click', function() {
+                  document.querySelector('.mobile-menu').classList.add('active');
+                  document.querySelector('.overlay').style.display = 'block';
+              });
+      
+              document.querySelector('.close-menu').addEventListener('click', function() {
+                  document.querySelector('.mobile-menu').classList.remove('active');
+                  document.querySelector('.overlay').style.display = 'none';
+              });
+      
+              document.querySelector('.overlay').addEventListener('click', function() {
+                  document.querySelector('.mobile-menu').classList.remove('active');
+                  this.style.display = 'none';
+              });
+              document.addEventListener("DOMContentLoaded", () => {
+        const dropdownBtn = document.querySelector(".dropdown-btn");
+        const userDropdown = document.querySelector(".user-dropdown");
+      
+        if (dropdownBtn) {
+            dropdownBtn.addEventListener("click", (event) => {
+                event.stopPropagation();
+                userDropdown.classList.toggle("active");
+            });
+      
+            document.addEventListener("click", () => {
+                userDropdown.classList.remove("active");
+            });
+        }
+      });
+            // Loan tabs functionality
+            const loanTabs = document.querySelectorAll(".loan-tab");
+            loanTabs.forEach((tab) => {
+              tab.addEventListener("click", () => {
+                // Remove active class from all tabs
+                loanTabs.forEach((t) => t.classList.remove("active"));
+                // Add active class to clicked tab
+                tab.classList.add("active");
+              });
+            });
+      
+            // Testimonial carousel functionality
+            const dots = document.querySelectorAll(".carousel-dot");
+            const carousel = document.querySelector(".testimonials-carousel");
+            const cards = document.querySelectorAll(".testimonial-card");
+      
+            dots.forEach((dot, index) => {
+              dot.addEventListener("click", () => {
+                // Remove active class from all dots
+                dots.forEach((d) => d.classList.remove("active"));
+                // Add active class to clicked dot
+                dot.classList.add("active");
+      
+                // Calculate scroll position
+                const cardWidth = cards[0].offsetWidth + 16; // Card width + margin
+                carousel.scrollTo({
+                  left: index * cardWidth,
+                  behavior: "smooth",
+                });
+              });
+            });
+      
+            // Handle scroll events to update active dot
+            carousel.addEventListener("scroll", () => {
+              const scrollPosition = carousel.scrollLeft;
+              const cardWidth = cards[0].offsetWidth + 16;
+      
+              // Find which card is most visible
+              const activeIndex = Math.round(scrollPosition / cardWidth);
+      
+              // Update active dot
+              dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === activeIndex);
+              });
+            });
+          </script>
+          <script
+            src="https://kit.fontawesome.com/e1fbe49b44.js"
+            crossorigin="anonymous"
+          ></script>
+        </body>
+      </html>
+      
+      <div class="partner-content">
+        <div class="partner-with-xzillow">
+          <h1>Partner with xzillow to Grow Your Business</h1>
+          <p>
+            Reach millions of buyers, sellers and renters on the largest real
+            estate network on the web.
+          </p>
+          <div class="line"></div>
+          <h3>Select your industry to get started</h3>
+        </div>
+      </div>
+      <div class="cards-container">
+        <div class="cards">
+          <div class="card">
+            <img src="/image/Agent.png" alt="" />
+            <div class="text-content">
+              <h3>I'm an agent or broker</h3>
+              <div class="get-started-btn">Get started</div>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="/image/manager.png" alt="" />
+            <div class="text-content">
+              <h3>I'm a property manager</h3>
+              <div class="get-started-btn">Get started</div>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="/image/landlord.png" alt="" />
+            <div class="text-content">
+              <h3>I'm a landlord</h3>
+              <div class="get-started-btn">Get started</div>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="/image/lender.png" alt="" />
+            <div class="text-content">
+              <h3>I'm a lender or loan officer</h3>
+              <div class="get-started-btn">Get started</div>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="/image/builder.png" alt="" />
+            <div class="text-content">
+              <h3>I'm a builder</h3>
+              <div class="get-started-btn">Get started</div>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="/image/brand.png" alt="" />
+            <div class="text-content">
+              <h3>I am a brand or local advertiser</h3>
+              <div class="get-started-btn">Get started</div>
+            </div>
+          </div>
+        </div>
+      </div>
+   <div class="target-audience">
+    <div class="target-text-image">
+    <h1>Reach your target audience on our network of leading real estate sites.
+    </h1>
+    <img src="/image/other-networks.png" alt="">
+  </div>
+   </div>
+   <div class="xzillowx-group-audience">
+    <h3>Zillow Group Audience </h3>
+    <div class="audience-number">
+      <div class="number">
+        <div>
+          <img src="/image/41.png" alt="">
+          <h4>41% to buy or sell</h4>
+          <p>Nearly 41% of people who visited Zillow and/or Trulia in the past 12 months are planning to buy and/or sell a home in the next 12 months.</p>
+        </div>
+        <div>
+          <img src="/image/194.png" alt="">
+          <h4>194 million</h4>
+          <p>More than 194 million average monthly unique users visited Zillow Group brands’ mobile apps and websites in Q2 2019.</p>
+        </div>
+        <div>
+          <img src="/image/most.png" alt="">
+          <h4>Most visited rental network</h4>
+          <p>Zillow Rentals is the most visited rental network.</p>
+        </div>
+      </div>
+    </div>
+    <div  class="Source">
+    <p>
+      Source: 41% stat: Zillow Group Tracking Survey, Q2 2019. 194 million stat: Google Analytics and Adobe Analytics. Rental network claim: Comscore Media Metrix® Multi-Platform, Key Measures, Custom-defined list including: Zillow Rentals, Apartments.com Network, RentPath Network, ForRent.com & Homes.com Network, Total Visits, July 2020, United States. Zillow Rentals is the deduplicated reach of Zillow.com Rentals, Trulia.com Rentals and HotPads.com.
+    </p>
+  </div>
+   </div>
+   </div>
+   <footer class="footer-wrapper">
+    <div class="footer-container">
+      <div class="links-row">
+           <a href="/about">About</a>
+          <a href="/zestimate">Zestimates</a>
+          <a href="/research">Research</a>
+          <a href="/careers">Careers</a>
+          <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+          <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+          <a href="/help">Help</a>
+          <a href="/advertise">Advertise</a>
+          <a href="/fair">Fair Housing Guide</a>
+          <a href="/advocacy">Advocacy</a>
+      </div>
+  
+      <div class="links-row">
+          <a href="/terms">Terms of use</a>
+          <a href="/privacy">Privacy Portal</a>
+          <a href="/cookie">Cookie Preference</a>
+          <a href="/learn">Learn</a>
+          <a href="/ai">AI</a>
+          <a href="/mobile">Mobile Apps</a>
+      </div>
+  
+      <div class="links-row">
+       <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+          <a  href="https://streeteasy.com/">StreetEasy</a>
+          <a  href="https://hotpads.com/">HotPads</a>
+          <a  href="https://showingtimeplus.com/">Out East</a>
+          <a  href="https://outeast.com/">ShowingTime+</a>
+      </div>
+  
+      <div class="do-not-sell">
+        <a href="#">Do Not Sell or Share My Personal Information→</a>
+      </div>
+  
+      <div class="accessibility-notice">
+        Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please <a href="#">let us know</a>.
+      </div>
+  
+      <div class="legal-info">
+        Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in multiple states. Zillow (Canada), Inc. holds real estate brokerage <a href="#">licenses</a> in multiple provinces.<br>
+        <a href="#">§ 442-H New York Standard Operating Procedures</a><br>
+        <a href="#">§ New York Fair Housing Notice</a><br>
+        TREC: <a href="#">Information about brokerage services</a>, <a href="#">Consumer protection notice</a><br>
+        California DRE #1522444<br>
+        <a href="#">Contact Zillow, Inc. Brokerage</a>
+      </div>
+  
+      <div class="legal-info">
+        For listings in Canada, the trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.
+      </div>
+  
+      <div class="app-stores">
+        <a href="#"><img src="/image/apple-icon.svg" alt="Download on the App Store"></a>
+        <a href="#"><img src="/image/google-icon.svg" alt="Get it on Google Play"></a>
+      </div>
+      <div class="bottom-row">
+        <img src="/image/blue-logo.jpg" alt="Zillow logo" class="zillow-logo">
+        <span>Follow us:</span>
+        <div class="social-icons">
+          <!-- Social media icons would go here -->
+        </div>
+        <span>© 2006-2025 Zillow</span>
+        <img src="./image/home-icon.png" alt="Equal Housing Opportunity" class="equal-housing">
+      </div>
+    </div>
+  </footer>
+  </div>
+  <img src="/image/footer-art.svg" alt="" class="footer-art">
+
+    
+    <script
+      src="https://kit.fontawesome.com/e1fbe49b44.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script src="account.js"></script>  
+<script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('active');
+            document.querySelector('.overlay').style.display = 'block';
+        });
+
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.overlay').style.display = 'none';
+        });
+
+        document.querySelector('.overlay').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            this.style.display = 'none';
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  const userDropdown = document.querySelector(".user-dropdown");
+
+  if (dropdownBtn) {
+      dropdownBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          userDropdown.classList.toggle("active");
+      });
+
+      document.addEventListener("click", () => {
+          userDropdown.classList.remove("active");
+      });
+  }
+});
+
+  </script>
+
+  </body>
+</html>

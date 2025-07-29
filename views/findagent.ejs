@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Directory</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            color: #2a2a2a;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+        
+        .nav-primary {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-primary a {
+            text-decoration: none;
+            color: #2a2a2a;
+        }
+        
+        .nav-secondary {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-secondary a {
+            text-decoration: none;
+            color: #2a2a2a;
+        }
+        
+        /* Category Navigation */
+        .category-nav {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            padding: 10px 40px;
+            border-bottom: 1px solid #e5e5e5;
+            background-color: #f8f8f8;
+        }
+        
+        .category-nav a {
+            text-decoration: none;
+            color: #2a2a2a;
+            font-size: 14px;
+        }
+        
+        .category-nav a.active {
+            color: #0066cc;
+            font-weight: bold;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/image/agent_banner.webp');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            height: 32rem;
+        }
+        
+        .hero h1 {
+            font-size: 32px;
+            margin-top: 60px;
+        }
+        
+        /* Search Box */
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 30px;
+            padding: 15px;
+        }
+        
+        .search-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .search-tabs button {
+            background: none;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .search-tabs button.active {
+            border-bottom: 2px solid #0066cc;
+            color: #0066cc;
+        }
+        
+        .search-box {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .search-box input {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        
+        .search-box button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        
+        /* Main Content */
+        .main-content-2 {
+            padding: 40px;
+        }
+        
+        .location-title {
+            margin-bottom: 20px;
+        }
+        
+        .location-description {
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        /* Professional Grid */
+        .professionals-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .professional-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+        
+        .professional-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        
+        .professional-details {
+            flex-grow: 1;
+        }
+        
+        .professional-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .professional-company {
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .professional-stats {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .rating {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .badge {
+            background-color: #0066cc;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+        
+        /* Help Finding Section */
+        .help-section {
+            background-color: #f8f8f8;
+            padding: 30px 40px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .help-content {
+            flex-grow: 1;
+        }
+        
+        .help-cta {
+            display: inline-block;
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        
+        /* Full Width Banner */
+        .banner {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/image/help_agent.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 40px;
+          
+            height: 20rem;
+        }
+        
+        .banner-content3 {
+            max-width: 600px;
+        }
+        
+        .banner h2 {
+            margin-bottom: 20px;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background-color: #2a2a2a;
+            color: white;
+            padding: 40px;
+        }
+        
+        .faq-title {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .faq-item {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        /* Resources Section */
+        .resources-section {
+            padding: 40px;
+            background-color: #f8f8f8;
+        }
+        
+        .resources-title {
+            margin-bottom: 20px;
+        }
+        
+        .resources-content {
+            margin-bottom: 30px;
+        }
+        
+        /* Category Lists */
+        .category-lists {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .category-list {
+            margin-bottom: 30px;
+        }
+        
+        .category-list h4 {
+            margin-bottom: 15px;
+            color: #0066cc;
+        }
+        
+        .category-list ul {
+            list-style: none;
+        }
+        
+        .category-list li {
+            margin-bottom: 10px;
+        }
+        
+        .category-list a {
+            text-decoration: none;
+            color: #2a2a2a;
+        }
+        
+        .show-more {
+            color: #0066cc;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #f8f8f8;
+            padding: 40px;
+            border-top: 1px solid #e5e5e5;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links a {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .footer-disclaimer {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 30px;
+        }
+        
+        .app-badges {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .app-badge {
+            height: 40px;
+        }
+        
+        .social-media {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #0066cc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .copyright {
+            font-size: 12px;
+            color: #777;
+        }
+        
+        .footer-icon {
+            color: #0066cc;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        /* Building Icons */
+        .building-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .building-icon {
+            text-align: center;
+            color: #0066cc;
+        }
+        @media screen and (max-width: 991px) {
+    /* Header adjustments */
+    header {
+        padding: 15px 20px;
+    }
+    
+    .category-nav {
+        padding: 10px 20px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    /* Hero section adjustments */
+    .hero {
+        padding: 40px 20px;
+        height: 28rem;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    /* Main content adjustments */
+    .main-content-2 {
+        padding: 30px 20px;
+    }
+    
+    /* Professional grid change to single column */
+    .professionals-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Category lists change to two columns */
+    .category-lists {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Layout (up to 767px) */
+@media screen and (max-width: 767px) {
+    /* Header simplification */
+    .nav-primary, .nav-secondary {
+        display: none;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    /* Hero section adjustments */
+    .hero {
+        padding: 30px 15px;
+        height: 24rem;
+    }
+    
+    .hero h1 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+    
+    .search-container {
+        margin-top: 20px;
+    }
+    
+    /* Professional cards layout adjustment */
+    .professional-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .professional-image {
+        margin-bottom: 15px;
+    }
+    
+    .rating {
+        position: static;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .badge {
+        top: 20px;
+        left: 20px;
+        bottom: auto;
+    }
+    
+    /* Help section adjustment */
+    .help-section {
+        padding: 20px 15px;
+    }
+    
+    /* Banner adjustment */
+    .banner {
+        padding: 30px 15px;
+        height: auto;
+        min-height: 18rem;
+    }
+    
+    /* Category lists change to single column */
+    .category-lists {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer adjustments */
+    footer {
+        padding: 30px 15px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Small Mobile Layout (up to 480px) */
+@media screen and (max-width: 480px) {
+    /* Further header simplification */
+    header {
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+    
+    /* Hero section further reduction */
+    .hero {
+        height: 20rem;
+    }
+    
+    .hero h1 {
+        font-size: 20px;
+    }
+    
+    /* Search container adjustments */
+    .search-tabs {
+        flex-wrap: wrap;
+    }
+    
+    /* Professional card adjustments */
+    .professional-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .professional-stats {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    /* Mobile menu adjustments */
+    .mobile-menu {
+        width: 100%;
+    }
+}
+
+/* Specific adjustments for existing mobile menu */
+@media screen and (min-width: 992px) {
+    .mobile-nav {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .desk {
+        display: none;
+    }
+    
+    .hide-major {
+        display: none;
+    }
+    
+    /* Ensure mobile menu works properly */
+    .mobile-menu.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: white;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    
+    .overlay.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>Menu</h2>
+            <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-items">
+            <ul>
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/rent">Rent</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/homeloans">Home Loans</a></li>
+                <li><a href="/findagent">Find an Agent</a></li>
+                <li><a href="/rentals">Manage Rentals</a></li>
+                <li><a href="/advertise">Advertise</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/signup">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+
+      <div class="overlay"></div>
+      <div class="mobile-menu">
+          <div class="mobile-menu-header">
+              <h2>Menu</h2>
+              <button class="close-menu">&times;</button>
+          </div>
+          <div class="mobile-menu-items">
+              <ul>
+                  <li><a href="/buy">Buy</a></li>
+                  <li><a href="/rent">Rent</a></li>
+                  <li><a href="/sell">Sell</a></li>
+                  <li><a href="/homeloans">Home Loans</a></li>
+                  <li><a href="/findagent">Find an Agent</a></li>
+                  <li><a href="/rentals">Manage Rentals</a></li>
+                  <li><a href="/advertise">Advertise</a></li>
+                  <li><a href="/help">Help</a></li>
+                  <li><a href="/signup">Sign In</a></li>
+              </ul>
+          </div>
+      </div>
+  
+      <nav>
+        <div class="nav-content">
+            <div class="mobile-nav">
+                <div style="display: flex;  align-items: center; justify-content: center;"><i class="fa-solid fa-bars bars" id="menu-toggle" style="color: #000; font-size: 1rem;"></i></div>
+                <div class="logo-con">
+                    <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+                </div>
+                 <div class="user-dropdown" style="display: flex; justify-content: center; align-items: center;">
+                    <% if (user) { %>
+                        <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                            <i class="fa-regular fa-user" style="color: #000; font-size: 2rem;"> Account</i>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile"><%= user.username %> Account</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    <% } else { %>
+                        <a class="login-btn" href="/signup">                            <i class="fa-regular fa-user" style="color: #000; font-size: 1rem;"> <span style="font-size: 10px;">Account</span></i>
+</a>
+                    <% } %>
+                </div>
+            </div>
+    
+            <ul class="first-ul">
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/rent">Rent</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/homeloans">Home Loans</a></li>
+                <li><a href="/findagent">Find an Agent</a></li>
+            </ul>
+    
+            <div class="logo-con desk">
+                <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+            </div>
+    
+            <div class="hide-major">
+                <ul class="second-ul">
+                    <li><a href="/rentals">Manage Rentals</a></li>
+                    <li><a href="/advertise">Advertise</a></li>
+                    <li><a href="/help">Help</a></li>
+                    <% if (user) { %>
+                        <li class="login-text user-dropdown">
+                            <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                                <i style="color: #000;" class="fa-regular fa-user"></i>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/profile"><%= user.username %> Account</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    <% } else { %>
+                        <li class="login-text"><a href="/signup">Sign In</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- Category Navigation -->
+    <div class="category-nav">
+        <a href="#" class="active">Consultants</a>
+        <a href="#">Business Development</a>
+        <a href="#">Project Managers</a>
+        <a href="#">Developers</a>
+        <a href="#">Designers</a>
+        <a href="#">Other</a>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>A great consultant makes<br>all the difference</h1>
+        <div class="search-container">
+            <div class="search-tabs">
+                <button class="active">Location</button>
+                <button>Name</button>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="City, neighborhood, or ZIP code">
+                <button>Search</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="main-content-2">
+        <h2 class="location-title">Professional Consultants in Boston, MA</h2>
+        <p class="location-description">With over a million consultants from all the top backgrounds, a local expert knows your market and can guide you through the process from start to finish.</p>
+        
+        <!-- Professionals Grid -->
+        <div class="professionals-grid">
+            <!-- Professional 1 -->
+            <div class="professional-card">
+                <div class="professional-image">
+                    <img src="/image/profile1.jpg" alt="Sarah Miller">
+                </div>
+                <div class="professional-details">
+                    <div class="professional-name">Sarah Miller</div>
+                    <div class="professional-company">Breakthrough Consulting</div>
+                    <div class="professional-stats">
+                        <div>$120K - $350K typical project range</div>
+                    </div>
+                    <div class="professional-stats">
+                        <div>156 projects last 12 months</div>
+                    </div>
+                </div>
+                <div class="rating">
+                    <span>5.0</span>
+                    <span>(237)</span>
+                </div>
+                <div class="badge">P</div>
+            </div>
+            
+            <!-- Professional 2 -->
+            <div class="professional-card">
+                <div class="professional-image">
+                    <img src="/image/profile2.jpg" alt="James Taylor">
+                </div>
+                <div class="professional-details">
+                    <div class="professional-name">James Taylor | The DR Group</div>
+                    <div class="professional-company">DIGITAL RESULTS TEAM</div>
+                    <div class="professional-stats">
+                        <div>$90K - $250K typical project range</div>
+                    </div>
+                    <div class="professional-stats">
+                        <div>95 projects last 12 months</div>
+                    </div>
+                </div>
+                <div class="rating">
+                    <span>4.9</span>
+                    <span>(107)</span>
+                </div>
+                <div class="badge">P</div>
+            </div>
+            
+            <!-- Help Finding Section -->
+            <div class="help-section">
+                <div class="help-content">
+                    <h3>Get help finding a consultant</h3>
+                    <p>We'll pair you with a ExpertFinder Premier Consultant who has the inside scoop on your market</p>
+                    <a href="#" class="help-cta">Connect with a local consultant</a>
+                </div>
+            </div>
+            
+            <!-- Professional 3 -->
+            <div class="professional-card">
+                <div class="professional-image">
+                    <img src="/image/profile3.jpg" alt="Liam Johnson">
+                </div>
+                <div class="professional-details">
+                    <div class="professional-name">Liam Johnson</div>
+                    <div class="professional-company">Boston Consulting</div>
+                    <div class="professional-stats">
+                        <div>$75K - $180K typical project range</div>
+                    </div>
+                    <div class="professional-stats">
+                        <div>129 projects last 12 months</div>
+                    </div>
+                </div>
+                <div class="rating">
+                    <span>4.8</span>
+                    <span>(83)</span>
+                </div>
+                <div class="badge">P</div>
+            </div>
+            
+            <!-- Professional 4 -->
+            <div class="professional-card">
+                <div class="professional-image">
+                    <img src="/image/profile4.jpg" alt="Nova Preferred Group">
+                </div>
+                <div class="professional-details">
+                    <div class="professional-name">Nova Preferred Group</div>
+                    <div class="professional-company">Nova Enterprise, LLC</div>
+                    <div class="professional-stats">
+                        <div>$60K - $220K typical project range</div>
+                    </div>
+                    <div class="professional-stats">
+                        <div>187 projects last 12 months</div>
+                    </div>
+                </div>
+                <div class="rating">
+                    <span>4.9</span>
+                    <span>(167)</span>
+                </div>
+                <div class="badge">P</div>
+            </div>
+            
+            <!-- Professional 5 -->
+            <div class="professional-card">
+                <div class="professional-image">
+                    <img src="/image/profile5.jpg" alt="Emma Chen">
+                </div>
+                <div class="professional-details">
+                    <div class="professional-name">Emma Chen</div>
+                    <div class="professional-company">Radiant Consulting & Perspectives Group LLC</div>
+                    <div class="professional-stats">
+                        <div>$110K - $310K typical project range</div>
+                    </div>
+                    <div class="professional-stats">
+                        <div>98 projects last 12 months</div>
+                    </div>
+                </div>
+                <div class="rating">
+                    <span>4.9</span>
+                    <span>(201)</span>
+                </div>
+                <div class="badge">P</div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <a href="#" class="help-cta">View more</a>
+        </div>
+    </main>
+    
+    <!-- Banner -->
+    <section class="banner">
+        <div class="banner-content3">
+            <h2>Get help finding a consultant</h2>
+            <p>We'll pair you with a ExpertFinder Premier Consultant who has the inside scoop on your market</p>
+            <a href="#" class="help-cta">Connect with a local consultant</a>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="faq-title">Frequently asked questions</h2>
+        <div class="faq-item">
+            <div>How to find a good consultant near me?</div>
+            <div>></div>
+        </div>
+        <div class="faq-item">
+            <div>How to pick a consultant?</div>
+            <div>></div>
+        </div>
+        <div class="faq-item">
+            <div>How to contact a consultant?</div>
+            <div>></div>
+        </div>
+        <div class="faq-item">
+            <div>How do I leave a review for a consultant?</div>
+            <div>></div>
+        </div>
+        <div class="faq-item">
+            <div>What is the difference between a consultant and a contractor?</div>
+            <div>></div>
+        </div>
+    </section>
+    
+    <!-- Resources Section -->
+    <section class="resources-section">
+        <h3 class="resources-title">Are you a professional consultant?</h3>
+        <p class="resources-content">Check out the extensive resources you can find in our <a href="#">Premier Consultant Resource Center</a>, covering everything from <a href="#">business plan templates</a> to complete guides on <a href="#">lead generation marketing</a>. Not a Premier Consultant yet? Find out how <a href="#">premium advertising</a> on ExpertFinder can help you get more leads.</p>
+        
+        <!-- Category Lists -->
+        <div class="category-lists">
+            <!-- List 1 -->
+            <div class="category-list">
+                <h4>Professional Consultants</h4>
+                <ul>
+                    <li><a href="#">Boston Tech Consultants</a></li>
+                    <li><a href="#">Cambridge Financial Consultants</a></li>
+                    <li><a href="#">Boston Healthcare Consultants</a></li>
+                    <li><a href="#">Cambridge Marketing Consultants</a></li>
+                    <li><a href="#">Brookline HR Consultants</a></li>
+                </ul>
+                <a href="#" class="show-more">+ Show more</a>
+            </div>
+            
+            <!-- List 2 -->
+            <div class="category-list">
+                <h4>Business Development Firms</h4>
+                <ul>
+                    <li><a href="#">Boston Business Development Firms</a></li>
+                    <li><a href="#">Cambridge Business Development</a></li>
+                    <li><a href="#">Quincy Business Development</a></li>
+                    <li><a href="#">Newton Business Development</a></li>
+                    <li><a href="#">Brookline Business Development</a></li>
+                </ul>
+                <a href="#" class="show-more">+ Show more</a>
+            </div>
+            
+            <!-- List 3 -->
+            <div class="category-list">
+                <h4>Business Improvement Pros</h4>
+                <ul>
+                    <li><a href="#">Boston Business Improvement Pros</a></li>
+                    <li><a href="#">Cambridge Process Improvement</a></li>
+                    <li><a href="#">Newton Business Improvement</a></li>
+                    <li><a href="#">Somerville Process Improvement</a></li>
+                    <li><a href="#">Brookline Business Improvement</a></li>
+                </ul>
+                <a href="#" class="show-more">+ Show more</a>
+            </div>
+            
+            <!-- List 4 -->
+            <div class="category-list">
+                <h4>Project Managers</h4>
+                <ul>
+                    <li><a href="#">Boston Project Managers</a></li>
+                    <li><a href="#">Cambridge Project Managers</a></li>
+                    <li><a href="#">Newton Project Managers</a></li>
+                    <li><a href="#">Somerville Project Managers</a></li>
+                    <li><a href="#">Brookline Project Managers</a></li>
+                </ul>
+                <a href="#" class="show-more">+ Show more</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Footer -->
+    <footer class="footer-wrapper">
+        <div class="footer-container">
+          <div class="links-row">
+               <a href="/about">About</a>
+              <a href="/zestimate">Zestimates</a>
+              <a href="/research">Research</a>
+              <a href="/careers">Careers</a>
+              <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+              <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+              <a href="/help">Help</a>
+              <a href="/advertise">Advertise</a>
+              <a href="/fair">Fair Housing Guide</a>
+              <a href="/advocacy">Advocacy</a>
+          </div>
+      
+          <div class="links-row">
+              <a href="/terms">Terms of use</a>
+              <a href="/privacy">Privacy Portal</a>
+              <a href="/cookie">Cookie Preference</a>
+              <a href="/learn">Learn</a>
+              <a href="/ai">AI</a>
+              <a href="/mobile">Mobile Apps</a>
+          </div>
+      
+          <div class="links-row">
+           <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+              <a  href="https://streeteasy.com/">StreetEasy</a>
+              <a  href="https://hotpads.com/">HotPads</a>
+              <a  href="https://showingtimeplus.com/">Out East</a>
+              <a  href="https://outeast.com/">ShowingTime+</a>
+          </div>
+      
+          <div class="do-not-sell">
+            <a href="#">Do Not Sell or Share My Personal Information→</a>
+          </div>
+      
+          <div class="accessibility-notice">
+            Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please <a href="#">let us know</a>.
+          </div>
+      
+          <div class="legal-info">
+            Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in multiple states. Zillow (Canada), Inc. holds real estate brokerage <a href="#">licenses</a> in multiple provinces.<br>
+            <a href="#">§ 442-H New York Standard Operating Procedures</a><br>
+            <a href="#">§ New York Fair Housing Notice</a><br>
+            TREC: <a href="#">Information about brokerage services</a>, <a href="#">Consumer protection notice</a><br>
+            California DRE #1522444<br>
+            <a href="#">Contact Zillow, Inc. Brokerage</a>
+          </div>
+      
+          <div class="legal-info">
+            For listings in Canada, the trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.
+          </div>
+      
+          <div class="app-stores">
+            <a href="#"><img src="/image/apple-icon.svg" alt="Download on the App Store"></a>
+            <a href="#"><img src="/image/google-icon.svg" alt="Get it on Google Play"></a>
+          </div>
+          <div class="bottom-row">
+            <img src="/image/blue-logo.jpg" alt="Zillow logo" class="zillow-logo">
+            <span>Follow us:</span>
+            <div class="social-icons">
+              <!-- Social media icons would go here -->
+            </div>
+            <span>© 2006-2025 Zillow</span>
+            <img src="./image/home-icon.png" alt="Equal Housing Opportunity" class="equal-housing">
+          </div>
+        </div>
+      </footer>
+      </div>
+      <img src="/image/footer-art.svg" alt="" class="footer-art">
+  <script src="https://kit.fontawesome.com/e1fbe49b44.js" crossorigin="anonymous"></script>
+</body>
+</html>

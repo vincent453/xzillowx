@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell Your Home with Confidence | Real Estate Learning Project</title>
+
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon" />
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Gideon Roman -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap"
+      rel="stylesheet"
+    />
+    <!-- loto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #01265a;
+        --text-color: #2a2a33;
+        --light-gray: #f9f9fb;
+        --border-color: #d1d1d5;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", Arial, sans-serif;
+      }
+
+      body {
+        color: var(--text-color);
+        line-height: 1.5;
+      }
+
+      .container {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      /* Header Styles */
+      header {
+        border-bottom: 1px solid var(--border-color);
+        padding: 12px 0;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo svg {
+        height: 24px;
+        margin-right: 5px;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav li {
+        margin-left: 24px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 14px;
+      }
+
+      .sign-in {
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      /* Hero Section */
+      .hero {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("/image/banner_sell.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 60px 0;
+        height: 30rem;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        margin-bottom: 16px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        max-width: 600px;
+        margin: 0 auto 24px;
+      }
+
+      .hero-button {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      /* Main Content */
+      .selling-options {
+        padding: 40px 0;
+      }
+
+      .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+
+      .option-cards {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      .option-card {
+        flex: 1;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .option-card h3 {
+        font-size: 20px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+      }
+
+      .option-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 16px;
+        background-color: #f0f8ff;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .option-description {
+        font-size: 14px;
+        flex-grow: 1;
+        margin-bottom: 20px;
+      }
+
+      .option-button {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+      }
+
+      /* Selling Methods Sections */
+      .selling-method {
+        padding: 40px 0;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .method-container {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .method-text {
+        flex: 1;
+      }
+
+      .method-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .method-image img {
+        max-width: 50%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .method-steps {
+        margin-top: 30px;
+        display: flex;
+        gap: 30px;
+      }
+
+      .steps-list {
+        flex: 1;
+      }
+
+      .how-to {
+        flex: 1;
+      }
+
+      .steps-list ul {
+        list-style-type: none;
+      }
+
+      .steps-list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        font-size: 14px;
+      }
+
+      .check-icon {
+        color: var(--primary-color);
+        margin-right: 10px;
+        font-weight: bold;
+      }
+
+      .how-to h4 {
+        margin-bottom: 12px;
+      }
+
+      .how-to p {
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+
+      /* Resources Section */
+      .resources {
+        background-image: url("/image/explore_home.jpg");
+        padding: 100px 0;
+        height: 25rem;
+        background-color: var(--light-gray);
+        text-align: center;
+      }
+
+      .resources-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      .resources-subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .search-container {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .search-input {
+        flex-grow: 1;
+        padding: 12px;
+        border: 1px solid var(--border-color);
+        border-right: none;
+        border-radius: 4px 0 0 4px;
+      }
+
+      .search-button {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      /* Process Section */
+      .process {
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .process-title {
+        font-size: 24px;
+        margin-bottom: 40px;
+      }
+
+      .process-steps {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+      }
+
+      .process-step {
+        flex: 1;
+        padding: 0 15px;
+        position: relative;
+      }
+
+      .process-step:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 35px;
+        right: -15px;
+        width: 30px;
+        height: 1px;
+        background-color: var(--border-color);
+      }
+
+      .step-number {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: var(--light-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      .step-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      /* Home Examples */
+      .home-examples {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 40px;
+        justify-content: center;
+      }
+
+      .home-card {
+        flex: 1;
+        max-width: 250px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .home-image1 {
+        height: 150px;
+        background-color: #eee;
+        background-image: url("/image/3debf302670ccf99512db3eadc4bb0e4-p_e.webp");
+        background-size: cover;
+      }
+      .home-image2 {
+        height: 150px;
+        background-color: #eee;
+        background-image: url("/image/26d1c89a11236da9c4db1740eb72eb49-p_e.webp");
+        background-size: cover;
+      }
+      .home-image3 {
+        height: 150px;
+        background-color: #eee;
+        background-image: url("/image/94f8decded5f4160956fdb73eeed6b7b-p_e.webp");
+        background-size: cover;
+      }
+      .home-image4 {
+        height: 150px;
+        background-color: #eee;
+        background-image: url("/image/70372e4e2904f279fbc9dd7c29fc8cfe-p_e.webp");
+        background-size: cover;
+      }
+
+      .home-details {
+        padding: 15px;
+        font-size: 14px;
+      }
+
+      .home-price {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .home-specs {
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .home-specs span {
+        margin-right: 10px;
+        font-size: 12px;
+        color: #666;
+      }
+
+      .home-address {
+        font-size: 12px;
+        color: #666;
+      }
+
+      .view-all-button {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      /* FAQ Section */
+      .faq {
+        padding: 60px 0;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .faq-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .faq-item {
+        border-bottom: 1px solid var(--border-color);
+        padding: 20px 0;
+      }
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .faq-answer {
+        margin-top: 15px;
+        font-size: 14px;
+        display: none;
+      }
+
+      .expand-icon {
+        font-size: 20px;
+      }
+
+      .faq-item.active .faq-answer {
+        display: block;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--light-gray);
+        padding: 40px 0;
+        font-size: 14px;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+
+      .footer-column {
+        flex: 1;
+      }
+
+      .footer-column h4 {
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+      .footer-column ul {
+        list-style: none;
+      }
+
+      .footer-column li {
+        margin-bottom: 8px;
+      }
+
+      .footer-column a {
+        text-decoration: none;
+        color: #666;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .social-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ddd;
+        margin: 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .footer-disclaimer {
+        font-size: 12px;
+        color: #666;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .option-cards,
+        .method-container,
+        .method-steps,
+        .process-steps,
+        .home-examples,
+        .footer-links {
+          flex-direction: column;
+        }
+
+        .option-card,
+        .home-card {
+          max-width: 100%;
+        }
+
+        .method-image {
+          margin-top: 30px;
+        }
+
+        .process-step:not(:last-child)::after {
+          display: none;
+        }
+
+        nav ul {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+         <div class="overlay"></div>
+      <div class="mobile-menu">
+          <div class="mobile-menu-header">
+              <h2>Menu</h2>
+              <button class="close-menu">&times;</button>
+          </div>
+          <div class="mobile-menu-items">
+              <ul>
+                  <li><a href="/buy">Buy</a></li>
+                  <li><a href="/rent">Rent</a></li>
+                  <li><a href="/sell">Sell</a></li>
+                  <li><a href="/homeloans">Home Loans</a></li>
+                  <li><a href="/findagent">Find an Agent</a></li>
+                  <li><a href="/rentals">Manage Rentals</a></li>
+                  <li><a href="/advertise">Advertise</a></li>
+                  <li><a href="/help">Help</a></li>
+                  <li><a href="/signup">Sign In</a></li>
+              </ul>
+          </div>
+      </div>
+  
+      <nav>
+        <div class="nav-content">
+            <div class="mobile-nav">
+                <div style="display: flex;  align-items: center; justify-content: center;"><i class="fa-solid fa-bars bars" id="menu-toggle" style="color: #000; font-size: 1rem;"></i></div>
+                <div class="logo-con">
+                    <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+                </div>
+                 <div class="user-dropdown" style="display: flex; justify-content: center; align-items: center;">
+                    <% if (user) { %>
+                        <button class="dropdown-btn">
+                            <i class="fa-regular fa-user" style="color: #000; font-size: 1rem;"> <span style="font-size: 10px;">Account</span></i>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile"><%= user.username %> Account</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    <% } else { %>
+                        <a class="login-btn" style="color: #000; text-decoration: none;" href="/signup">Sign in</a>
+                    <% } %>
+                </div>
+            </div>
+    
+            <ul class="first-ul">
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/rent">Rent</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/homeloans">Home Loans</a></li>
+                <li><a href="/findagent">Find an Agent</a></li>
+            </ul>
+    
+            <div class="logo-con desk">
+                <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+            </div>
+    
+            <div class="hide-major">
+                <ul class="second-ul">
+                    <li><a href="/rentals">Manage Rentals</a></li>
+                    <li><a href="/advertise">Advertise</a></li>
+                    <li><a href="/help">Help</a></li>
+                    <% if (user) { %>
+                        <li class="login-text user-dropdown">
+                              <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                                <i style="color: #000;" class="fa-regular fa-user"></i>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/profile"><%= user.username %> Account</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    <% } else { %>
+                        <li class="login-text"><a href="/signup">Sign In</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Sell your home with confidence</h1>
+        <p>Choose a selling method with your choice and more in mind</p>
+        <a href="#" class="hero-button"
+          >Learn how to sell your home faster and for more. Read more</a
+        >
+      </div>
+    </section>
+
+    <!-- Selling Options -->
+    <section class="selling-options">
+      <div class="container">
+        <h2 class="section-title">
+          Sell with a partner agent or get a cash offer
+        </h2>
+        <p>
+          Select what's right for your home, your life, and the selling path
+          that's right for you when you sell with a RealEstate partner agent or
+          get a cash offer from a RealEstate partner. RealEstate is here to help
+          guide you every step of the way.
+        </p>
+
+        <div class="option-cards">
+          <div class="option-card">
+            <h3>
+              <div class="option-icon">🏠</div>
+              Sell directly to qualified investors
+            </h3>
+            <p class="option-description">
+              Get a cash offer without having to put your home in the market by
+              selling directly to a qualified investor in our agent network.
+            </p>
+            <a href="#" class="option-button">Get your estimate</a>
+          </div>
+
+          <div class="option-card">
+            <h3>
+              <div class="option-icon">👤</div>
+              Sell for more money with a partner agent
+            </h3>
+            <p class="option-description">
+              Work with a local RealEstate partner agent who can help you sell
+              your home for the most money. You can cancel at any time with no
+              obligation.
+            </p>
+            <a href="#" class="option-button">Find a partner agent</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Traditional Selling Method -->
+    <section class="selling-method">
+      <div class="container">
+        <h2 class="section-title">Sell traditionally with an agent</h2>
+
+        <div class="method-container">
+          <div class="method-text">
+            <p>
+              When you sell your home with a real estate agent, you'll have
+              expert guidance from start to finish. Our partner agents are among
+              the best in your market.
+            </p>
+            <a
+              href="#"
+              class="option-button"
+              style="display: inline-block; width: auto; margin-top: 20px"
+              >Find an agent</a
+            >
+          </div>
+
+          <div class="method-image">
+            <img src="/image/traditional.png" alt="Agent helping homeowner" />
+          </div>
+        </div>
+
+        <div class="method-steps">
+          <div class="steps-list">
+            <h3>Why sell traditionally</h3>
+            <ul>
+              <li>
+                <span class="check-icon">✓</span> Access to MLS listing agent
+              </li>
+              <li>
+                <span class="check-icon">✓</span> Maximize home value with
+                expert guidance
+              </li>
+              <li>
+                <span class="check-icon">✓</span> Professional marketing
+                materials
+              </li>
+              <li>
+                <span class="check-icon">✓</span> Navigate a complex process
+                with a pro
+              </li>
+            </ul>
+          </div>
+
+          <div class="how-to">
+            <h3>How to sell traditionally</h3>
+            <h4>Connect with a top agent in your area</h4>
+            <p>
+              Once you share your home details, we'll help match you with a
+              local agent who will guide you through every step of the selling
+              process.
+            </p>
+            <h4>Prepare your home for sale</h4>
+            <p>
+              Your agent will help you determine the right price and get your
+              home ready for the market. They'll also create professional photos
+              and marketing materials.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FSBO Method -->
+    <section class="selling-method">
+      <div class="container">
+        <h2 class="section-title">Sell your home yourself</h2>
+
+        <div class="method-container">
+          <div class="method-text">
+            <p>
+              Want to try selling your home yourself? You can list on our site
+              for a flat fee of $99 for 30 days, and you'll save on traditional
+              agent commissions. We can also help connect you with services like
+              professional photography.
+            </p>
+            <a
+              href="/create"
+              class="option-button"
+              style="display: inline-block; width: auto; margin-top: 20px"
+              >Post your home for sale</a
+            >
+          </div>
+
+          <div class="method-image">
+            <img src="/image/sell_home.webp" alt="For Sale By Owner" />
+          </div>
+        </div>
+
+        <div class="method-steps">
+          <div class="steps-list">
+            <h3>Why sell FSBO</h3>
+            <ul>
+              <li>
+                <span class="check-icon">✓</span> Avoid paying listing agent
+                commission
+              </li>
+              <li>
+                <span class="check-icon">✓</span> Maintain complete control over
+                the process
+              </li>
+              <li>
+                <span class="check-icon">✓</span> Available a-la-carte
+                professional services
+              </li>
+            </ul>
+          </div>
+
+          <div class="how-to">
+            <h3>How to sell FSBO</h3>
+            <h4>Create your listing</h4>
+            <p>
+              Simply create an account, add photos and details about your home,
+              set your price, and publish your listing.
+            </p>
+            <h4>Engage with potential buyers</h4>
+            <p>
+              Once your listing is live, you can message directly with
+              interested buyers, schedule showings, and negotiate offers through
+              our platform.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources">
+      <div class="container">
+        <h2 class="resources-title">Go-to resources for a successful sale</h2>
+        <p class="resources-subtitle">Explore your home's value</p>
+
+        <div class="search-container">
+          <input
+            type="text"
+            placeholder="Enter your home address"
+            class="search-input"
+          />
+          <button class="search-button">Get Started</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+      <div class="container">
+        <h2 class="process-title">Get acquainted with the process</h2>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Prepare your home</h3>
+            <p>Make repairs, clean, and stage</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Price your home</h3>
+            <p>Research comparables and market values</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3 class="step-title">List your property</h3>
+            <p>Create a compelling listing with photos</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3 class="step-title">Market and show it</h3>
+            <p>Promote and host open houses</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <h3 class="step-title">Close the deal</h3>
+            <p>Navigate offers and finalize the sale</p>
+          </div>
+        </div>
+
+        <div class="home-examples">
+          <div class="home-card">
+            <div class="home-image1"></div>
+            <div class="home-details">
+              <div class="home-price">$450,000</div>
+              <div class="home-specs">
+                <span>3 bd</span>
+                <span>2 ba</span>
+                <span>1,850 sqft</span>
+              </div>
+              <div class="home-address">123 Maple Street, Portland, OR</div>
+            </div>
+          </div>
+
+          <div class="home-card">
+            <div class="home-image2"></div>
+            <div class="home-details">
+              <div class="home-price">$375,000</div>
+              <div class="home-specs">
+                <span>2 bd</span>
+                <span>2 ba</span>
+                <span>1,450 sqft</span>
+              </div>
+              <div class="home-address">456 Oak Avenue, Seattle, WA</div>
+            </div>
+          </div>
+
+          <div class="home-card">
+            <div class="home-image3"></div>
+            <div class="home-details">
+              <div class="home-price">$525,000</div>
+              <div class="home-specs">
+                <span>4 bd</span>
+                <span>3 ba</span>
+                <span>2,100 sqft</span>
+              </div>
+              <div class="home-address">789 Pine Road, Denver, CO</div>
+            </div>
+          </div>
+
+          <div class="home-card">
+            <div class="home-image4"></div>
+            <div class="home-details">
+              <div class="home-price">$395,000</div>
+              <div class="home-specs">
+                <span>3 bd</span>
+                <span>2 ba</span>
+                <span>1,775 sqft</span>
+              </div>
+              <div class="home-address">321 Cedar Lane, Phoenix, AZ</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="/buy"><button class="view-all-button">View all listings</button></a>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What is the "Clear Cooperation Policy"?
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            The "Clear Cooperation Policy" is a rule by the National Association
+            of Realtors, which is designed to ensure that real estate listings
+            are widely shared among brokerages and made available to all
+            consumers in an open, fair, and competitive market.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What is a pocket listing?
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            A pocket listing is a property that is marketed without being
+            entered into the Multiple Listing Service (MLS), often to maintain
+            privacy or test the market.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What can I do to maximize my home's selling price?
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            To maximize your home's selling price, consider: making strategic
+            renovations, staging your home professionally, pricing it correctly
+            based on market research, ensuring excellent curb appeal, and timing
+            your sale during peak seasons.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What is an MLS?
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            MLS stands for Multiple Listing Service, which is a database
+            established by cooperating real estate brokers to provide data about
+            properties for sale. It allows brokers to see one another's listings
+            of properties for sale with the goal of connecting homebuyers to
+            sellers.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            When is the best time to sell a house?
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            The best time to sell a house is typically during spring and early
+            summer when buyer activity is highest. However, market conditions,
+            local trends, and personal circumstances should also factor into
+            your decision.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-wrapper">
+      <div class="footer-container">
+        <div class="links-row">
+          <a href="/about">About</a>
+          <a href="/zestimate">Zestimates</a>
+          <a href="/research">Research</a>
+          <a href="/careers">Careers</a>
+          <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+          <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+          <a href="/help">Help</a>
+          <a href="/advertise">Advertise</a>
+          <a href="/fair">Fair Housing Guide</a>
+          <a href="/advocacy">Advocacy</a>
+        </div>
+
+        <div class="links-row">
+          <a href="/terms">Terms of use</a>
+          <a href="/privacy">Privacy Portal</a>
+          <a href="/cookie">Cookie Preference</a>
+          <a href="/learn">Learn</a>
+          <a href="/ai">AI</a>
+          <a href="/mobile">Mobile Apps</a>
+        </div>
+
+        <div class="links-row">
+          <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+          <a href="https://streeteasy.com/">StreetEasy</a>
+          <a href="https://hotpads.com/">HotPads</a>
+          <a href="https://showingtimeplus.com/">Out East</a>
+          <a href="https://outeast.com/">ShowingTime+</a>
+        </div>
+
+        <div class="do-not-sell">
+          <a href="#">Do Not Sell or Share My Personal Information→</a>
+        </div>
+
+        <div class="accessibility-notice">
+          Zillow Group is committed to ensuring digital accessibility for
+          individuals with disabilities. We are continuously working to improve
+          the accessibility of our web experience for everyone, and we welcome
+          feedback and accommodation requests. If you wish to report an issue or
+          seek an accommodation, please <a href="#">let us know</a>.
+        </div>
+
+        <div class="legal-info">
+          Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in
+          multiple states. Zillow (Canada), Inc. holds real estate brokerage
+          <a href="#">licenses</a> in multiple provinces.<br />
+          <a href="#">§ 442-H New York Standard Operating Procedures</a><br />
+          <a href="#">§ New York Fair Housing Notice</a><br />
+          TREC: <a href="#">Information about brokerage services</a>,
+          <a href="#">Consumer protection notice</a><br />
+          California DRE #1522444<br />
+          <a href="#">Contact Zillow, Inc. Brokerage</a>
+        </div>
+
+        <div class="legal-info">
+          For listings in Canada, the trademarks REALTOR®, REALTORS®, and the
+          REALTOR® logo are controlled by The Canadian Real Estate Association
+          (CREA) and identify real estate professionals who are members of CREA.
+          The trademarks MLS®, Multiple Listing Service® and the associated
+          logos are owned by CREA and identify the quality of services provided
+          by real estate professionals who are members of CREA. Used under
+          license.
+        </div>
+
+        <div class="app-stores">
+          <a href="#"
+            ><img src="/image/apple-icon.svg" alt="Download on the App Store"
+          /></a>
+          <a href="#"
+            ><img src="/image/google-icon.svg" alt="Get it on Google Play"
+          /></a>
+        </div>
+        <div class="bottom-row">
+          <img
+            src="/image/blue-logo.jpg"
+            alt="Zillow logo"
+            class="zillow-logo"
+          />
+          <span>Follow us:</span>
+          <div class="social-icons">
+            <!-- Social media icons would go here -->
+          </div>
+          <span>© 2006-2025 Zillow</span>
+          <img
+            src="./image/home-icon.png"
+            alt="Equal Housing Opportunity"
+            class="equal-housing"
+          />
+        </div>
+      </div>
+    </footer>
+    <script src="account.js"></script>
+    <script>
+               // Mobile Menu Toggle
+               document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('active');
+            document.querySelector('.overlay').style.display = 'block';
+        });
+
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.overlay').style.display = 'none';
+        });
+
+        document.querySelector('.overlay').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            this.style.display = 'none';
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  const userDropdown = document.querySelector(".user-dropdown");
+
+  if (dropdownBtn) {
+      dropdownBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          userDropdown.classList.toggle("active");
+      });
+
+      document.addEventListener("click", () => {
+          userDropdown.classList.remove("active");
+      });
+  }
+});
+    </script>
+    <script
+      src="https://kit.fontawesome.com/e1fbe49b44.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

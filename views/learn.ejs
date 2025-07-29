@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xZillowx | About</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon" />
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.all {
+    margin-top: 6rem;
+}
+
+/* Header and Navigation */
+nav {
+    background-color: #003580;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-con {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.xzillow-logo {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.first-ul, .second-ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.first-ul a, .second-ul a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.first-ul a:hover, .second-ul a:hover {
+    opacity: 0.8;
+}
+
+.mobile-nav {
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bars {
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -80%;
+    width: 80%;
+    height: 100%;
+    background: white;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.close-menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-menu-items ul {
+    list-style: none;
+}
+
+.mobile-menu-items ul li {
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-items ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Main Container Styles */
+.container1, .container2, .container3, .container4, .container5 {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Section Headers */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.see-all {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Slider Styles */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 68vh;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+}
+
+.slide-image {
+    flex: 1;
+    max-width: 60%;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slide-content {
+    flex: 1;
+    max-width: 40%;
+    padding: 20px;
+}
+
+.category {
+    color: #6200ee;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.read-time {
+    color: #666;
+    font-size: 14px;
+    margin-left: 10px;
+    line-height: 2;
+    display: block;
+}
+
+.slide-title {
+    font-size: 32px;
+    color: #333;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.slide-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-article {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #0066ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.slider-buttons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.slider-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.slider-button:hover {
+    background: #f5f5f5;
+}
+
+.slider-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Grid Layout for Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+.card {
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    height: 160px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-image {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    color: #00295c;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.bottom-border {
+    height: 20px;
+    margin-top: 20px;
+}
+
+/* Articles Grid */
+.articles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.main-article {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 70%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.main-article img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.content {
+    padding: 20px;
+}
+
+.article-title {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-decoration: none;
+    line-height: 1.4;
+    display: block;
+}
+
+.main-article .article-title {
+    font-size: 24px;
+}
+
+.description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Article Cards */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+/* Scrollable Articles Row */
+.scroll-container {
+    position: relative;
+    margin: 0 -20px;
+    padding: 0 20px;
+}
+
+.articles-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.articles-row::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.nav-buttons {
+    position: absolute;
+    right: 20px;
+    top: -24px;
+    display: flex;
+    gap: 8px;
+}
+
+.nav-button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.nav-button:hover {
+    background: #f5f5f5;
+}
+
+.nav-button svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+}
+
+/* Download App Section */
+.download-section {
+    background-color: #e0f2ff;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    
+    gap: 40px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+.download-section .content{
+    direction: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title {
+    font-size: 32px;
+    color: #0066ff;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #0066ff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #0052cc;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 500px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .container1, .container2, .container3, .container4, .container5 {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .first-ul, .second-ul {
+        gap: 1rem;
+    }
+    
+    .slide {
+        flex-direction: column;
+    }
+    
+    .slide-image, .slide-content {
+        max-width: 100%;
+    }
+    
+    .slide-image img {
+        height: 300px;
+    }
+    
+    .slider-container {
+        height: auto;
+        min-height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .articles-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+    .mobile-nav {
+        display: flex;
+    }
+    
+    .desk, .first-ul, .second-ul {
+        display: none;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card {
+        height: auto;
+    }
+    
+    .card-image {
+        width: 40%;
+        height: 120px;
+    }
+    
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-article {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    
+    .download-section {
+        flex-direction: column;
+        padding: 24px;
+    }
+    
+    .down.content {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .image-container {
+        order: -1;
+        max-width: 100%;
+    }
+    
+    .image-container img {
+        height: 300px;
+    }
+    
+    .title {
+        font-size: 28px;
+    }
+    
+    .description {
+        font-size: 16px;
+    }
+    
+    .nav-buttons {
+        display: none;
+    }
+    
+    .links-row {
+        justify-content: center;
+    }
+    
+    .bottom-row {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .articles-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .card-image {
+        width: 100%;
+        height: 180px;
+    }
+    
+    .card-content {
+        width: 100%;
+    }
+    
+    .article-card {
+        display: flex;
+    }
+    
+    .article-card img {
+        width: 100%;
+        height: 180px;
+    }
+    .main-article{
+        height: 100%;
+    }
+    .main-article img {
+        height: 220px;
+    }
+    
+    .download-section {
+        padding: 20px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    .image-container img {
+        height: 250px;
+    }
+    
+    .links-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+  </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>Menu</h2>
+            <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-items">
+            <ul>
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/rent">Rent</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/homeloans">Home Loans</a></li>
+                <li><a href="/findagent">Find an Agent</a></li>
+                <li><a href="/rentals">Manage Rentals</a></li>
+                <li><a href="/advertise">Advertise</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/signup">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+
+      <div class="overlay"></div>
+      <div class="mobile-menu">
+          <div class="mobile-menu-header">
+              <h2>Menu</h2>
+              <button class="close-menu">&times;</button>
+          </div>
+          <div class="mobile-menu-items">
+              <ul>
+                  <li><a href="/buy">Buy</a></li>
+                  <li><a href="/rent">Rent</a></li>
+                  <li><a href="/sell">Sell</a></li>
+                  <li><a href="/homeloans">Home Loans</a></li>
+                  <li><a href="/findagent">Find an Agent</a></li>
+                  <li><a href="/rentals">Manage Rentals</a></li>
+                  <li><a href="/advertise">Advertise</a></li>
+                  <li><a href="/help">Help</a></li>
+                  <li><a href="/signup">Sign In</a></li>
+              </ul>
+          </div>
+      </div>
+  
+      <nav>
+        <div class="nav-content">
+            <div class="mobile-nav">
+                <div style="display: flex;  align-items: center; justify-content: center;"><i class="fa-solid fa-bars bars" id="menu-toggle" style="color: #000; font-size: 1rem;"></i></div>
+                <div class="logo-con">
+                    <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+                </div>
+                 <div class="user-dropdown" style="display: flex; justify-content: center; align-items: center;">
+                    <% if (user) { %>
+                        <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                            <i class="fa-regular fa-user" style="color: #000; font-size: 2rem;"> Account</i>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile"><%= user.username %> Account</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    <% } else { %>
+                        <a class="login-btn" href="/signup">                            <i class="fa-regular fa-user" style="color: #000; font-size: 1rem;"> <span style="font-size: 10px;">Account</span></i>
+</a>
+                    <% } %>
+                </div>
+            </div>
+    
+            <ul class="first-ul">
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/rent">Rent</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/homeloans">Home Loans</a></li>
+                <li><a href="/findagent">Find an Agent</a></li>
+            </ul>
+    
+            <div class="logo-con desk">
+                <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+            </div>
+    
+            <div class="hide-major">
+                <ul class="second-ul">
+                    <li><a href="/rentals">Manage Rentals</a></li>
+                    <li><a href="/advertise">Advertise</a></li>
+                    <li><a href="/help">Help</a></li>
+                    <% if (user) { %>
+                        <li class="login-text user-dropdown">
+                            <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                                <i style="color: #000;" class="fa-regular fa-user"></i>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/profile"><%= user.username %> Account</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    <% } else { %>
+                        <li class="login-text"><a href="/signup">Sign In</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container1">
+      <h1>Resources for every stage of your journey home</h1>
+      
+      <div class="slider-container">
+          <div class="slider">
+              <div class="slide">
+                  <div class="slide-image">
+                      <img src="/image/buying-learn.webp" alt="House with people playing">
+                  </div>
+                  <div class="slide-content">
+                      <span class="category">Buying</span>
+                      <span class="read-time">3 min read</span>
+                      <h2 class="slide-title">46 Cities Where a Monthly Mortgage Costs Less Than a Big-Game Ticket</h2>
+                      <p class="slide-description">Tickets to the first national football championship in 1967 cost $10. Today's would cover a mortgage payment — or even a down payment.</p>
+                      <a href="#" class="read-article">Read article</a>
+                  </div>
+              </div>
+              <div class="slide">
+                <div class="slide-image">
+                    <img src="/image/buying-learn-2.webp" alt="House with people playing">
+                </div>
+                <div class="slide-content">
+                    <span class="category">Buying</span>
+                    <span class="read-time">3 min read</span>
+                    <h2 class="slide-title">46 Cities Where a Monthly Mortgage Costs Less Than a Big-Game Ticket</h2>
+                    <p class="slide-description">Tickets to the first national football championship in 1967 cost $10. Today's would cover a mortgage payment — or even a down payment.</p>
+                    <a href="#" class="read-article">Read article</a>
+                </div>
+            </div>
+            <div class="slide">
+              <div class="slide-image">
+                  <img src="/image/buying-learn-3.webp" alt="House with people playing">
+              </div>
+              <div class="slide-content">
+                  <span class="category">Buying</span>
+                  <span class="read-time">3 min read</span>
+                  <h2 class="slide-title">46 Cities Where a Monthly Mortgage Costs Less Than a Big-Game Ticket</h2>
+                  <p class="slide-description">Tickets to the first national football championship in 1967 cost $10. Today's would cover a mortgage payment — or even a down payment.</p>
+                  <a href="#" class="read-article">Read article</a>
+              </div>
+          </div>
+          <div class="slide">
+            <div class="slide-image">
+                <img src="/image/buying-learn-4.webp" alt="House with people playing">
+            </div>
+            <div class="slide-content">
+                <span class="category">Buying</span>
+                <span class="read-time">3 min read</span>
+                <h2 class="slide-title">46 Cities Where a Monthly Mortgage Costs Less Than a Big-Game Ticket</h2>
+                <p class="slide-description">Tickets to the first national football championship in 1967 cost $10. Today's would cover a mortgage payment — or even a down payment.</p>
+                <a href="#" class="read-article">Read article</a>
+            </div>
+        </div>
+          </div>
+          
+          <div class="slider-buttons">
+              <button class="slider-button prev" aria-label="Previous slide">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </button>
+              <button class="slider-button next" aria-label="Next slide">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path d="M9 18l6-6-6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  </div>
+
+
+      <div class="container2">
+        <div class="header">
+            <h1>Buying</h1>
+            <a href="#" class="see-all">See all</a>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <img src="/image/buying-1.webp" alt="People discussing house purchase" class="card-image">
+                <div class="card-content">
+                    <div class="read-time">13 min read</div>
+                    <h2 class="card-title">10 Steps to Buying a House</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/image/buying-2.webp" alt="Agent meeting with clients" class="card-image">
+                <div class="card-content">
+                    <div class="read-time">15 min read</div>
+                    <h2 class="card-title">Agents Share Their 21 Best Tips for Buying a House</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/image/buying-3.webp" alt="Friends in front of house" class="card-image">
+                <div class="card-content">
+                    <div class="read-time">9 min read</div>
+                    <h2 class="card-title">Buying a House With a Friend: How to Know If It's Right For You</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/image/buying-4.webp" alt="Suburban house with porch" class="card-image">
+                <div class="card-content">
+                    <div class="read-time">5 min read</div>
+                    <h2 class="card-title">Is It A Buyer's or Seller's Market?</h2>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-border"></div>
+    </div>
+
+    <div class="container3">
+      <div class="header">
+          <h1>Financing</h1>
+          <a href="#" class="see-all">See all</a>
+      </div>
+
+      <div class="articles-grid">
+          <article class="main-article">
+              <img src="/image/finance-1.webp" alt="Family in front of house">
+              <div class="content">
+                  <span class="read-time">9 min read</span>
+                  <h2><a href="#" class="article-title">How to Afford a House: 17 Ways to Understand and Unlock Your Home Buying Power</a></h2>
+                  <p class="description">Resources to help make owning a home a reality.</p>
+              </div>
+          </article>
+
+          <article class="article-card">
+              <img src="/image/finance-2.webp" alt="Couple reviewing documents">
+              <div class="content">
+                  <span class="read-time">14 min read</span>
+                  <h2><a href="#" class="article-title">21 Creative Ways to Save Money for a Home Down Payment</a></h2>
+              </div>
+          </article>
+
+          <article class="article-card">
+              <img src="/image/finance-3.webp" alt="Couple with laptop">
+              <div class="content">
+                  <span class="read-time">10 min read</span>
+                  <h2><a href="#" class="article-title">How to Qualify for a Mortgage</a></h2>
+              </div>
+          </article>
+
+          <article class="article-card">
+              <img src="/image/finance-4.webp" alt="Person using phone">
+              <div class="content">
+                  <span class="read-time">9 min read</span>
+                  <h2><a href="#" class="article-title">Who Should You Find First: Agent or Lender?</a></h2>
+              </div>
+          </article>
+      </div>
+  </div>
+  <div class="container5">
+    <div class="download-section">
+        <div class="content">
+            <h2 class="title">Download the Zillow App</h2>
+            <p class="description">Don't miss out on the right home for you — browse up-to-date listings, refine your search and more.</p>
+            <a href="#" class="download-button">Download the free app</a>
+        </div>
+        <div class="image-container">
+            <img src="/image/download-app.webp" alt="Person in yellow coat using mobile phone">
+        </div>
+    </div>
+</div>
+    <div class="container4">
+      <div class="header">
+          <h1>Selling</h1>
+          <a href="#" class="see-all">See all</a>
+      </div>
+    
+
+      <div class="scroll-container">
+          <div class="articles-row">
+              <article class="article-card">
+                  <img src="/image/selling-1.webp" alt="Person placing for sale sign">
+                  <div class="card-content">
+                      <span class="read-time">12 min read</span>
+                      <a href="#" class="article-title">9 Mistakes to Avoid When Selling Your Home</a>
+                  </div>
+              </article>
+
+              <article class="article-card">
+                  <img src="/image/selling-2.webp" alt="Digital home listing display">
+                  <div class="card-content">
+                      <span class="read-time">9 min read</span>
+                      <a href="#" class="article-title">How to Boost Your Home's Digital Curb Appeal</a>
+                  </div>
+              </article>
+
+              <article class="article-card">
+                  <img src="/image/selling-3.webp" alt="People moving furniture">
+                  <div class="card-content">
+                      <span class="read-time">8 min read</span>
+                      <a href="#" class="article-title">Buying and Selling a House at the Same Time: Where to Begin</a>
+                  </div>
+              </article>
+
+              <article class="article-card">
+                  <img src="/image/selling-4.webp" alt="Home improvement project">
+                  <div class="card-content">
+                      <span class="read-time">8 min read</span>
+                      <a href="#" class="article-title">11 Home Improvement Projects That Don't Add Value</a>
+                  </div>
+              </article>
+          </div>
+
+          <div class="nav-buttons">
+              <button class="nav-button prev" aria-label="Previous">
+                  <svg viewBox="0 0 24 24">
+                      <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </button>
+              <button class="nav-button next" aria-label="Next">
+                  <svg viewBox="0 0 24 24">
+                      <path d="M9 18l6-6-6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </button>
+          </div>
+      </div>
+      <div class="container3">
+        <div class="header">
+            <h1>Renting</h1>
+            <a href="#" class="see-all">See all</a>
+        </div>
+  
+        <div class="articles-grid">
+            <article class="main-article">
+                <img src="/image/rent-1.webp" alt="Family in front of house">
+                <div class="content">
+                    <span class="read-time">9 min read</span>
+                    <h2><a href="#" class="article-title">How to Afford a House: 17 Ways to Understand and Unlock Your Home Buying Power</a></h2>
+                    <p class="description">Resources to help make owning a home a reality.</p>
+                </div>
+            </article>
+  
+            <article class="article-card">
+                <img src="/image/rent-2.webp" alt="Couple reviewing documents">
+                <div class="content">
+                    <span class="read-time">14 min read</span>
+                    <h2><a href="#" class="article-title">21 Creative Ways to Save Money for a Home Down Payment</a></h2>
+                </div>
+            </article>
+  
+            <article class="article-card">
+                <img src="/image/rent-3.webp" alt="Couple with laptop">
+                <div class="content">
+                    <span class="read-time">10 min read</span>
+                    <h2><a href="#" class="article-title">How to Qualify for a Mortgage</a></h2>
+                </div>
+            </article>
+  
+            <article class="article-card">
+                <img src="/image/rent-4.webp" alt="Person using phone">
+                <div class="content">
+                    <span class="read-time">9 min read</span>
+                    <h2><a href="#" class="article-title">Who Should You Find First: Agent or Lender?</a></h2>
+                </div>
+            </article>
+        </div>
+    </div>
+    </div>
+
+    <div class="container3">
+      <div class="header">
+          <h1>Owning</h1>
+          <a href="#" class="see-all">See all</a>
+      </div>
+
+      <div class="articles-grid">
+          <article class="main-article">
+              <img src="/image/finance-1.webp" alt="Family in front of house">
+              <div class="content">
+                  <span class="read-time">9 min read</span>
+                  <h2><a href="#" class="article-title">How to Afford a House: 17 Ways to Understand and Unlock Your Home Buying Power</a></h2>
+                  <p class="description">Resources to help make owning a home a reality.</p>
+              </div>
+          </article>
+
+          <article class="article-card">
+              <img src="/image/finance-2.webp" alt="Couple reviewing documents">
+              <div class="content">
+                  <span class="read-time">14 min read</span>
+                  <h2><a href="#" class="article-title">21 Creative Ways to Save Money for a Home Down Payment</a></h2>
+              </div>
+          </article>
+
+          <article class="article-card">
+              <img src="/image/finance-3.webp" alt="Couple with laptop">
+              <div class="content">
+                  <span class="read-time">10 min read</span>
+                  <h2><a href="#" class="article-title">How to Qualify for a Mortgage</a></h2>
+              </div>
+          </article>
+
+          <article class="article-card">
+              <img src="/image/finance-4.webp" alt="Person using phone">
+              <div class="content">
+                  <span class="read-time">9 min read</span>
+                  <h2><a href="#" class="article-title">Who Should You Find First: Agent or Lender?</a></h2>
+              </div>
+          </article>
+      </div>
+  </div>
+  </div>
+
+
+  <footer class="footer-wrapper">
+    <div class="footer-container">
+      <div class="links-row">
+           <a href="/about">About</a>
+          <a href="/zestimate">Zestimates</a>
+          <a href="/research">Research</a>
+          <a href="/careers">Careers</a>
+          <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+          <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+          <a href="/help">Help</a>
+          <a href="/advertise">Advertise</a>
+          <a href="/fair">Fair Housing Guide</a>
+          <a href="/advocacy">Advocacy</a>
+      </div>
+  
+      <div class="links-row">
+          <a href="/terms">Terms of use</a>
+          <a href="/privacy">Privacy Portal</a>
+          <a href="/cookie">Cookie Preference</a>
+          <a href="/learn">Learn</a>
+          <a href="/ai">AI</a>
+          <a href="/mobile">Mobile Apps</a>
+      </div>
+  
+      <div class="links-row">
+       <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+          <a  href="https://streeteasy.com/">StreetEasy</a>
+          <a  href="https://hotpads.com/">HotPads</a>
+          <a  href="https://showingtimeplus.com/">Out East</a>
+          <a  href="https://outeast.com/">ShowingTime+</a>
+      </div>
+  
+      <div class="do-not-sell">
+        <a href="#">Do Not Sell or Share My Personal Information→</a>
+      </div>
+  
+      <div class="accessibility-notice">
+        Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please <a href="#">let us know</a>.
+      </div>
+  
+      <div class="legal-info">
+        Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in multiple states. Zillow (Canada), Inc. holds real estate brokerage <a href="#">licenses</a> in multiple provinces.<br>
+        <a href="#">§ 442-H New York Standard Operating Procedures</a><br>
+        <a href="#">§ New York Fair Housing Notice</a><br>
+        TREC: <a href="#">Information about brokerage services</a>, <a href="#">Consumer protection notice</a><br>
+        California DRE #1522444<br>
+        <a href="#">Contact Zillow, Inc. Brokerage</a>
+      </div>
+  
+      <div class="legal-info">
+        For listings in Canada, the trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.
+      </div>
+  
+      <div class="app-stores">
+        <a href="#"><img src="/image/apple-icon.svg" alt="Download on the App Store"></a>
+        <a href="#"><img src="/image/google-icon.svg" alt="Get it on Google Play"></a>
+      </div>
+      <div class="bottom-row">
+        <img src="/image/blue-logo.jpg" alt="Zillow logo" class="zillow-logo">
+        <span>Follow us:</span>
+        <div class="social-icons">
+          <!-- Social media icons would go here -->
+        </div>
+        <span>© 2006-2025 Zillow</span>
+        <img src="./image/home-icon.png" alt="Equal Housing Opportunity" class="equal-housing">
+      </div>
+    </div>
+  </footer>
+  <img src="/image/footer-art.svg" alt="" class="footer-art">
+<script src="https://kit.fontawesome.com/e1fbe49b44.js" crossorigin="anonymous"></script>
+
+    <script>
+           const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        });
+
+        // Optional: Add keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            } else if (e.key === 'ArrowRight') {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }
+        });
+        const scrollContainer = document.querySelector('.articles-row');
+        const prevButton2 = document.querySelector('.prev');
+        const nextButton2 = document.querySelector('.next');
+        const scrollAmount = 300;
+
+        prevButton2.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        nextButton2.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Update button states based on scroll position
+        scrollContainer.addEventListener('scroll', () => {
+            prevButton2.style.opacity = scrollContainer.scrollLeft > 0 ? '1' : '0.5';
+            nextButton2.style.opacity = 
+                scrollContainer.scrollLeft < (scrollContainer.scrollWidth - scrollContainer.clientWidth) 
+                ? '1' : '0.5';
+        });
+    </script>
+        <script src="account.js"></script>  
+<script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('active');
+            document.querySelector('.overlay').style.display = 'block';
+        });
+
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.overlay').style.display = 'none';
+        });
+
+        document.querySelector('.overlay').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            this.style.display = 'none';
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  const userDropdown = document.querySelector(".user-dropdown");
+
+  if (dropdownBtn) {
+      dropdownBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          userDropdown.classList.toggle("active");
+      });
+
+      document.addEventListener("click", () => {
+          userDropdown.classList.remove("active");
+      });
+  }
+});
+
+  </script>
+
+    </body>
+    </html>
+    

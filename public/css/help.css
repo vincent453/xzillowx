@@ -1,0 +1,263 @@
+/* General Layout */
+body {
+    margin: 0;
+    font-family: "Inter", serif;
+    overflow-x: hidden;
+   
+}
+
+a {
+    text-decoration: none;
+    color: #0072EF;
+   
+}
+li{
+    list-style: none;
+}
+input:focus{
+    outline: none;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    height: 71px;
+    background: #ffffff;
+    flex-wrap: wrap;
+}
+.header-content{
+    height: 71px;
+    width: 1160px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    align-items: center;
+    flex-shrink: 10;
+ 
+}
+
+
+.header-content img {
+    width: 176px;
+    height: auto;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text a {
+    color: #0072EF;
+    font-size: 14px;
+    list-style: none;
+}
+
+/* Background Section */
+.bg {
+    background-image: url("../image/help-bg.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-btn2{
+    position: relative;
+    display: inline-block;
+}
+.input-btn2 input{
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    box-sizing: border-box;
+    color: #666;
+    height: 35px;
+    padding-left: 40px;
+    padding-right: 20px;
+    width: 610px;
+}
+
+.input-btn2 input:focus{
+    border: none;
+    border-color: #1041db;
+    box-shadow: 0 0 5px 1px #1041db;
+}
+
+.input-btn2 img{
+    position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Adjust size of the icon */
+   
+}
+/* List Container */
+.lists-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 130px;
+}
+
+.lists {
+    width: 100%;
+    max-width: 1190px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blocks-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin-top: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgb(205, 205, 211);
+}
+
+/* Blocks List Items */
+.blocks-item {
+    display: flex;
+    border: 1px solid #0072EF;
+    border-radius: 4px;
+    padding: 20px 30px;
+    margin: 0 1rem 2rem;
+    flex: 1 0 300px;
+    font-weight: 300;
+    color: #0072EF;
+    justify-content: center;
+    text-align: center;
+}
+
+.blocks-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blocks-item-title {
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* Footer */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 16rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgb(205, 205, 211);
+}
+.footer-content a:first-child{
+   color: #666;
+}
+
+
+.dropdown-toggle {
+    cursor: pointer;
+    background: none;
+    border: 0;
+    display: inline-block;
+    padding: 0;
+    text-align: initial;
+}
+
+.dropdown-menu {
+    display: none;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    position: absolute;
+    right: 6rem;
+    margin-top: -100px;
+    width: 170px;
+    height: 92px;
+    z-index: 1000;
+    text-align: left;
+    padding-left: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .lists {
+        max-width: 100%;
+    }
+
+    .blocks-item {
+        flex: 1 0 30%;
+    }
+    .input-btn2{
+        width: 40rem;
+    }
+    .input-btn2 input {
+        width: 100%; /* Make the input full width */
+        padding: 0 2rem;
+
+      }
+      .input-btn2 img {
+        width: 18px; /* Slightly smaller icon for smaller screens */
+      }
+
+}
+
+@media (max-width: 789px) {
+
+    .text a {
+        display: none;
+    }
+    .lists {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .blocks-item {
+        flex: 1 0 40%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .text a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text a {
+        font-size: 10px;
+    }
+
+    .footer-content {
+        gap: 1rem;
+    }
+
+    .blocks-item-title {
+        font-size: 14px;
+    }
+    .input-btn2 input {
+        padding-left: 30px; /* Reduce padding */
+      }
+      .input-btn2 img {
+        width: 16px; /* Even smaller icon */
+    }
+}

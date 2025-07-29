@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeFind - Sign Up or Sign In</title>
+    <style>
+      :root {
+        --primary: #006aff;
+        --primary-dark: #0053c4;
+        --text-dark: #2a2a33;
+        --text-light: #67696b;
+        --border-color: #d1d1d5;
+        --background-light: #f9f9fb;
+        --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      }
+
+      body {
+        background-color: var(--background-light);
+        color: var(--text-dark);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        background-color: white;
+        box-shadow: var(--shadow);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .container {
+        width: 92%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-icon {
+        margin-right: 8px;
+        font-size: 24px;
+      }
+
+      .main-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 20px;
+        background-image: url("/api/placeholder/1920/1080");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .main-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(5px);
+      }
+
+      .auth-container {
+        background: white;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        width: 100%;
+        max-width: 460px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .tab-container {
+        display: flex;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .tab {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--text-light);
+        background: transparent;
+        border: none;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+
+      .tab.active {
+        color: var(--primary);
+        border-bottom: 3px solid var(--primary);
+      }
+
+      .form-container {
+        padding: 30px;
+      }
+
+      .form-title {
+        font-size: 22px;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--text-dark);
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border 0.3s ease;
+      }
+
+      .form-input:focus {
+        border-color: var(--primary);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(0, 106, 255, 0.2);
+      }
+
+      .remember-me {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      .remember-me input {
+        margin-right: 8px;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        margin: 24px 0;
+        color: var(--text-light);
+        font-size: 14px;
+      }
+
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: var(--border-color);
+      }
+
+      .divider::before {
+        margin-right: 15px;
+      }
+
+      .divider::after {
+        margin-left: 15px;
+      }
+
+      .social-login {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .social-btn {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        background-color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .social-btn:hover {
+        background-color: var(--background-light);
+        border-color: #b1b1b5;
+      }
+
+      .social-icon {
+        margin-right: 8px;
+        font-size: 20px;
+      }
+
+      .terms {
+        font-size: 12px;
+        color: var(--text-light);
+        text-align: center;
+        margin-top: 24px;
+      }
+
+      .terms a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .terms a:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        background-color: white;
+        padding: 24px 0;
+        text-align: center;
+        color: var(--text-light);
+        font-size: 14px;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .forgot-password {
+        text-align: right;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
+      .forgot-password a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .forgot-password a:hover {
+        text-decoration: underline;
+      }
+
+      /* Tabs content */
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+      #password-strength {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+      @media (max-width: 600px) {
+        .form-container {
+          padding: 20px;
+        }
+
+        .main-content {
+          padding: 40px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="logo">
+            <span class="logo-icon">🏠</span>
+            Home
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="auth-container">
+        <div class="tab-container">
+          <button class="tab active" id="signin-tab">Sign In</button>
+          <button class="tab  " id="signup-tab">Sign Up</button>
+        </div>
+
+        <div class="form-container">
+          <!-- Sign In Form -->
+          <div class="tab-content active" id="signin-content">
+            <h2 class="form-title">Welcome back</h2>
+
+            <div class="social-login">
+              <button class="social-btn">
+                <span class="social-icon">G</span>
+                Google
+              </button>
+              <button class="social-btn">
+                <span class="social-icon">f</span>
+                Facebook
+              </button>
+            </div>
+
+            <div class="divider">or sign in with email</div>
+
+            <form action="/login" method="post">
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  class="form-input"
+                  required
+                />
+              </div>
+
+              <div class="remember-me">
+                <input type="checkbox" id="remember" />
+                <label for="remember">Remember me</label>
+              </div>
+
+              <div class="forgot-password">
+                <a href="/forgot-password">Forgot your password?</a>
+              </div>
+
+              <button type="submit" class="btn">Sign In</button>
+            </form>
+
+            <p class="terms">
+              By signing in, I agree to HomeFind's
+              <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+            </p>
+          </div>
+
+          <!-- Sign Up Form -->
+          <div class="tab-content" id="signup-content">
+            <h2 class="form-title">Create your account</h2>
+
+            <div class="social-login">
+              <button class="social-btn">
+                <span class="social-icon">G</span>
+                Google
+              </button>
+              <button class="social-btn">
+                <span class="social-icon">f</span>
+                Facebook
+              </button>
+            </div>
+
+            <div class="divider">or create account with email</div>
+
+            <form action="/signup" method="post">
+              <div class="form-group">
+                <label for="username" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  class="form-input"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-input"
+                  required
+                />
+                <p id="password-strength"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="confirm-password" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  class="form-input"
+                />
+              </div>
+
+              <div class="remember-me">
+                <input type="checkbox" id="accept-terms" required />
+                <label for="accept-terms"
+                  >I accept the <a href="#">Terms of Service</a> and
+                  <a href="#">Privacy Policy</a></label
+                >
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn">Create Account</button>
+            </form>
+
+            <p class="terms">
+              By creating an account, you'll get updates on saved searches,
+              favorite properties, and market insights.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 HomeFind. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Tab switching functionality
+      const signinTab = document.getElementById("signin-tab");
+      const signupTab = document.getElementById("signup-tab");
+      const signinContent = document.getElementById("signin-content");
+      const signupContent = document.getElementById("signup-content");
+
+      signinTab.addEventListener("click", function () {
+        signinTab.classList.add("active");
+        signupTab.classList.remove("active");
+        signinContent.classList.add("active");
+        signupContent.classList.remove("active");
+      });
+
+      signupTab.addEventListener("click", function () {
+        signupTab.classList.add("active");
+        signinTab.classList.remove("active");
+        signupContent.classList.add("active");
+        signinContent.classList.remove("active");
+      });
+      
+      document.getElementById("password").addEventListener("input", function () {
+            const password = this.value;
+            const strengthText = document.getElementById("password-strength");
+            const submitBtn = document.getElementById("submit-btn");
+
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[\W_]/.test(password)) strength++;
+
+            if (strength < 2) {
+                strengthText.textContent = "Weak Password ❌";
+                strengthText.style.color = "red";
+                submitBtn.disabled = true;
+            } else if (strength < 4) {
+                strengthText.textContent = "Moderate Password ⚠️";
+                strengthText.style.color = "orange";
+                submitBtn.disabled = false;
+            } else {
+                strengthText.textContent = "Strong Password ✅";
+                strengthText.style.color = "green";
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+
+  </body>
+</html>

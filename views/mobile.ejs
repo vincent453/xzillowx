@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zillow App Features</title>
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/buy.css" />
+
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    
+    body {
+      background-color: #f8f9fa;
+      color: #2a2a33;
+      line-height: 1.5;
+    }
+   
+    
+    .app-banner {
+      background-color: #0061ff;
+      color: white;
+      padding: 3rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+    }
+    
+    .app-banner-content {
+      max-width: 1100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .app-banner-text {
+      max-width: 500px;
+    }
+    
+    .app-banner h2 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      font-family: "Gideon Roman", serif;
+
+    }
+    
+    .app-banner p {
+      font-size: 17px;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+    
+    .app-phone-container {
+      width: 477px;
+      height: 400px;
+      position: relative;
+    }
+    
+    .app-phone img{
+        width: 100%;
+    }
+    .mobile{
+        width: 100%;
+        display: none;
+    }
+    
+
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    
+    .feature-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .feature-image-container {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+    }
+    
+    .feature-title {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    
+    .feature-description {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      max-width: 350px;
+    }
+    
+    .ratings-section {
+      background-color: #f0f0f0;
+      padding: 2rem 0;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    
+    .ratings-container {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+    }
+    
+    .rating-item {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+    }
+    
+    .rating-stars {
+      color: #ffb400;
+      margin: 0 0.5rem;
+    }
+    
+    .value-props {
+      max-width: 1100px;
+      margin: 4rem auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 5rem 0rem;
+    }
+    
+    .value-prop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 380px;
+      text-align: center;
+      row-gap: 2.5rem;
+
+
+    }
+    
+    .value-prop-icon {
+      width: 80px;
+      height: 80px;
+      background-color: #f0f0f0;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0061ff;
+      font-size: 30px;
+    }
+    
+    .value-prop-title {
+      font-weight: 600;
+      font-size: 23px;
+      margin-bottom: -2rem;
+      color: #000;
+    }
+    
+    .value-prop-text {
+      font-size: 16px;
+      color: #212020;
+    }
+    .eligible{
+        display: flex;
+        justify-content: center;
+    }
+    .eligible p{
+        width: 50rem;
+        text-align: center;
+        font-size: 10px;
+        padding: 3rem 0;
+    }
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+    .mobility{
+        display: none;
+    }
+    .app-banner-content{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .app-phone-container img{
+        display: block;
+    }
+    }
+    @media (max-width: 768px) {
+      .app-banner-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .app-banner-text {
+        margin-bottom: 2rem;
+      }
+      
+      .qr-code {
+        position: static;
+        margin: 0 auto 1rem;
+        transform: none;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .ratings-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .value-props {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width:480px){
+        .app-phone-container{
+            display: none;
+        }
+        .rating-item{
+            display: flex;
+            justify-content: center;
+        }
+        .rating-item img{
+            width: 60%;
+        }
+        .feature-image-container img{
+            width: 80%;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="mobile-menu">
+      <div class="mobile-menu-header">
+          <h2>Menu</h2>
+          <button class="close-menu">&times;</button>
+      </div>
+      <div class="mobile-menu-items">
+          <ul>
+              <li><a href="/buy">Buy</a></li>
+              <li><a href="/rent">Rent</a></li>
+              <li><a href="/sell">Sell</a></li>
+              <li><a href="/homeloans">Home Loans</a></li>
+              <li><a href="/findagent">Find an Agent</a></li>
+              <li><a href="/rentals">Manage Rentals</a></li>
+              <li><a href="/advertise">Advertise</a></li>
+              <li><a href="/help">Help</a></li>
+              <li><a href="/signup">Sign In</a></li>
+          </ul>
+      </div>
+  </div>
+
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>Menu</h2>
+            <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-items">
+            <ul>
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/rent">Rent</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/homeloans">Home Loans</a></li>
+                <li><a href="/findagent">Find an Agent</a></li>
+                <li><a href="/rentals">Manage Rentals</a></li>
+                <li><a href="/advertise">Advertise</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/signup">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav>
+      <div class="nav-content">
+          <div class="mobile-nav">
+              <div><i class="fa-solid fa-bars bars" id="menu-toggle" style="color: #ffffff; font-size: 2rem;"></i></div>
+              <div class="logo-con">
+                  <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+              </div>
+               <div class="user-dropdown" style="display: flex; justify-content: center; align-items: center;">
+                  <% if (user) { %>
+                      <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                          <i class="fa-regular fa-user" style="color: #000; font-size: 2rem;"> Account</i>
+                          <span  style="color: #000;"><%= user.username %></span>
+                          <i class="fa-solid fa-chevron-down"></i>
+                      </button>
+                      <ul class="dropdown-menu">
+                          <li><a href="/profile"><%= user.username %> Account</a></li>
+                          <li><a href="/logout">Logout</a></li>
+                      </ul>
+                  <% } else { %>
+                      <a class="login-btn" href="/signup"><i class="fa-regular fa-user" style="color: #ffffff; font-size: 2rem;"></i></a>
+                  <% } %>
+              </div>
+          </div>
+  
+          <ul class="first-ul">
+              <li><a href="/buy">Buy</a></li>
+              <li><a href="/rent">Rent</a></li>
+              <li><a href="/sell">Sell</a></li>
+              <li><a href="/homeloans">Home Loans</a></li>
+              <li><a href="/findagent">Find an Agent</a></li>
+          </ul>
+  
+          <div class="logo-con desk">
+              <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+          </div>
+  
+          <div class="hide-major">
+              <ul class="second-ul">
+                  <li><a href="/rentals">Manage Rentals</a></li>
+                  <li><a href="/advertise">Advertise</a></li>
+                  <li><a href="/help">Help</a></li>
+                  <% if (user) { %>
+                      <li class="login-text user-dropdown">
+                          <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                              <i style="color: #000;" class="fa-regular fa-user"></i>
+                                <i class="fa-solid fa-chevron-down"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                              <li><a href="/profile"><%= user.username %> Account</a></li>
+                              <li><a href="/logout">Logout</a></li>
+                          </ul>
+                      </li>
+                  <% } else { %>
+                      <li class="login-text"><a href="/signup">Sign In</a></li>
+                  <% } %>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <!-- App Download Banner -->
+  <section class="app-banner">
+    <div class="app-banner-content">
+      <div class="app-banner-text">
+        <h2>Scan the QR code to get the Zillow App</h2>
+        <p>Whether you're looking for homes to buy, rent or sell, the award-winning Zillow app helps you stay on top of your home search, listings, and the entire real estate journey from anywhere, anytime from the palm of your hand.</p>
+      </div>
+      
+      <div class="app-phone-container">
+        <img class="mobile" src="/image/Play-video.webp" alt="">
+        <div class="app-phone mobility">
+            <img src="/image/phone-qr.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- App Features -->
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-image-container">
+      <img src="/image/feature_1.webp" alt="">
+      </div>
+      <h3 class="feature-title">Browse homes you'll love</h3>
+      <p class="feature-description">Find your perfect match with easy-to-use filters and features that'll narrow down your options.</p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-image-container">
+        <img src="/image/feature_2.webp" alt="">
+    </div>
+      <h3 class="feature-title">Find your dream spot</h3>
+      <p class="feature-description">Use the interactive map to explore neighborhoods and discover what's near you.</p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-image-container">
+        <img src="/image/feature_3.webp" alt="">
+    </div>
+      <h3 class="feature-title">Shop homes together</h3>
+      <p class="feature-description">Save and share your favorite homes with friends, family, and anyone else in the home shopping process.</p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-image-container">
+        <img src="/image/feature_4.webp" alt="">
+    </div>
+      <h3 class="feature-title">Keep an eye on your costs</h3>
+      <p class="feature-description">Explore your costs with 3D Home capabilities, so you can truly see what you're getting.</p>
+    </div>
+  </div>
+  
+  <!-- App Store Ratings -->
+  <section class="ratings-section">
+    <div class="ratings-container">
+      <div class="rating-item">
+        <img src="/image/Rating_Apple.webp" alt="">
+      </div>
+      
+      <div class="rating-item">
+        <img src="/image/Rating_Google.webp" alt="">
+
+      </div>
+    </div>
+  </section>
+  
+  <!-- Value Propositions -->
+  <div class="value-props">
+    <div class="value-prop">
+      <div class="value-prop-icon"><img src="/image/feature_buy.webp"></div>
+      <h3 class="value-prop-title">Buy a home</h3>
+      <p class="value-prop-text">Find your new place with millions of constantly updated listings, robust filters and an immersive photo experience.</p>
+    </div>
+    
+    <div class="value-prop">
+      <div class="value-prop-icon"><img src="/image/feature_sell.webp"></div>
+      <h3 class="value-prop-title">Sell a home</h3>
+      <p class="value-prop-text">Whether you sell with Zillow Offers or take another approach, we’ll help you navigate the path to a successful sale.</p>
+    </div>
+    
+    <div class="value-prop">
+      <div class="value-prop-icon"><img src="/image/feature_rent.webp"></div>
+      <h3 class="value-prop-title">Rent a home</h3>
+      <p class="value-prop-text">Tap into a complete online experience — from shopping on the largest rental network to applying and paying rent.*
+
+      </p>
+    </div>
+  </div>
+  
+  <!-- Bottom App Banner -->
+  <section class="app-banner">
+    <div class="app-banner-content">
+      <div class="app-banner-text">
+        <h2>Download the Zillow app today</h2>
+        <p>Get the most out of your home search with the award-winning Zillow app.</p>
+      </div>
+      
+      <div class="app-phone-container mobility">
+        <div class="app-phone ">
+            <img src="/image/phone-qr.webp">
+        </div>
+      </div>
+    </div>
+   
+  </section>
+  <div class="eligible">
+  <p>Not all homes are eligible for Zillow Offers. Zillow, Inc. has a real estate brokerage license in select states. Local broker partners/agents will represent Zillow in the purchase and sale of homes in the Zillow Offers program. See zillow.com/offers for details.
+
+    Not all listings have a 3D Home tour. Look for the “3D Home” icon on a listing to take a virtual tour.
+    
+    *Comscore Media Metrix® Multi-Platform Key Measures, Total Audience, September 2019, Custom-Defined List</p>
+</div>
+  <footer class="footer-wrapper">
+    <div class="footer-container">
+      <div class="links-row">
+           <a href="/about">About</a>
+          <a href="/zestimate">Zestimates</a>
+          <a href="/research">Research</a>
+          <a href="/careers">Careers</a>
+          <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+          <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+          <a href="/help">Help</a>
+          <a href="/advertise">Advertise</a>
+          <a href="/fair">Fair Housing Guide</a>
+          <a href="/advocacy">Advocacy</a>
+      </div>
+  
+      <div class="links-row">
+          <a href="/terms">Terms of use</a>
+          <a href="/privacy">Privacy Portal</a>
+          <a href="/cookie">Cookie Preference</a>
+          <a href="/learn">Learn</a>
+          <a href="/ai">AI</a>
+          <a href="/mobile">Mobile Apps</a>
+      </div>
+  
+      <div class="links-row">
+       <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+          <a  href="https://streeteasy.com/">StreetEasy</a>
+          <a  href="https://hotpads.com/">HotPads</a>
+          <a  href="https://showingtimeplus.com/">Out East</a>
+          <a  href="https://outeast.com/">ShowingTime+</a>
+      </div>
+  
+      <div class="do-not-sell">
+        <a href="#">Do Not Sell or Share My Personal Information→</a>
+      </div>
+  
+      <div class="accessibility-notice">
+        Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please <a href="#">let us know</a>.
+      </div>
+  
+      <div class="legal-info">
+        Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in multiple states. Zillow (Canada), Inc. holds real estate brokerage <a href="#">licenses</a> in multiple provinces.<br>
+        <a href="#">§ 442-H New York Standard Operating Procedures</a><br>
+        <a href="#">§ New York Fair Housing Notice</a><br>
+        TREC: <a href="#">Information about brokerage services</a>, <a href="#">Consumer protection notice</a><br>
+        California DRE #1522444<br>
+        <a href="#">Contact Zillow, Inc. Brokerage</a>
+      </div>
+  
+      <div class="legal-info">
+        For listings in Canada, the trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.
+      </div>
+  
+      <div class="app-stores">
+        <a href="#"><img src="/image/apple-icon.svg" alt="Download on the App Store"></a>
+        <a href="#"><img src="/image/google-icon.svg" alt="Get it on Google Play"></a>
+      </div>
+      <div class="bottom-row">
+        <img src="/image/blue-logo.jpg" alt="Zillow logo" class="zillow-logo">
+        <span>Follow us:</span>
+        <div class="social-icons">
+          <!-- Social media icons would go here -->
+        </div>
+        <span>© 2006-2025 Zillow</span>
+        <img src="./image/home-icon.png" alt="Equal Housing Opportunity" class="equal-housing">
+      </div>
+    </div>
+  </footer>
+  </div>
+  <img src="/image/footer-art.svg" alt="" class="footer-art">
+
+    
+  <script
+  src="https://kit.fontawesome.com/e1fbe49b44.js"
+  crossorigin="anonymous"
+></script> 
+<script src="account.js"></script>  
+<script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('active');
+            document.querySelector('.overlay').style.display = 'block';
+        });
+
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.overlay').style.display = 'none';
+        });
+
+        document.querySelector('.overlay').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            this.style.display = 'none';
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  const userDropdown = document.querySelector(".user-dropdown");
+
+  if (dropdownBtn) {
+      dropdownBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          userDropdown.classList.toggle("active");
+      });
+
+      document.addEventListener("click", () => {
+          userDropdown.classList.remove("active");
+      });
+  }
+});
+
+  </script>
+
+</body>
+</html>

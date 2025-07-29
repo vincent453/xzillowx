@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Today's Current Mortgage Rates | Zillow</title>
+  </head>
+  <style>
+    .bg {
+      background-color: rgb(206, 199, 199);
+      text-align: center;
+      height: 500px;
+      background-position: center;
+    }
+    .bg h1 {
+      padding-top: 150px;
+    }
+    .morg-1 {
+      /* height: 300px; */
+      width: 1030px;
+      padding: 12px;
+      box-shadow: 0px 0px 10px 2px black;
+      margin: 20px;
+    }
+    .round {
+      background-color: blue;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      color: white;
+    }
+
+    .round span {
+      position: relative;
+      top: 30%;
+      left: 0%;
+      transform: translate(-50%, 0%);
+    }
+
+    .morg-2 {
+      display: flex;
+      padding: 12px;
+    }
+    .foot a {
+      display: block;
+    }
+    .but {
+      padding: 10px 22px;
+      background-color: blue;
+      color: white;
+      border: none;
+    }
+    .search {
+      padding: 10px 42px;
+      color: black;
+    }
+
+    @media (max-width: 480px) {
+      .morg-1 {
+        width: 360px;
+        margin: 0;
+      }
+
+      .morg-2 {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <body>
+    <!--put the navbar here  -->
+    <section class="bg">
+      <h1>Compare Today's Mortgage Rates</h1>
+      <p>
+        Answer a few questions about your loan preferences to compare mortgage
+        rates from multiple lenders.
+      </p>
+      <form action="">
+        <input
+          type="text"
+          name=""
+          placeholder="City,Zip,code or country"
+          id=""
+          class="search"
+        />
+        <button class="but">Get started</button>
+      </form>
+      <p>Rates can vary by location.</p>
+    </section>
+
+    <p>Mortgages/Today's Average Mortgage Rates</p>
+
+    <section class="morg-1">
+      <h2>What are today's mortgage rates?</h2>
+      <h3>National 30-year fixed mortgage rates go up to 6.74%</h3>
+      <p>
+        The current average 30-year fixed mortgage rate climbed 1 basis point
+        from 6.73% to 6.74% on Friday, Zillow announced. The 30-year fixed
+        mortgage rate on January 24, 2025 is down 4 basis points from the
+        previous week's average rate of 6.78%. Additionally, the current
+        national average 15-year fixed mortgage rate remained stable at 6.02%.
+        The current national average 5-year ARM mortgage rate is up 2 basis
+        points from 6.67% to 6.69%.
+      </p>
+      <p>
+        The current average 30-year fixed mortgage rate climbed 1 basis point
+        from 6.73% to 6.74% on Friday, Zillow announced. The 30-year fixed
+        mortgage rate on January 24, 2025 is down 4 basis points from the
+        previous week's average rate of 6.78%. Additionally, the current
+        national average 15-year fixed mortgage rate remained stable at 6.02%.
+        The current national average 5-year ARM mortgage rate is up 2 basis
+        points from 6.67% to 6.69%.
+      </p>
+    </section>
+
+    <section class="morg-1">
+      <h2>Mortgage rate trends</h2>
+      <p>
+        Adjust the graph below to see historical mortgage rates tailored to your
+        loan program, credit score, down payment and location.
+      </p>
+      <div>
+        <div>
+          <h5>LOAN PROGRAMS</h5>
+          <div>
+            <input type="checkbox" name="" id="" />
+            <p>30 year fixed</p>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="" />
+            <p>20 year fixed</p>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="" />
+            <p>15 year fixed</p>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="" />
+            <p>10 year fixed</p>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="" />
+            <p>7-year ARM</p>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="" />
+            <p>5-year ARM</p>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="" />
+            <p>3-year ARM</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label for="Loan purpose">Loan purpose</label>
+            <select name="Loan purpose" id="Loan purpose">
+              <option value="volvo">Purchase</option>
+              <option value="saab">Refinance</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="Loan purpose">Credit rating</label>
+            <select name="Credit rating" id="Credit rating">
+              <option value="volvo">740 or higher</option>
+              <option value="saab">680 to 740</option>
+              <option value="saab">Less than 680</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="Loan purpose">Percent down</label>
+            <select name="Percent down" id="Percent down">
+              <option value="volvo">20% or higher</option>
+              <option value="saab">5% to 20%</option>
+              <option value="saab">Less than 5%</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="Location">Location</label>
+            <select name="Location" id="Location">
+              <option value="volvo">Purchase</option>
+              <option value="saab">Refinance</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="Loan purpose">Timespan</label>
+            <select name="Timespan" id="Timespan">
+              <option value="volvo">Purchase</option>
+              <option value="saab">Refinance</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <img src="" alt="graph" />
+    </section>
+
+    <section class="morg-1">
+      <h1>Compare current mortgage rates by loan type</h1>
+      <p>
+        The table below is updated daily with current mortgage rates for the
+        most common types of home loans. Compare week-over-week changes to
+        mortgage rates and APRs.
+      </p>
+      <h4>Conforming loans</h4>
+      <table>
+        <tr>
+          <th>Program</th>
+          <th>Rate (%)</th>
+          <th>1W CHANGE</th>
+          <th>APR (%)</th>
+          <th>1W CHANGE</th>
+        </tr>
+        <tr>
+          <td>30-year fixed rate</td>
+          <td>6.32</td>
+          <td>0.09</td>
+          <td>6.59</td>
+          <td>0.09</td>
+        </tr>
+        <tr>
+          <td>20-year fixed rate</td>
+          <td>6.32</td>
+          <td>0.09</td>
+          <td>6.59</td>
+          <td>0.09</td>
+        </tr>
+        <tr>
+          <td>15-year fixed rate</td>
+          <td>6.32</td>
+          <td>0.09</td>
+          <td>6.59</td>
+          <td>0.09</td>
+        </tr>
+        <tr>
+          <td>10-year fixed rate</td>
+          <td>6.32</td>
+          <td>0.10</td>
+          <td>6.05</td>
+          <td>0.10</td>
+        </tr>
+        <tr>
+          <td>7-year ARM</td>
+          <td>6.83</td>
+          <td>0.02</td>
+          <td>6.05</td>
+          <td>0.05</td>
+        </tr>
+        <tr>
+          <td>5-year ARM</td>
+          <td>6.82</td>
+          <td>0.02</td>
+          <td>7.29</td>
+          <td>0.01</td>
+        </tr>
+        <tr>
+          <td>3-year ARM</td>
+          <td>8.02</td>
+          <td>0.00</td>
+          <td>7.59</td>
+          <td>0.00</td>
+        </tr>
+      </table>
+      <h4>Government loans</h4>
+      <table>
+        <tr>
+          <th>Program</th>
+          <th>Rate (%)</th>
+          <th>1W CHANGE</th>
+          <th>APR (%)</th>
+          <th>1W CHANGE</th>
+        </tr>
+        <tr>
+          <td>30-year fixed rate</td>
+          <td>6.97</td>
+          <td>0.09</td>
+          <td>6.59</td>
+          <td>0.09</td>
+        </tr>
+        <tr>
+          <td>20-year fixed rate</td>
+          <td>6.02</td>
+          <td>0.09</td>
+          <td>6.59</td>
+          <td>0.09</td>
+        </tr>
+        <tr>
+          <td>15-year fixed rate</td>
+          <td>6.32</td>
+          <td>0.09</td>
+          <td>6.59</td>
+          <td>0.09</td>
+        </tr>
+      </table>
+      <h4>Jumbo loans</h4>
+      <table>
+        <tr>
+          <th>Program</th>
+          <th>Rate (%)</th>
+          <th>1W CHANGE</th>
+          <th>APR (%)</th>
+          <th>1W CHANGE</th>
+        </tr>
+        <tr>
+          <td>30-year fixed rate</td>
+          <td>6.32</td>
+          <td>0.09</td>
+          <td>6.59</td>
+          <td>0.09</td>
+        </tr>
+        <tr>
+          <td>15-year fixed rate</td>
+          <td>6.32</td>
+          <td>0.09</td>
+          <td>6.59</td>
+          <td>0.09</td>
+        </tr>
+        <tr>
+          <td>7-year ARM</td>
+          <td>6.83</td>
+          <td>0.02</td>
+          <td>6.05</td>
+          <td>0.05</td>
+        </tr>
+        <tr>
+          <td>5-year ARM</td>
+          <td>6.82</td>
+          <td>0.02</td>
+          <td>7.29</td>
+          <td>0.01</td>
+        </tr>
+        <tr>
+          <td>3-year ARM</td>
+          <td>0.02</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="morg-1">
+      <h1>What is a good mortgage interest rate?</h1>
+      <p>
+        The best mortgage rate for you will depend on your financial situation.
+        A home loan with a shorter term may have a lower interest rate but a
+        higher monthly payment, while a home loan with an adjustable interest
+        rate may have a lower interest rate at first but then change annually
+        after a set period of time. For example, a 7-year ARM (adjustable-rate
+        mortgage) has a set rate for the initial 7 years then adjusts annually
+        for the remaining life of the loan (loan term), while a 30-year
+        fixed-rate mortgage has a rate that stays the same over the loan term.
+      </p>
+    </section>
+
+    <section class="morg-1">
+      <h1>How to get the best mortgage rate</h1>
+      <p>
+        Mortgage rates change daily and can vary widely depending on a variety
+        of factors, including the borrower's personal situation. The difference
+        in mortgage rates can mean spending tens of thousands of dollars more
+        (or less) in interest over the life of the loan. Here are some tactics
+        to help you find the best mortgage rate for your new home loan:
+      </p>
+      <div>
+        <div>
+          <div class="round"><span>1</span></div>
+          <div>
+            <h3>Shop around for a lender</h3>
+            <p>
+              Using the lender your real estate agent typically works with
+              doesn't guarantee you'll get the best mortgage rate for your home
+              loan. Ask around for recommendations or use an online tool to find
+              a lender who can provide you with a loan that is best for your
+              situation.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="round"><span>2</span></div>
+          <div>
+            <h3>Compare lender fees</h3>
+            <p>
+              Using the lender your real estate agent typically works with
+              doesn't guarantee you'll get the best mortgage rate for your home
+              loan. Ask around for recommendations or use an online tool to find
+              a lender who can provide you with a loan that is best for your
+              situation.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="round"><span>3</span></div>
+          <div>
+            <h3>Increase your down payment</h3>
+            <p>
+              Using the lender your real estate agent typically works with
+              doesn't guarantee you'll get the best mortgage rate for your home
+              loan. Ask around for recommendations or use an online tool to find
+              a lender who can provide you with a loan that is best for your
+              situation.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="round"><span>4</span></div>
+          <div>
+            <h3>Improve your credit score</h3>
+            <p>
+              Using the lender your real estate agent typically works with
+              doesn't guarantee you'll get the best mortgage rate for your home
+              loan. Ask around for recommendations or use an online tool to find
+              a lender who can provide you with a loan that is best for your
+              situation.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="round"><span>5</span></div>
+          <div>
+            <h3>Consider different types of home loans</h3>
+            <p>
+              Using the lender your real estate agent typically works with
+              doesn't guarantee you'll get the best mortgage rate for your home
+              loan. Ask around for recommendations or use an online tool to find
+              a lender who can provide you with a loan that is best for your
+              situation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1>Frequently asked questions about mortgages</h1>
+    </section>
+
+    <section class="morg-1 morg-2">
+      <div>
+        <img src="" alt="Calc" />
+        <h2>Mortgage calculator</h2>
+        <p>Quickly estimate your monthly mortgage payments for a new home.</p>
+        <button>Calculate your mortgage</button>
+      </div>
+      <div>
+        <img src="" alt="Good" />
+        <h2>Mortgage calculator</h2>
+        <p>Quickly estimate your monthly mortgage payments for a new home.</p>
+        <button>Calculate your mortgage</button>
+      </div>
+      <div>
+        <img src="" alt="Custom" />
+        <h2>Mortgage calculator</h2>
+        <p>Quickly estimate your monthly mortgage payments for a new home.</p>
+        <button>Calculate your mortgage</button>
+      </div>
+    </section>
+
+    <section class="foot">
+      <div>
+        <h3>Mortgage Tools</h3>
+
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Qualified</a>
+        <a href="">30-year MR</a>
+        <a href="">20-year MR</a>
+        <a href="">15-year MR</a>
+      </div>
+      <div>
+        <h3>Mortgage Tools</h3>
+
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+      </div>
+      <div>
+        <h3>Mortgage Tools</h3>
+
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+      </div>
+      <div>
+        <h3>Mortgage Tools</h3>
+
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+        <a href="">Get Pre-Approved</a>
+      </div>
+    </section>
+
+    <section class="foot">
+      Current Mortgage Rates by State
+      <a href="/dropdown/browse-homes/california.html">California</a>
+      <a href="">Texas</a>
+      <a href="">Florida</a>
+      <a href="">New York</a>
+      <a href="">Pennsylvania</a>
+      <a href="">Illnois</a>
+      <a href="">Ohio</a>
+      <a href="">Georgia</a>
+      <a href="">North Carolina</a>
+      <a href="">Michigan</a>
+      <a href="">New Jersey</a>
+      <a href="">Virginia</a>
+      <a href="">Arizona</a>
+      <a href="">Massachusetts</a>
+      <a href="">Tennessee</a>
+      <a href="">Indiana</a>
+      <a href="">Maryland</a>
+      <a href="">Missouri</a>
+      <a href="">Wisconsin</a>
+      <a href="">Colorado</a>
+      <a href="">Minnesota</a>
+      <a href="">South Carolina</a>
+      <a href="">Alabama</a>
+      <a href="">Louisana</a>
+      <a href="">Kentucky</a>
+      <a href="">Oregon</a>
+      <a href="">Oklahoma</a>
+      <a href="">Connecticut</a>
+      <a href="">Utah</a>
+      <a href="">Iowa</a>
+      <a href="">Nevada</a>
+      <a href="">Arkansas</a>
+      <a href="">Mississippi</a>
+      <a href="">Kansas</a>
+      <a href="">New Mexico</a>
+      <a href="">Nebraska</a>
+      <a href="">Idaho</a>
+      <a href="">West Virginia</a>
+      <a href="">Hawaii</a>
+      <a href="">New Hampshire</a>
+      <a href="">Maine</a>
+      <a href="">Rhode island</a>
+      <a href="">Montana</a>
+      <a href="">Delaware</a>
+      <a href="">South Dakota</a>
+      <a href="">North Dakota</a>
+      <a href="">Alaska</a>
+      <a href="">Washington, DC</a>
+      <a href="">Vermont</a>
+      <a href="">Wyoming</a>
+    </section>
+
+    <footer class="foot">
+      <a href="/footer/zestimate.html">Zestimates</a>
+      <a href="/footer/research.html">Research</a>
+      <a href="/footer/careers.html">Careers</a>
+      <a href="/footer/careers_us.html">Careers - U.S. Privacy Notice</a>
+      <a href="/footer/careers_mex.html">Careers - Mexico Privacy Notice</a>
+      <a href="/footer/help.html">Help</a>
+      <a href="/footer/advertise.html">Advertise</a>
+      <a href="/footer/fairhousing.html">Fair Housing Guide</a>
+      <a href="/footer/advocacy.html">Advocacy</a>
+
+      <a href="">Do Not Sell or Share My Personal Information →</a>
+    </footer>
+    <script src="account.js"></script>
+    <script>
+      // Mobile Menu Toggle
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.add("active");
+          document.querySelector(".overlay").style.display = "block";
+        });
+
+      document
+        .querySelector(".close-menu")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.remove("active");
+          document.querySelector(".overlay").style.display = "none";
+        });
+
+      document.querySelector(".overlay").addEventListener("click", function () {
+        document.querySelector(".mobile-menu").classList.remove("active");
+        this.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

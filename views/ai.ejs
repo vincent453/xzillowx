@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XZillowx</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+    
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon" />
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+/* Base styles */
+.partner-content {
+    width: 100%;
+    background-color: rgb(249, 249, 251);
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.blue-img img {
+    width: 10rem;
+}
+
+.footer-art {
+    margin-top: 5rem;
+}
+
+nav {
+    border-bottom: 1px solid rgb(205, 205, 211);
+}
+
+.partner-with-xzillow {
+    width: 60rem; /* Fixed width for larger screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    padding: 4rem 0;
+    height: auto;
+}
+
+.partner-with-xzillow h1 {
+    font-family: "Gideon Roman", serif;
+    font-size: 46px;
+    line-height: 55.2px;
+    font-weight: 700;
+}
+
+.partner-with-xzillow p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.partner-with-xzillow .line {
+    background-color: rgb(255, 210, 55);
+    width: 144px;
+    height: 2px;
+}
+
+.partner-with-xzillow h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Fix the card layout */
+.card-parent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 3rem auto 2rem;
+}
+
+.section-header h1 {
+    font-size: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto 4rem;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.cards {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-container .cards .card {
+    width: 400px;
+    height: 408px;
+    box-shadow: 0 0 10px 0px #605d5d7a;
+    background-color: #fffffc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+   
+}
+
+.card .text-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    row-gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+}
+
+
+.card img {
+    width: 100%;
+    height: 186px;
+    object-fit: cover;
+}
+
+body {
+    background-color: #F9F9FB;
+}
+
+h1 {
+    font-family: "Gideon Roman", serif;
+}
+
+.zai {
+    margin-top: 4rem;
+}
+
+.check-out {
+    width: 12rem;
+    height: 3rem;
+    border: none;
+    color: #ffffff;
+    font-weight: 400;
+    background-color: #006aff;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.check-out:hover {
+    background-color: #0056cc;
+}
+
+.feat {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.feat button {
+    padding: 8px 13px;
+    background-color: #f2a619;
+    color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.feat a {
+    text-decoration: none;
+    color: #6c6767;
+    font-size: 14px;
+}
+
+.text-content h2 {
+    font-weight: 600;
+    font-size: 26px;
+    margin: 0;
+    padding: 0;
+}
+
+.work-at-xzillow {
+    background-color: #1b5098;
+    width: 100%;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.fea-rea {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 4rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featured, .recent {
+    flex: 1;
+    min-width: 10%;
+}
+
+.featured p {
+    line-height: 2;
+}
+
+.recent p {
+    line-height: 2;
+}
+
+.work-at-xzillow .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.content h2 {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.content p {
+    color: #fff;
+    text-align: center;
+}
+
+/* Media Query for Medium Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .partner-with-xzillow h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .fea-rea {
+        padding: 0 2rem;
+    }
+}
+
+/* Media Query for Small Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    /* Navigation */
+    .nav-content {
+        flex-direction: column;
+    }
+    
+  
+    
+    .feat {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .first-ul, .second-ul {
+        display: none;
+    }
+    
+    .logo-con {
+        margin: 1rem auto;
+    }
+    
+    .logo-con img {
+        width: 40px;
+    }
+    
+    .logo-con h2 {
+        font-size: 1.2rem;
+    }
+    
+    /* Partner section */
+    .partner-with-xzillow {
+        width: 90%;
+    }
+    
+    .partner-with-xzillow h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .check-out {
+        width: 80%;
+        margin: 2rem auto;
+        display: block;
+    }
+    
+    /* Cards section */
+    .cards-container {
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .cards-container .cards .card {
+        width: 90%;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .card img {
+        height: auto;
+    }
+    
+    .section-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Work at XZillowx section */
+    .work-at-xzillow {
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+    }
+    
+    .content h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Featured & Recent section */
+    .fea-rea {
+        flex-direction: column;
+        margin: 2rem 1rem;
+        gap: 3rem;
+    }
+    
+    /* Footer */
+    .footer-container {
+        padding: 1rem;
+    }
+    
+    .links-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .bottom-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* Media Query for Extra Small Devices (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    .partner-with-xzillow h1 {
+        font-size: 1.5rem;
+    }
+    
+    .text-content h2 {
+        font-size: 1rem;
+    }
+    
+    .feat a {
+        font-size: 12px;
+    }
+    
+    .content h2 {
+        font-size: 1.2rem;
+    }
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="mobile-menu">
+          <div class="mobile-menu-header">
+              <h2>Menu</h2>
+              <button class="close-menu">&times;</button>
+          </div>
+          <div class="mobile-menu-items">
+              <ul>
+                  <li><a href="/buy">Buy</a></li>
+                  <li><a href="/rent">Rent</a></li>
+                  <li><a href="/sell">Sell</a></li>
+                  <li><a href="/homeloans">Home Loans</a></li>
+                  <li><a href="/findagent">Find an Agent</a></li>
+                  <li><a href="/rentals">Manage Rentals</a></li>
+                  <li><a href="/advertise">Advertise</a></li>
+                  <li><a href="/help">Help</a></li>
+                  <li><a href="/signup">Sign In</a></li>
+              </ul>
+          </div>
+      </div>
+  
+      <nav>
+          <div class="nav-content">
+              <div class="mobile-nav">
+                  <div style="display: flex;  align-items: center; justify-content: center;"><i class="fa-solid fa-bars bars" id="menu-toggle" style="color: #000; font-size: 1rem;"></i></div>
+                  <div class="logo-con"><a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a></div>
+                  <div><a class="login-btn" href="/signup">                            <i class="fa-regular fa-user" style="color: #000; font-size: 1rem;"> <span style="font-size: 10px;">Account</span></i>
+</a></div>
+              </div>
+              <ul class="first-ul">
+                  <li><a href="/buy">Buy</a></li>
+                  <li><a href="/rent">Rent</a></li>
+                  <li><a href="/sell">Sell</a></li>
+                  <li><a href="/homeloans">Home Loans</a></li>
+                  <li><a href="/findagent">Find an Agent</a></li>
+              </ul>
+              <div class="logo-con desk"><a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a></div>
+              <div class="hide-major">
+                  <ul class="second-ul">
+                      <li><a href="/rentals">Manage Rentals</a></li>
+                      <li><a href="/advertise">Advertise</a></li>
+                      <li><a href="/help">Help</a></li>
+                      <li class="login-text"><a href="/signup">Sign In</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+      <hr />
+
+      <div class="partner-content">
+        <div class="partner-with-xzillow">
+          <h1 style="font-size: 3.5rem;">Zillow Tech Hub</h1>
+          <input type="button" class="check-out" value="Check out careers" />
+          <div class="line"></div>
+        </div>
+        </div>
+<!-- Replace the problematic sections with this revised structure -->
+
+<!-- Replace the card-parent div and all its contents with: -->
+<div class="card-parent">
+  <!-- AI section -->
+  <div class="section-header">
+    <h1>AI, Machine Learning & Research</h1>
+    <a href="">See all</a>
+  </div>
+  
+  <div class="cards-container">
+    <div class="cards">
+      <div class="card">
+        <img src="/image/blog-one.png" alt="Blog post thumbnail" />
+        <div class="text-content">
+          <div class="feat">
+            <button>Featured</button>
+            <a href="">AI, Machine Learning & Research</a>
+          </div>
+          <h2>Next Best Action platform: democratizing personalization with...</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cards">
+      <div class="card">
+        <img src="/image/blog-two.jpg" alt="Blog post thumbnail" />
+        <div class="text-content">
+          <div class="feat">
+            <a href="">AI, Machine Learning & Research</a>
+          </div>
+          <h2>Next Best Action platform: democratizing personalization with...</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cards">
+      <div class="card">
+        <img src="/image/blog-three.jpg" alt="Blog post thumbnail" />
+        <div class="text-content">
+          <div class="feat">
+            <button>Featured</button>
+            <a href="">AI, Machine Learning & Research</a>
+          </div>
+          <h2>Next Best Action platform: democratizing personalization with...</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data & Analytics section -->
+  <div class="section-header">
+    <h1>Data & Analytics</h1>
+    <a href="">See all</a>
+  </div>
+  
+  <div class="cards-container">
+    <div class="cards">
+      <div class="card">
+        <img src="/image/data-one.png" alt="Blog post thumbnail" />
+        <div class="text-content">
+          <div class="feat">
+            <button>Featured</button>
+            <a href="">Data & Analytics</a>
+          </div>
+          <h2>Next Best Action platform: democratizing personalization with...</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cards">
+      <div class="card">
+        <img src="/image/data-two.png" alt="Blog post thumbnail" />
+        <div class="text-content">
+          <div class="feat">
+            <a href="">Data & Analytics</a>
+          </div>
+          <h2>Next Best Action platform: democratizing personalization with...</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cards">
+      <div class="card">
+        <img src="/image/data-three.png" alt="Blog post thumbnail" />
+        <div class="text-content">
+          <div class="feat">
+            <a href="">Data & Analytics</a>
+          </div>
+          <h2>Next Best Action platform: democratizing personalization with...</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Software Engineering section -->
+  <div class="section-header">
+    <h1>Software Engineering</h1>
+    <a href="">See all</a>
+  </div>
+  
+  <div class="cards-container">
+    <div class="cards">
+      <div class="card">
+        <img src="/image/soft-one.png" alt="Blog post thumbnail" />
+        <div class="text-content">
+          <div class="feat">
+            <button>Featured</button>
+            <a href="">Software Engineering</a>
+          </div>
+          <h2>Next Best Action platform: democratizing personalization with...</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cards">
+      <div class="card">
+        <img src="/image/soft-two.png" alt="Blog post thumbnail" />
+        <div class="text-content">
+          <div class="feat">
+            <a href="">Software Engineering</a>
+          </div>
+          <h2>Next Best Action platform: democratizing personalization with...</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cards">
+      <div class="card">
+        <img src="/image/soft-three.png" alt="Blog post thumbnail" />
+        <div class="text-content">
+          <div class="feat">
+            <button>Featured</button>
+            <a href="">Software Engineering</a>
+          </div>
+          <h2>Next Best Action platform: democratizing personalization with...</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="work-at-xzillow">
+          <div class="content">
+            <h2>Want to work at Zillow Group?</h2>
+            <p>We're hiring engineers, designers and managers.</p>
+            <input type="button" class="check-out" value="View opening" />
+
+
+          </div>
+        </div>
+
+        <div class="fea-rea">
+          <div class="featured">
+            <h3 style="width: 13rem; border-bottom: 2px solid #ffc107; height: 3rem;">FEATURED</h3>
+           
+            <p>Inflation Pressures Keep Mortgage Rates Elevated   </p>
+            <p>Sellers ramp up price cuts to woo struggling buyers (January 2025 Market Report)</p>
+            <p>As Renters Reemerge from Winter Doldrums, Rent Growth Holds Steady (January 2025 Rental Market Report) </p>
+            <p>Zillow’s Insights on CPI and ZORI: A day ahead of shelter inflation release  </p>
+            <p>Fed Starts 2025 With a Pause</p>
+          </div>
+          <div class="recent">
+          <h3 style="width: 13rem; border-bottom: 2px solid #ffc107; height: 3rem;">RECENT</h3>
+          
+          <p>Almost 1 in 5 homeowners are considering selling in the next three years</p>
+          <p>December 2024: New Home Sales Finished The Year Strong, Increasing Again in 2024   </p>
+          <p>Inventory continues to climb, giving buyers more options (December 2024 Market Report)</p>
+          <p>Mortgage rate volatility drives single-family rent growth, while multifamily moderates (December 2024 Rental Market Report)
+          </p>
+          <p>Home Sellers and Private Listing Networks: Insights From a Recent Survey</p>
+        </div>
+        </div>
+      </div>
+      <footer class="footer-wrapper">
+        <div class="footer-container">
+          <div class="links-row">
+               <a href="/about">About</a>
+              <a href="/zestimate">Zestimates</a>
+              <a href="/research">Research</a>
+              <a href="/careers">Careers</a>
+              <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+              <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+              <a href="/help">Help</a>
+              <a href="/advertise">Advertise</a>
+              <a href="/fair">Fair Housing Guide</a>
+              <a href="/advocacy">Advocacy</a>
+          </div>
+      
+          <div class="links-row">
+              <a href="/terms">Terms of use</a>
+              <a href="/privacy">Privacy Portal</a>
+              <a href="/cookie">Cookie Preference</a>
+              <a href="/learn">Learn</a>
+              <a href="/ai">AI</a>
+              <a href="/mobile">Mobile Apps</a>
+          </div>
+      
+          <div class="links-row">
+           <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+              <a  href="https://streeteasy.com/">StreetEasy</a>
+              <a  href="https://hotpads.com/">HotPads</a>
+              <a  href="https://showingtimeplus.com/">Out East</a>
+              <a  href="https://outeast.com/">ShowingTime+</a>
+          </div>
+      
+          <div class="do-not-sell">
+            <a href="#">Do Not Sell or Share My Personal Information→</a>
+          </div>
+      
+          <div class="accessibility-notice">
+            Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please <a href="#">let us know</a>.
+          </div>
+      
+          <div class="legal-info">
+            Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in multiple states. Zillow (Canada), Inc. holds real estate brokerage <a href="#">licenses</a> in multiple provinces.<br>
+            <a href="#">§ 442-H New York Standard Operating Procedures</a><br>
+            <a href="#">§ New York Fair Housing Notice</a><br>
+            TREC: <a href="#">Information about brokerage services</a>, <a href="#">Consumer protection notice</a><br>
+            California DRE #1522444<br>
+            <a href="#">Contact Zillow, Inc. Brokerage</a>
+          </div>
+      
+          <div class="legal-info">
+            For listings in Canada, the trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.
+          </div>
+      
+          <div class="app-stores">
+            <a href="#"><img src="/image/apple-icon.svg" alt="Download on the App Store"></a>
+            <a href="#"><img src="/image/google-icon.svg" alt="Get it on Google Play"></a>
+          </div>
+          <div class="bottom-row">
+            <img src="/image/blue-logo.jpg" alt="Zillow logo" class="zillow-logo">
+            <span>Follow us:</span>
+            <div class="social-icons">
+              <!-- Social media icons would go here -->
+            </div>
+            <span>© 2006-2025 Zillow</span>
+            <img src="./image/home-icon.png" alt="Equal Housing Opportunity" class="equal-housing">
+          </div>
+        </div>
+      </footer>
+      </div>
+      <img src="/image/footer-art.svg" alt="" class="footer-art">
+  
+      <script src="https://kit.fontawesome.com/e1fbe49b44.js" crossorigin="anonymous"></script>
+      <script src="account.js"></script>  
+<script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('active');
+            document.querySelector('.overlay').style.display = 'block';
+        });
+
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.overlay').style.display = 'none';
+        });
+
+        document.querySelector('.overlay').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            this.style.display = 'none';
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  const userDropdown = document.querySelector(".user-dropdown");
+
+  if (dropdownBtn) {
+      dropdownBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          userDropdown.classList.toggle("active");
+      });
+
+      document.addEventListener("click", () => {
+          userDropdown.classList.remove("active");
+      });
+  }
+});
+
+  </script>
+
+  </body>
+</html>

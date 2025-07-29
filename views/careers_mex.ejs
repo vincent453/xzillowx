@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xZillowx | About</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon" />
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    /* General Styles */
+    body {
+      font-family: "Inter", sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #ffffff;
+    }
+
+    /* Navigation */
+
+    /* Main Content */
+    .us-container {
+      max-width: 1024px;
+      margin: 40px auto;
+      margin-top: 5rem;
+      padding: 30px;
+      border-radius: 8px;
+      padding: 2rem 0;
+    }
+
+    h1 {
+      font-size: 38px;
+      color: #222;
+      font-weight: 700;
+      font-family: "Lato", serif;
+      padding: 1rem;
+    }
+
+    h2 {
+      font-size: 30px;
+      padding: 1rem;
+      color: #333;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    ul {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    ul li {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table th,
+    table td {
+      padding: 12px;
+      border: 1px solid #000;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #ffffff;
+      color: black;
+    }
+
+    table td {
+      background-color: #ffffff;
+    }
+
+    .last {
+      font-size: 13px;
+    }
+
+    .three-social {
+      margin-top: 2rem;
+    }
+    .foot-section-two {
+      border-top: 1px solid rgb(205, 205, 211);
+    }
+    .foot-section-three {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-content {
+        flex-direction: column;
+      }
+
+      .nav-content ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .nav-content ul li {
+        margin: 10px 0;
+      }
+
+      .toggleNav {
+        display: block;
+      }
+
+      .us-container {
+        padding: 20px;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <h2>Menu</h2>
+          <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-items">
+          <ul>
+            <li><a href="/buy">Buy</a></li>
+            <li><a href="/rent">Rent</a></li>
+            <li><a href="/sell">Sell</a></li>
+            <li><a href="/homeloans">Home Loans</a></li>
+            <li><a href="/findagent">Find an Agent</a></li>
+            <li><a href="/rentals">Manage Rentals</a></li>
+            <li><a href="/advertise">Advertise</a></li>
+            <li><a href="/help">Help</a></li>
+            <li><a href="/signup">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="overlay"></div>
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <h2>Menu</h2>
+          <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-items">
+          <ul>
+            <li><a href="/buy">Buy</a></li>
+            <li><a href="/rent">Rent</a></li>
+            <li><a href="/sell">Sell</a></li>
+            <li><a href="/homeloans">Home Loans</a></li>
+            <li><a href="/findagent">Find an Agent</a></li>
+            <li><a href="/rentals">Manage Rentals</a></li>
+            <li><a href="/advertise">Advertise</a></li>
+            <li><a href="/help">Help</a></li>
+            <li><a href="/signup">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <nav>
+        <div class="nav-content">
+          <div class="mobile-nav">
+            <div>
+              <i
+                class="fa-solid fa-bars bars"
+                id="menu-toggle"
+                style="color: #ffffff; font-size: 2rem"
+              ></i>
+            </div>
+            <div class="logo-con">
+              <a href="/"
+                ><img class="logo" src="/image/logo.png" alt="Logo" />
+                <h2 class="xzillow-logo">XZillow</h2></a
+              >
+            </div>
+            <div
+              class="user-dropdown"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <% if (user) { %>
+              <button
+                class="dropdown-btn"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <i
+                  class="fa-regular fa-user"
+                  style="color: #ffffff; font-size: 2rem"
+                ></i>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="/profile"><%= user.username %> Account</a></li>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+              <% } else { %>
+              <a class="login-btn" href="/signup"
+                ><i
+                  class="fa-regular fa-user"
+                  style="color: #ffffff; font-size: 2rem"
+                ></i
+              ></a>
+              <% } %>
+            </div>
+          </div>
+
+          <ul class="first-ul">
+            <li><a href="/buy">Buy</a></li>
+            <li><a href="/rent">Rent</a></li>
+            <li><a href="/sell">Sell</a></li>
+            <li><a href="/homeloans">Home Loans</a></li>
+            <li><a href="/findagent">Find an Agent</a></li>
+          </ul>
+
+          <div class="logo-con desk">
+            <a href="/"
+              ><img class="logo" src="/image/logo.png" alt="Logo" />
+              <h2 class="xzillow-logo">XZillow</h2></a
+            >
+          </div>
+
+          <div class="hide-major">
+            <ul class="second-ul">
+              <li><a href="/rentals">Manage Rentals</a></li>
+              <li><a href="/advertise">Advertise</a></li>
+              <li><a href="/help">Help</a></li>
+              <% if (user) { %>
+              <li class="login-text user-dropdown">
+                <button
+                  class="dropdown-btn"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <i style="color: #000" class="fa-regular fa-user"></i>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="/profile"><%= user.username %> Account</a></li>
+                  <li><a href="/logout">Logout</a></li>
+                </ul>
+              </li>
+              <% } else { %>
+              <li class="login-text"><a href="/signup">Sign In</a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="us-container">
+        <h1>Personal Privacy Notice – Zillow Mexico</h1>
+        <p>Last Updated: December 2022</p>
+        <p>
+          Zillow Mexico S. de R.L. de C.V. (hereinafter “Zillow” or “we”), with
+          address at Avenida Insurgentes Centro, No. 64, Oficina B – 601,
+          Colonia Juárez, Alcaldía Cuauhtémoc, Código Postal 06600, Ciudad de
+          México, Mexico, in accordance with the provisions of the Federal Law
+          on Protection of Personal Data Held by Private Parties, its
+          Regulations, the Privacy Notice Guidelines and other applicable
+          regulations (the “Law”), we make this privacy notice available to you
+          so that you know the characteristics of the use that will be given to
+          your personal data.
+        </p>
+
+        <h2>Personal data processed</h2>
+        <p>
+          Zillow may process the following personal data of candidates who are
+          part of the recruitment and selection processes:
+        </p>
+        <br />
+        <ul>
+          <li>
+            Identification data. Full name, age, sex, date of birth, place of
+            birth, nationality, Federal Taxpayers Registry (R.F.C.), Unique Key
+            of Population Registry (C.U.R.P.), official identification, marital
+            status, image, signature and if applicable, immigration status.
+          </li>
+          <li>
+            Contact information. Complete address, e-mail, mobile and/or
+            landline telephone number.
+          </li>
+          <li>
+            Employment data. Work history, curriculum vitae, current position,
+            work permit.
+          </li>
+          <li>
+            Academic data. Academic history, certificates of studies,
+            professional license and other proof of studies, language skills,
+            schooling.
+          </li>
+          <li>
+            Personal and work references. Information provided to us by third
+            parties from whom you have provided us with reference information
+          </li>
+          <li>
+            Data related to your abilities, skills, aptitudes and personality.
+            This information is the result of tests or exercises conducted
+            during the recruitment and selection process, as well as the
+            interviews carried out.
+          </li>
+          <li>
+            Economic or patrimonial data. Information resulting from the
+            socioeconomic studies carried out during the last stage of the
+            recruitment and selection process; current salary and desired
+            salary.
+          </li>
+
+          <p>We will not collect data considered sensitive by law.</p>
+
+          <p>
+            We may ask you to show us documentation related to the personal data
+            you provide us, and to provide us with a simple copy of it. We may
+            also corroborate such information in publicly available sources.
+          </p>
+
+          <p>
+            During the process we may also collect personal data from third
+            parties, for the purpose of obtaining personal and employment
+            references of the candidates. These personal data are provided by
+            the candidates and include:
+          </p>
+
+          <li>
+            Identification data (full name), contact data (e-mail, telephone
+            number) and, if applicable, employment data (company and position)
+            of third parties designated by the candidate to obtain personal and
+            employment references.
+          </li>
+          <p>
+            The candidate must ensure that he/she has the prior authorization of
+            any third parties of whom he/she provides us with personal data.
+          </p>
+        </ul>
+
+        <h2>Purposes of processing personal data</h2>
+        <p>
+          The personal data we collect from you, as a candidate, may be used for
+          the following necessary purposes:
+        </p>
+        <br />
+
+        <ul>
+          <li>
+            To evaluate your profile and consider you for a recruitment and
+            selection process.
+          </li>
+          <li>To contact you and, if necessary, to keep in touch with you.</li>
+          <li>To allow you access to our facilities.</li>
+          <li>
+            To carry out the investigations, evaluations and in general all the
+            steps that may be necessary during the recruitment and selection
+            process.
+          </li>
+          <li>To request personal and work references.</li>
+          <li>To compile candidate files.</li>
+          <li>
+            To make decisions regarding the recruitment and selection process.
+          </li>
+          <li>To conduct interviews.</li>
+          <li>If applicable, to establish the job offer</li>
+          <li>
+            To ensure our safety, that of other candidates, personnel working in
+            our offices and third parties who visit us.
+          </li>
+          <li>
+            To comply with legal obligations and requirements of competent
+            authorities.
+          </li>
+          <li>
+            In the event of a dispute, to defend Zillow’s rights and interests,
+            including before the competent authorities.
+          </li>
+          <li>To carry out the transfers indicated below.</li>
+          <p>
+            We may also process your personal data for the following voluntary
+            purposes, which you may object to at any time by following the
+            procedure set forth below:
+          </p>
+          <li>
+            In the event that you are not selected to fill the job vacancy for
+            which you applied, we may retain your personal data for up to one
+            year in order to consider you for future recruitment and selection
+            processes at Zillow.
+          </li>
+          <li>
+            In the event that you are not selected to fill the job vacancy for
+            which you applied, we may conduct resume exchanges with other
+            companies within the same Zillow corporate group.
+          </li>
+
+          <p>
+            Your personal data may be transferred to the following third
+            parties, for the purposes set below:
+          </p>
+        </ul>
+        <table>
+          <tbody>
+            <tr>
+              <h1>Date Transfers</h1>
+              <th>Recipient of personal data</th>
+              <th>Purpose</th>
+              <th>Consent</th>
+            </tr>
+            <tr>
+              <td>Companies with the xZillowx corporate group</td>
+              <td>
+                When it is necessary to carry out the steps related to the
+                recruitment and selection procedure. In addition, we may share
+                your curriculum vitae with companies within our corporate group
+                that may be interested in your profile as a candidate (voluntary
+                purpose).
+              </td>
+              <td>not necessary</td>
+            </tr>
+
+            <tr>
+              <td>Competent authorities</td>
+              <td>
+                To comply with legal requirements or requests from authorities;
+                to safeguard the public interest or for the procurement or
+                administration of justice; or for the recognition, exercise or
+                defense of a right in a judicial proceeding, as well as in cases
+                specifically permitted by law.
+              </td>
+              <td>not necessary</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Your Rights</h2>
+
+        <p>
+          You have the right to know what personal data we have about you, for
+          what purpose and how we use them, as well as the privacy notice that
+          governs its processing (Access). Likewise, you may request the
+          correction or updating of your personal data (Rectification); that we
+          delete your personal data in situations where this is possible
+          (Cancellation); as well as to oppose the processing of your personal
+          data for voluntary purposes or under certain legitimate circumstances
+          (Opposition) (jointly “ARCO rights“). Likewise, you may limit the use
+          and disclosure of your data or revoke the consent you have given for
+          its processing, when this is possible and applicable. Please note that
+          the revocation of your consent could mean the end of the recruitment
+          and selection process.  <br />
+          To exercise any of your rights, please send your request to our Data
+          Protection Officer at: zgprivacy@zillowgroup.com. <br />
+
+          Your request must contain at least the following information: i) your
+          full name, address and email address so that we can communicate the
+          response to the request; ii) the document that proves your identity
+          (copy of official identification) and, if applicable, personality of
+          your representative (with a copy of the corresponding official
+          identification); iii) a clear and precise description of the personal
+          data with respect to which you are seeking to exercise any of the
+          rights and the right you are exercising; iv) any document or
+          information that facilitates the location of your personal data; v) in
+          the event of requesting a rectification of personal data, you must
+          also indicate the modifications to be made and provide the
+          documentation supporting your request. <br />
+
+          Once we receive your application, we will have 5 business days to
+          review it for compliance with all requirements. If your application
+          does not meet any of the above requirements, we will ask you to
+          complete it within 10 business days. If you do not provide the missing
+          information or documentation within the deadline, your request will be
+          deemed not to have been submitted.<br />
+
+          We will respond to your request within 20 business days after we
+          receive it in full. If the request is granted, we will respond within
+          15 business days. <br />
+
+          Access to your personal data will be deemed to have been granted when
+          they are made available to you, regardless of the medium or format, or
+          when simple copies of your personal data are provided to you, at
+          Zillow’s option.
+        </p>
+
+        <h2>Changes to the Privacy Notice</h2>
+        <p>
+          We reserve the right to make changes or updates to this privacy notice
+          at any time. If there are substantial modifications, we will send you
+          the updated version of the privacy notice to the email address you
+          have provided to us.
+        </p>
+
+        <h2>Consent</h2>
+
+        <p>
+          By providing us with your personal data and/or following the
+          recruitment and selection process with us, you expressly consent to
+          the processing of your personal data in accordance with this privacy
+          notice.
+        </p>
+
+        <p class="last">
+          Zillow Group is an equal opportunity employer and is committed to
+          working with and providing reasonable accommodations to applicants
+          with disabilities. If you have a disability and require a reasonable
+          accommodation related to applying for employment at our company,
+          please contact us. Changes to the Privacy Notice.
+        </p>
+      </div>
+    </div>
+    <footer class="footer-wrapper">
+      <div class="footer-container">
+        <div class="links-row">
+          <a href="/about">About</a>
+          <a href="/zestimate">Zestimates</a>
+          <a href="/research">Research</a>
+          <a href="/careers">Careers</a>
+          <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+          <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+          <a href="/help">Help</a>
+          <a href="/advertise">Advertise</a>
+          <a href="/fair">Fair Housing Guide</a>
+          <a href="/advocacy">Advocacy</a>
+        </div>
+
+        <div class="links-row">
+          <a href="/terms">Terms of use</a>
+          <a href="/privacy">Privacy Portal</a>
+          <a href="/cookie">Cookie Preference</a>
+          <a href="/learn">Learn</a>
+          <a href="/ai">AI</a>
+          <a href="/mobile">Mobile Apps</a>
+        </div>
+
+        <div class="links-row">
+          <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+          <a href="https://streeteasy.com/">StreetEasy</a>
+          <a href="https://hotpads.com/">HotPads</a>
+          <a href="https://showingtimeplus.com/">Out East</a>
+          <a href="https://outeast.com/">ShowingTime+</a>
+        </div>
+
+        <div class="do-not-sell">
+          <a href="#">Do Not Sell or Share My Personal Information→</a>
+        </div>
+
+        <div class="accessibility-notice">
+          Zillow Group is committed to ensuring digital accessibility for
+          individuals with disabilities. We are continuously working to improve
+          the accessibility of our web experience for everyone, and we welcome
+          feedback and accommodation requests. If you wish to report an issue or
+          seek an accommodation, please <a href="#">let us know</a>.
+        </div>
+
+        <div class="legal-info">
+          Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in
+          multiple states. Zillow (Canada), Inc. holds real estate brokerage
+          <a href="#">licenses</a> in multiple provinces.<br />
+          <a href="#">§ 442-H New York Standard Operating Procedures</a><br />
+          <a href="#">§ New York Fair Housing Notice</a><br />
+          TREC: <a href="#">Information about brokerage services</a>,
+          <a href="#">Consumer protection notice</a><br />
+          California DRE #1522444<br />
+          <a href="#">Contact Zillow, Inc. Brokerage</a>
+        </div>
+
+        <div class="legal-info">
+          For listings in Canada, the trademarks REALTOR®, REALTORS®, and the
+          REALTOR® logo are controlled by The Canadian Real Estate Association
+          (CREA) and identify real estate professionals who are members of CREA.
+          The trademarks MLS®, Multiple Listing Service® and the associated
+          logos are owned by CREA and identify the quality of services provided
+          by real estate professionals who are members of CREA. Used under
+          license.
+        </div>
+
+        <div class="app-stores">
+          <a href="#"
+            ><img src="/image/apple-icon.svg" alt="Download on the App Store"
+          /></a>
+          <a href="#"
+            ><img src="/image/google-icon.svg" alt="Get it on Google Play"
+          /></a>
+        </div>
+        <div class="bottom-row">
+          <img
+            src="/image/blue-logo.jpg"
+            alt="Zillow logo"
+            class="zillow-logo"
+          />
+          <span>Follow us:</span>
+          <div class="social-icons">
+            <!-- Social media icons would go here -->
+          </div>
+          <span>© 2006-2025 Zillow</span>
+          <img
+            src="./image/home-icon.png"
+            alt="Equal Housing Opportunity"
+            class="equal-housing"
+          />
+        </div>
+      </div>
+    </footer>
+    <img src="/image/footer-art.svg" alt="" class="footer-art" />
+
+    <script
+      src="https://kit.fontawesome.com/e1fbe49b44.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="account.js"></script>
+    <script>
+      // Mobile Menu Toggle
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.add("active");
+          document.querySelector(".overlay").style.display = "block";
+        });
+
+      document
+        .querySelector(".close-menu")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.remove("active");
+          document.querySelector(".overlay").style.display = "none";
+        });
+
+      document.querySelector(".overlay").addEventListener("click", function () {
+        document.querySelector(".mobile-menu").classList.remove("active");
+        this.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

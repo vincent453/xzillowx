@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xZillowx | Rental</title>
+    <link rel="stylesheet" href="/css/rental.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <h2>Menu</h2>
+        <button class="close-menu">&times;</button>
+      </div>
+      <div class="mobile-menu-items">
+        <ul>
+          <li><a href="/buy">Buy</a></li>
+          <li><a href="/rent">Rent</a></li>
+          <li><a href="/sell">Sell</a></li>
+          <li><a href="/homeloans">Home Loans</a></li>
+          <li><a href="/findagent">Find an Agent</a></li>
+          <li><a href="/rentals">Manage Rentals</a></li>
+          <li><a href="/advertise">Advertise</a></li>
+          <li><a href="/help">Help</a></li>
+          <li><a href="/signup">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <h2>Menu</h2>
+        <button class="close-menu">&times;</button>
+      </div>
+      <div class="mobile-menu-items">
+        <ul>
+          <li><a href="/buy">Buy</a></li>
+          <li><a href="/rent">Rent</a></li>
+          <li><a href="/sell">Sell</a></li>
+          <li><a href="/homeloans">Home Loans</a></li>
+          <li><a href="/findagent">Find an Agent</a></li>
+          <li><a href="/rentals">Manage Rentals</a></li>
+          <li><a href="/advertise">Advertise</a></li>
+          <li><a href="/help">Help</a></li>
+          <li><a href="/signup">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <nav>
+      <div class="nav-content">
+        <div class="mobile-nav">
+          <div>
+            <i
+              class="fa-solid fa-bars bars"
+              id="menu-toggle"
+              style="color: #000; font-size: 2rem"
+            ></i>
+          </div>
+          <div class="logo-con">
+            <a href="/"
+              ><img class="logo" src="/image/logo.png" alt="Logo" />
+              <h2 class="xzillow-logo">XZillow</h2></a
+            >
+          </div>
+          <div
+            class="user-dropdown"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <% if (user) { %>
+            <button
+              class="dropdown-btn"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <i
+                class="fa-regular fa-user"
+                style="color: #ffffff; font-size: 2rem"
+              ></i>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/profile"><%= user.username %> Account</a></li>
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+            <% } else { %>
+            <a class="login-btn" href="/signup"
+              ><i
+                class="fa-regular fa-user"
+                style="color: #000; font-size: 2rem"
+              ></i
+            ></a>
+            <% } %>
+          </div>
+        </div>
+
+        <ul class="first-ul">
+          <li><a href="/buy">Buy</a></li>
+          <li><a href="/rent">Rent</a></li>
+          <li><a href="/sell">Sell</a></li>
+          <li><a href="/homeloans">Home Loans</a></li>
+          <li><a href="/findagent">Find an Agent</a></li>
+        </ul>
+
+        <div class="logo-con desk">
+          <a href="/"
+            ><img class="logo" src="/image/logo.png" alt="Logo" />
+            <h2 class="xzillow-logo">XZillow</h2></a
+          >
+        </div>
+
+        <div class="hide-major">
+          <ul class="second-ul">
+            <li><a href="/rentals">Manage Rentals</a></li>
+            <li><a href="/advertise">Advertise</a></li>
+            <li><a href="/help">Help</a></li>
+            <% if (user) { %>
+            <li class="login-text user-dropdown">
+              <button
+                class="dropdown-btn"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <i style="color: #000" class="fa-regular fa-user"></i>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="/profile"><%= user.username %> Account</a></li>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </li>
+            <% } else { %>
+            <li class="login-text"><a href="/signup">Sign In</a></li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="rental-con">
+      <h1>Browse Rental Buildings by State/Province</h1>
+      <h3>United States</h3>
+      <a href="/dropdown/browse-homes/california.html">California</a>
+      <a href="">Texas</a>
+      <a href="">Florida</a>
+      <a href="">New York</a>
+      <a href="">Pennsylvania</a>
+      <a href="">Illnois</a>
+      <a href="">Ohio</a>
+      <a href="">Georgia</a>
+      <a href="">North Carolina</a>
+      <a href="">Michigan</a>
+      <a href="">New Jersey</a>
+      <a href="">Virginia</a>
+      <a href="">Arizona</a>
+      <a href="">Massachusetts</a>
+      <a href="">Tennessee</a>
+      <a href="">Indiana</a>
+      <a href="">Maryland</a>
+      <a href="">Missouri</a>
+      <a href="">Wisconsin</a>
+      <a href="">Colorado</a>
+      <a href="">Minnesota</a>
+      <a href="">South Carolina</a>
+      <a href="">Alabama</a>
+      <a href="">Louisana</a>
+      <a href="">Kentucky</a>
+      <a href="">Oregon</a>
+      <a href="">Oklahoma</a>
+      <a href="">Connecticut</a>
+      <a href="">Utah</a>
+      <a href="">Iowa</a>
+      <a href="">Nevada</a>
+      <a href="">Arkansas</a>
+      <a href="">Mississippi</a>
+      <a href="">Kansas</a>
+      <a href="">New Mexico</a>
+      <a href="">Nebraska</a>
+      <a href="">Idaho</a>
+      <a href="">West Virginia</a>
+      <a href="">Hawaii</a>
+      <a href="">New Hampshire</a>
+      <a href="">Maine</a>
+      <a href="">Rhode island</a>
+      <a href="">Montana</a>
+      <a href="">Delaware</a>
+      <a href="">South Dakota</a>
+      <a href="">North Dakota</a>
+      <a href="">Alaska</a>
+      <a href="">Washington, DC</a>
+      <a href="">Vermont</a>
+      <a href="">Wyoming</a>
+
+      <h3>Canada</h3>
+      <a href="">Ontario</a>
+      <a href="">Quebec</a>
+      <a href="">British Columbia</a>
+      <a href="">Alberta</a>
+      <a href="">Manitoba</a>
+      <a href="">Saskatcheewan</a>
+      <a href="">Nova Scotia</a>
+      <a href="">New Brunswick</a>
+      <a href="">Newfoundland and Labrador</a>
+      <a href="">Prince Edward Island</a>
+      <a href="">Northwest Territories</a>
+      <a href="">Nunavut</a>
+      <a href="">Yukon</a>
+    </div>
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/67bf97b0d4d18b1910cdea64/1il26h2pu";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+  </body>
+</html>

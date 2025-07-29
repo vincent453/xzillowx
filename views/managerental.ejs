@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zillow Rentals</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+      }
+
+      /* Header styles */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 48px;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .logo-cont {
+        display: flex;
+        align-items: center;
+      }
+      .logo-cont img {
+        width: 2rem;
+      }
+      .logo {
+        height: 24px;
+      }
+
+      .header-buttons {
+        display: flex;
+        gap: 16px;
+      }
+
+      .btn {
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .btn-outline {
+        border: 1px solid #006aff;
+        color: #006aff;
+        background: white;
+      }
+
+      .btn-primary {
+        background: #006aff;
+        color: white;
+        border: none;
+      }
+
+      /* Hero section */
+      .hero {
+        display: flex;
+        padding: 64px 48px;
+        align-items: center;
+        gap: 48px;
+        background-image: url("/image/ZRM-hero.webp");
+      }
+
+      .hero-content {
+        flex: 1;
+        max-width: 600px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        line-height: 1.2;
+        color: #2a2a33;
+        margin-bottom: 24px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #54545a;
+        margin-bottom: 32px;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 16px;
+      }
+
+      .hero-image {
+        flex: 1;
+      }
+
+      .hero-image img {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      /* Features section */
+      .features {
+        background: #001751;
+        padding: 64px 48px;
+        color: white;
+      }
+
+      .features h2 {
+        font-size: 32px;
+        margin-bottom: 32px;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .feature-card {
+        background: #ffff;
+        padding: 24px;
+        border-radius: 8px;
+      }
+
+      .feature-card h3 {
+        margin: 16px 0;
+        font-size: 20px;
+        color: #2a2a33;
+      }
+
+      .feature-card p {
+        margin-bottom: 16px;
+        line-height: 1.5;
+        color: #54545a;
+      }
+
+      .learn-more {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      /* Management section */
+      .management {
+        padding: 64px 48px;
+      }
+
+      .management h2 {
+        font-size: 32px;
+        margin-bottom: 32px;
+        color: #2a2a33;
+      }
+
+      .price-tool {
+        display: flex;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .price-tool img {
+        width: 50%;
+        border-radius: 8px;
+      }
+      .price-tool div {
+        line-height: 2;
+      }
+      /* Testimonials */
+      .testimonials {
+        background: #001751;
+        padding: 64px 48px;
+        color: white;
+        text-align: center;
+      }
+
+      .testimonial {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 24px;
+        line-height: 1.5;
+      }
+
+      .testimonial p {
+        margin-bottom: 16px;
+      }
+
+      .testimonial-nav {
+        margin-top: 32px;
+      }
+
+      /* Premium section */
+      .premium {
+        padding: 64px 48px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      .premium img {
+        width: 40%;
+      }
+
+      .premium-content {
+        flex: 1;
+        width: 30%;
+      }
+
+      .premium-content ul {
+        margin: 24px 0;
+        list-style: none;
+      }
+
+      .premium-content li {
+        margin: 12px 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      /* App download section */
+      .app-download {
+        text-align: center;
+        padding: 64px 48px;
+        display: flex;
+      }
+
+      .qr-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        margin-top: 32px;
+      }
+      .qr-container img {
+        width: 25rem;
+      }
+
+      /* Resources section */
+      .resources {
+        background: #f8f9fd;
+        padding: 64px 48px;
+      }
+
+      .resources h2 {
+        margin-bottom: 32px;
+      }
+
+      .resources-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 32px 48px;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+      }
+
+      .footer-links h4 {
+        margin-bottom: 16px;
+      }
+
+      .footer-links ul {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin: 8px 0;
+      }
+
+      .footer-links a {
+        color: #54545a;
+        text-decoration: none;
+      }
+
+      /* Portrait and landscape */
+      @media only screen and (max-width: 767px) {
+        /* Header */
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 16px;
+        }
+        .logo {
+          margin-bottom: 16px;
+        }
+        .header-buttons {
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        /* Hero Section */
+        .hero {
+          padding: 32px 16px;
+        }
+        .hero-content {
+          max-width: 100%;
+        }
+        .hero-buttons {
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        /* Features Section */
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+
+        /* Management Section */
+        .price-tool {
+          flex-direction: column;
+          gap: 16px;
+        }
+        .price-tool img {
+          width: 100%;
+        }
+
+        /* Testimonials Section */
+        .testimonial {
+          font-size: 18px;
+        }
+
+        /* Premium Section */
+        .premium {
+          flex-direction: column;
+          gap: 16px;
+        }
+        .premium-content {
+          width: 100%;
+        }
+        .premium img {
+          width: 100%;
+        }
+
+        /* App Download Section */
+        .app-download {
+          padding: 32px 16px;
+        }
+        .qr-container {
+          gap: 16px;
+        }
+        .qr-container img {
+          width: 100%;
+        }
+
+        /* Resources Section */
+        .resources-grid {
+          grid-template-columns: 1fr;
+        }
+
+        /* Footer */
+        .footer-links {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-cont">
+        <img src="./image/logo.png" />
+        <h2>XZillowx</h2>
+        <span>Rentals</span>
+      </div>
+      <div class="header-buttons">
+        <a href="#" class="btn btn-outline">Contact sales</a>
+        <a href="/sell" class="btn btn-primary">Post your listing</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Level up your landlording simply and confidently</h1>
+        <p>
+          Take the stress beyond list of running your rental business and
+          modernize by implementing our stress-free management tools.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Get started</a>
+          <a href="#" class="btn btn-outline">View past success</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <h2>Rent like a pro with Rental Manager</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <img src="/image/Listing.png" alt="Post listings icon" />
+          <h3>Post listings & find renters easily</h3>
+          <p>Get your rental listed on the most viewed rental site.</p>
+          <a href="#" class="learn-more">Learn more →</a>
+        </div>
+        <div class="feature-card">
+          <img src="/image/Applications.png" alt="Screen icon" />
+          <h3>Screen applicants effectively</h3>
+          <p>Get verified reports on employment, credit and rental history.</p>
+          <a href="#" class="learn-more">Learn more →</a>
+        </div>
+        <div class="feature-card">
+          <img src="/image/Leases.png" alt="Document icon" />
+          <h3>Create & send leases for signing</h3>
+          <p>Upload your own or use our standard lease templates.</p>
+          <a href="#" class="learn-more">Learn more →</a>
+        </div>
+        <div class="feature-card">
+          <img src="/image/Payments.png" alt="Payment icon" />
+          <h3>Collect rent online</h3>
+          <p>Get paid rent, deposits, and fees automatically.</p>
+          <a href="#" class="learn-more">Learn more →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Management Section -->
+    <section class="management">
+      <h2>Take the guesswork out of managing your business</h2>
+      <div class="price-tool">
+        <img
+          src="/image/price-your-rental2x_CMS_Full.png"
+          alt="Pricing tool interface"
+        />
+        <div>
+          <h3>Price your rental competitively</h3>
+          <p>
+            Use our pricing tools to estimate the right price for your property
+          </p>
+          <a href="#" class="btn btn-outline">Get started</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="testimonial">
+        <p>
+          "The number and quality of inquiries was amazing. Very pleased by how
+          user friendly and fast it is."
+        </p>
+        <cite>Jennifer, Satisfied Portland PM</cite>
+      </div>
+      <div class="testimonial-nav">
+        <button>←</button>
+        <button>→</button>
+      </div>
+    </section>
+
+    <!-- Premium Section -->
+    <section class="premium">
+      <div class="premium-content">
+        <h2>Fill vacancies faster with Premium</h2>
+        <ul>
+          <li>More exposure</li>
+          <li>Listing recommendations</li>
+          <li>Pricing & market insights</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Upgrade to premium</a>
+      </div>
+      <img src="/image/premium@2x.png" alt="Premium features" />
+    </section>
+
+    <!-- App Download Section -->
+    <section class="app-download">
+      <div>
+        <h2>Scan the QR code to get the Zillow Rental Manager App</h2>
+        <p>
+          Simply point the QR code on the right and your phone's camera to
+          download the app
+        </p>
+      </div>
+      <div class="qr-container">
+        <img src="/image/white-qr.png" alt="QR Code" />
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources">
+      <h2>Property management resources</h2>
+      <div class="resources-grid">
+        <div>
+          <h3>Rental management tips, tools & trends</h3>
+          <ul>
+            <li>Getting Your Property Ready to Rent</li>
+            <li>Tenant Rights and Fair Housing Laws</li>
+            <li>2024 Rental Market Trends Report</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Investment marketing</h3>
+          <ul>
+            <li>Your Guide to 2024 Price Trends</li>
+            <li>Investment Property Marketing</li>
+            <li>Property Management Trends Report</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <div>
+          <h4>Rental manager</h4>
+          <ul>
+            <li><a href="#">Find tenants</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Apartment advertising</h4>
+          <ul>
+            <li><a href="#">Subscription based plan</a></li>
+            <li><a href="#">Pay per lease plan</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="account.js"></script>
+    <script>
+      // Mobile Menu Toggle
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.add("active");
+          document.querySelector(".overlay").style.display = "block";
+        });
+
+      document
+        .querySelector(".close-menu")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.remove("active");
+          document.querySelector(".overlay").style.display = "none";
+        });
+
+      document.querySelector(".overlay").addEventListener("click", function () {
+        document.querySelector(".mobile-menu").classList.remove("active");
+        this.style.display = "none";
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/e1fbe49b44.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

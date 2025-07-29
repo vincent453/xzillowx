@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xZillowx | About</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon" />
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: #0072ef;
+      }
+      li {
+        list-style: none;
+      }
+      input:focus {
+        outline: none;
+      }
+
+      /* Header */
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5%;
+        border-bottom: 1px solid rgb(205, 205, 211);
+        height: 71px;
+        background: #ffffff;
+        flex-wrap: wrap;
+      }
+      .header-content {
+        height: 71px;
+        width: 1160px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+        align-items: center;
+        flex-shrink: 10;
+      }
+
+      .header-content img {
+        width: 176px;
+        height: auto;
+      }
+
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text a {
+        color: #0072ef;
+        font-size: 14px;
+        list-style: none;
+      }
+
+      /* Privacy Section */
+      .privacy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 3rem;
+        height: 20rem;
+        text-align: center;
+      }
+
+      .privacy .line {
+        background-color: rgb(255, 210, 55);
+        width: 144px;
+        height: 2px;
+        margin-top: 1rem;
+      }
+
+      .privacy h1 {
+        font-size: 4rem;
+      }
+
+      .privacy img {
+        width: 59%;
+        margin-top: 2rem;
+      }
+
+      .privacy-2 {
+        height: 330px;
+        display: flex;
+        justify-content: center;
+        background-color: #ffffff;
+        text-align: left;
+        line-height: 3rem;
+        flex-direction: column;
+        margin-left: 2rem;
+        padding: 4rem;
+      }
+
+      .privacy-2 h1 {
+        width: 20rem;
+      }
+
+      .privacy-2 p {
+        width: 29rem;
+        font-size: 1rem;
+      }
+
+      .privacy-3 img {
+        width: 600px;
+      }
+
+      .privacy-2-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .privacy-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+      }
+
+      .privacy-4 .dropdown-box {
+        width: 792px;
+        height: 240px;
+        background-color: #ffffff;
+        display: flex;
+        text-align: left;
+        align-items: left;
+        padding-left: 2rem;
+        row-gap: 2rem;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .dropdown-box h4 {
+        font-size: 1.6rem;
+      }
+
+      .dropdown-box p {
+        font-size: 1rem;
+        color: #292626;
+      }
+
+      .dropdown-box a {
+        color: #292626;
+      }
+
+      .box-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .privacy-6 {
+        width: 1080px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        margin-top: 0rem;
+        row-gap: 3rem;
+      }
+
+      .privacy-6 .pribox {
+        width: 345.59px;
+        height: 369px;
+        background-color: #ffffff;
+      }
+
+      button {
+        padding: 10px 3rem;
+        background-color: #ffffff;
+        border: #0072ef 1px solid;
+        border-radius: 3px;
+      }
+
+      .foot {
+        width: 100%;
+        height: 4rem;
+        border-top: 1px solid rgba(72, 71, 71, 0.637);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+      }
+
+      .pribox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2.5rem;
+      }
+
+      .pribox img {
+        width: 160px;
+      }
+
+      .pribox .btn {
+        border-radius: 0%;
+        background-color: rgb(0, 106, 255);
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.3rem;
+        height: 73px;
+      }
+
+      /* Media Queries */
+      @media (max-width: 1200px) {
+        .privacy-2-3 {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .privacy-2 {
+          margin-left: 0;
+          padding: 2rem;
+          text-align: center;
+        }
+
+        .privacy-2 h1,
+        .privacy-2 p {
+          width: 100%;
+        }
+
+        .privacy-3 img {
+          width: 100%;
+        }
+
+        .privacy-6 {
+          width: 90%;
+          grid-template-columns: 1fr;
+        }
+
+        .privacy-4 .dropdown-box {
+          width: 90%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .privacy h1 {
+          font-size: 2.5rem;
+        }
+
+        .privacy img {
+          width: 80%;
+        }
+
+        .privacy-2 {
+          height: auto;
+          padding: 1rem;
+        }
+
+        .privacy-2 h1 {
+          font-size: 2rem;
+        }
+
+        .privacy-2 p {
+          font-size: 0.9rem;
+        }
+
+        .privacy-4 .dropdown-box {
+          height: auto;
+          padding: 1rem;
+        }
+
+        .dropdown-box h4 {
+          font-size: 1.2rem;
+        }
+
+        .dropdown-box p {
+          font-size: 0.9rem;
+        }
+
+        .privacy-6 {
+          width: 100%;
+        }
+
+        .pribox {
+          width: 90%;
+          height: auto;
+          padding: 1rem;
+        }
+
+        .pribox img {
+          width: 120px;
+        }
+
+        .pribox .btn {
+          font-size: 1rem;
+          height: 50px;
+        }
+
+        .foot p {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .privacy h1 {
+          font-size: 2rem;
+        }
+
+        .privacy img {
+          width: 100%;
+        }
+
+        .privacy-2 h1 {
+          font-size: 1.5rem;
+        }
+
+        .privacy-2 p {
+          font-size: 0.8rem;
+          width: 100%;
+        }
+
+        .dropdown-box h4 {
+          font-size: 1rem;
+        }
+
+        .dropdown-box p {
+          font-size: 0.8rem;
+        }
+
+        .pribox .btn {
+          font-size: 0.9rem;
+          height: 40px;
+        }
+
+        .foot p {
+          font-size: 0.8rem;
+        }
+        .pribox {
+          width: 40%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-content">
+        <div class="image">
+          <a href="/"><img src="/image/blue-logo.png" alt="XZillowx Logo" /></a>
+        </div>
+        <div class="text">
+          <% if (!user) { %>
+          <li class="login-text"><a href="/signup">Sign In</a></li>
+
+          <% } else { %>
+          <li class="dropdown">
+            <button class="dropbtn">
+              <img
+                src="/image/profile-pic.svg"
+                alt="User"
+                class="profile-icon"
+              />
+            </button>
+            <div class="dropdown-content">
+              <a href="/profile">Profile</a>
+              <form action="/logout" method="POST">
+                <button type="submit">Logout</button>
+              </form>
+            </div>
+          </li>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <div class="privacy">
+      <h1>Our Commitment to privacy</h1>
+      <div class="line"></div>
+      <img src="/image/other-networks.png" alt="" />
+    </div>
+    <div class="privacy-2-3">
+      <div class="privacy-2">
+        <h1>Finding a home is a personal journey</h1>
+        <p>
+          No one understands that better than we do. And we're committed to
+          being transparent about how we use your data to help get you into a
+          home you'll love. Our goal is to give you the tools you need to be in
+          control of your privacy.
+        </p>
+      </div>
+      <div class="privacy-3">
+        <img src="/image/privacy-img.jpg" alt="" />
+      </div>
+    </div>
+    <div class="privacy">
+      <h1 style="font-size: 44px">Here's the data we use and why</h1>
+      <div class="line"></div>
+    </div>
+    <!-- dropdown -->
+
+    <div class="privacy-4">
+      <div class="dropdown-box">
+        <h4>The information we collect</h4>
+        <p>
+          What we learn when you use our sites and apps helps us pave the way to
+          your next home.
+        </p>
+
+        <a href="#">SEE EXAMPLES<img src="image/dropdown.png" alt="" /></a>
+      </div>
+      <div class="dropdown-box">
+        <h4>How we use this information</h4>
+        <p>
+          We use your data to make your home journey easier and more efficient.
+        </p>
+
+        <a href="#">SEE EXAMPLES<img src="image/dropdown.png" alt="" /></a>
+      </div>
+      <div class="dropdown-box">
+        <h4>How we share information</h4>
+        <p>
+          We share information across our lines of business and with partners
+          and service providers who can help with your next move.
+        </p>
+
+        <a href="#">SEE EXAMPLES<img src="image/dropdown.png" alt="" /></a>
+      </div>
+      <div class="dropdown-box">
+        <h4>The information we collect</h4>
+        <p>
+          What we learn when you use our sites and apps helps us pave the way to
+          your next home.
+        </p>
+
+        <a href="#">SEE EXAMPLES <img src="image/dropdown.png" alt="" /></a>
+      </div>
+    </div>
+
+    <div class="privacy">
+      <h1>You're in control of your privacy</h1>
+      <div class="line"></div>
+      <p style="font-size: 20px; width: 50%; margin-top: 2rem">
+        We've built tools that allow you to see and manage your personal data.
+      </p>
+    </div>
+    <div class="box-div">
+      <div class="privacy-6">
+        <div class="pribox">
+          <img src="image/rentals-privacy.png" alt="" />
+          <h3>Manage Privacy Preferences</h3>
+          <input class="btn" type="button" value="Get started" />
+        </div>
+        <div class="pribox">
+          <img src="image/export-data.png" alt="" />
+          <h3>Request a copy of your data</h3>
+          <input class="btn" type="button" value="Get started" />
+        </div>
+        <div class="pribox">
+          <img src="image/delete-data.png" alt="" />
+          <h3>Delete your data</h3>
+          <input class="btn" type="button" value="Get started" />
+        </div>
+        <div class="pribox">
+          <img src="image/update.png" alt="" />
+          <h3>Update your personal data</h3>
+          <input class="btn" type="button" value="Get started" />
+        </div>
+      </div>
+      <button style="margin-top: 6em">
+        Privacy Metrics for year<img src="image/dropdown" alt="" />
+      </button>
+      <p style="font-size: 14px; font-weight: 900">
+        Read our full privacy policy
+      </p>
+    </div>
+    <div class="foot">
+      <p>2025xZillowx Group. All Rights Reserved.</p>
+    </div>
+  </body>
+</html>

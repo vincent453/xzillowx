@@ -1,0 +1,336 @@
+<!-- admin-dashboard.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xZillowx Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>xZillowx</h2>
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li class="active">
+                        <a href="/admin/dashboard"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="/admin/properties"><i class="fa-solid fa-house"></i> <span>Properties</span></a>
+                    </li>
+                    <li>
+                        <a href="/admin/users"><i class="fa-solid fa-users"></i> <span>Users</span></a>
+                    </li>
+                    <li>
+                        <a href="/admin/transactions"><i class="fa-solid fa-money-bill-transfer"></i> <span>Transactions</span></a>
+                    </li>
+                    <li>
+                        <a href="/admin/analytics"><i class="fa-solid fa-chart-line"></i> <span>Analytics</span></a>
+                    </li>
+                    <li>
+                        <a href="/admin/settings"><i class="fa-solid fa-gear"></i> <span>Settings</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <a href="/admin/logout"><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="search-container">
+                    <input type="text" placeholder="Search...">
+                    <button class="search-btn"><i class="fa-solid fa-search"></i></button>
+                </div>
+                <div class="user-menu">
+                    <div class="notifications">
+                        <button class="notification-btn">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="badge">3</span>
+                        </button>
+                    </div>
+                    <div class="user-profile">
+                        <img src="/images/avatar-placeholder.jpg" alt="Admin" class="avatar">
+                        <span class="user-name">Admin User</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h1>Dashboard</h1>
+                    <div class="date-display"><%- new Date().toLocaleDateString() %></div>
+                </div>
+
+                <!-- Dashboard Statistics -->
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-card-icon blue">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Total Properties</h3>
+                            <p class="stat-value"><%- stats.totalProperties %></p>
+                            <p class="stat-change increase">+<%- stats.propertyIncrease %>%</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon green">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Active Users</h3>
+                            <p class="stat-value"><%- stats.activeUsers %></p>
+                            <p class="stat-change increase">+<%- stats.userIncrease %>%</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon purple">
+                            <i class="fa-solid fa-money-bill-transfer"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Total Revenue</h3>
+                            <p class="stat-value">$<%- stats.totalRevenue.toLocaleString() %></p>
+                            <p class="stat-change increase">+<%- stats.revenueIncrease %>%</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon orange">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Page Views</h3>
+                            <p class="stat-value"><%- stats.pageViews.toLocaleString() %></p>
+                            <p class="stat-change decrease">-<%- stats.viewsDecrease %>%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Properties & Activities Section -->
+                <div class="content-row">
+                    <div class="content-card properties-table">
+                        <div class="card-header">
+                            <h2>Recent Properties</h2>
+                            <a href="/admin/properties" class="view-all">View All</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Address</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% recentProperties.forEach(property => { %>
+                                    <tr>
+                                        <td>#<%- property.id %></td>
+                                        <td><%- property.address %></td>
+                                        <td>$<%- property.price.toLocaleString() %></td>
+                                        <td>
+                                            <span class="status-badge <%- property.status.toLowerCase() %>">
+                                                <%- property.status %>
+                                            </span>
+                                        </td>
+                                        <td class="actions">
+                                            <a href="/admin/properties/<%- property.id %>" class="action-btn view">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </a>
+                                            <a href="/admin/properties/<%- property.id %>/edit" class="action-btn edit">
+                                                <i class="fa-solid fa-pen"></i>
+                                            </a>
+                                            <button class="action-btn delete" data-id="<%- property.id %>">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <% }); %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="content-card recent-activity">
+                        <div class="card-header">
+                            <h2>Recent Activity</h2>
+                        </div>
+                        <ul class="activity-list">
+                            <% recentActivities.forEach(activity => { %>
+                            <li class="activity-item">
+                                <div class="activity-icon <%- activity.type %>">
+                                    <i class="fa-solid <%- activity.icon %>"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p class="activity-text"><%- activity.text %></p>
+                                    <p class="activity-time"><%- activity.time %></p>
+                                </div>
+                            </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="content-row">
+                    <div class="content-card chart-card">
+                        <div class="card-header">
+                            <h2>Sales Performance</h2>
+                            <div class="chart-filters">
+                                <button class="chart-filter active" data-period="weekly">Weekly</button>
+                                <button class="chart-filter" data-period="monthly">Monthly</button>
+                                <button class="chart-filter" data-period="yearly">Yearly</button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <!-- Chart placeholder - would use a charting library like Chart.js in real implementation -->
+                            <div class="chart-placeholder">
+                                <img src="/images/chart-placeholder.png" alt="Sales Chart">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card user-demographics">
+                        <div class="card-header">
+                            <h2>User Demographics</h2>
+                        </div>
+                        <div class="chart-container">
+                            <!-- Pie chart placeholder -->
+                            <div class="chart-placeholder">
+                                <img src="/images/pie-chart-placeholder.png" alt="Demographics Chart">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // admin-scripts.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Sidebar toggle functionality
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.querySelector('.main-content');
+    
+    if (sidebarToggle && sidebar) {
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+            
+            // For mobile devices
+            if (window.innerWidth <= 576) {
+                sidebar.classList.toggle('mobile-visible');
+                createOverlay();
+            }
+        });
+    }
+    
+    // Create overlay for mobile sidebar
+    function createOverlay() {
+        let overlay = document.querySelector('.overlay');
+        
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            document.body.appendChild(overlay);
+            
+            overlay.addEventListener('click', function() {
+                sidebar.classList.remove('mobile-visible');
+                overlay.classList.remove('active');
+            });
+        }
+        
+        overlay.classList.toggle('active');
+    }
+    
+    // Add mobile menu toggle button for very small screens
+    if (window.innerWidth <= 576) {
+        const topHeader = document.querySelector('.top-header');
+        
+        if (topHeader && !document.querySelector('.mobile-menu-toggle')) {
+            const mobileToggle = document.createElement('button');
+            mobileToggle.className = 'mobile-menu-toggle';
+            mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            
+            topHeader.insertBefore(mobileToggle, topHeader.firstChild);
+            
+            mobileToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('mobile-visible');
+                createOverlay();
+            });
+        }
+    }
+    
+    // Chart filter buttons
+    const chartFilters = document.querySelectorAll('.chart-filter');
+    
+    chartFilters.forEach(filter => {
+        filter.addEventListener('click', function() {
+            chartFilters.forEach(f => f.classList.remove('active'));
+            this.classList.add('active');
+            
+            // In a real application, you would update the chart data here
+            console.log('Chart period changed to:', this.dataset.period);
+        });
+    });
+    
+    // Table row hover effect
+    const tableRows = document.querySelectorAll('tbody tr');
+    
+    tableRows.forEach(row => {
+        row.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = '#f1f5f9';
+        });
+        
+        row.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = '';
+        });
+    });
+    
+    // Delete property confirmation
+    const deleteButtons = document.querySelectorAll('.action-btn.delete');
+    
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const propertyId = this.dataset.id;
+            
+            if (confirm(`Are you sure you want to delete property #${propertyId}?`)) {
+                // In a real application, you would send a request to delete the property
+                console.log(`Deleting property #${propertyId}`);
+            }
+        });
+    });
+    
+    // Responsive behavior for window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 992 && !sidebar.classList.contains('collapsed')) {
+            sidebar.classList.add('collapsed');
+        }
+        
+        if (window.innerWidth > 576) {
+            sidebar.classList.remove('mobile-visible');
+            const overlay = document.querySelector('.overlay');
+            if (overlay) {
+                overlay.classList.remove('active');
+            }
+        }
+    });
+});
+    </script>
+</body>
+</html>

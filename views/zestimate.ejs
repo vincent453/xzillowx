@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XZillowx | About</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon" />
+       <!-- Inter font family -->
+       <link rel="preconnect" href="https://fonts.googleapis.com" />
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+       <link
+         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+         rel="stylesheet"
+       />
+       <!-- Montserrat font family -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Gideon Roman -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
+       <style>
+        
+        .zest {
+        background-image: url('/image/zest.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 408px;
+        color: white;
+        padding: 2rem;
+      }
+
+      .zest-3 {
+        align-items: center;
+        text-align: center;
+        justify-content: center;  
+      }
+
+      .zest h1 {
+        font-family: "Lato", serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);  /* Responsive font size */
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center !important;
+      }
+
+      .zest p {
+        width: min(50rem, 90vw);  /* Responsive width */
+        text-align: left;
+        font-size: clamp(1rem, 2vw, 1.125rem);
+        line-height: 1.6;
+      }
+
+      .zest-2 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .zest-2 h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+      }
+
+      .zest-2 p {
+        width: min(50rem, 90vw);
+        font-size: clamp(1rem, 2vw, 1.125rem);
+        line-height: 1.6;
+      }
+
+      .tab-container {
+        display: flex;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        max-width: 60rem;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .tab {
+        padding: 1rem 0;
+        cursor: pointer;
+        font-size: clamp(0.875rem, 2vw, 1.125rem);
+        width:20%;
+        border-bottom: 3px solid transparent;
+        transition: 0.3s;
+
+      }
+
+      .tab.active {
+        color: #0073E6;
+        border-bottom: 3px solid #0073E6;
+        font-weight: bold;
+      }
+
+      .tab-content1, .tab-content2 {
+        display: none;
+      }
+      .tab-content1 img, .tab-content2 img {
+        width: 80%;
+      }
+
+
+      .tab-content1.active, .tab-content2.active {
+        display: block;
+      }
+     
+
+      .faq {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        margin-top: 2rem;
+        row-gap: 2rem;
+      }
+
+      .faq .drop {
+        width: min(50rem, 90vw);
+        border-bottom: 1px solid rgb(205, 205, 211);
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .faq h4 {
+        font-size: clamp(1.125rem, 2vw, 1.25rem);
+        margin: 0;
+      }
+
+      .notes {
+        margin-top: 2rem;
+      }
+
+      .notes h3 {
+        font-size: clamp(1.125rem, 2vw, 1.3rem);
+        line-height: 3rem;
+      }
+
+      /* Media Queries */
+      @media screen and (max-width: 768px) {
+        .tab-container {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .tab {
+          width: 100%;
+          text-align: center;
+        }
+        
+        .zest p {
+          text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .zest {
+          padding: 1.5rem;
+        }
+        
+        .notes h3 {
+          line-height: 2rem;
+        }
+        
+        .faq .drop {
+          row-gap: 0.25rem;
+        }
+      }
+       </style>
+        <body>          
+             <div class="dropdown-on-mobile">
+              <div class="overlay"></div>
+              <div class="mobile-menu">
+                  <div class="mobile-menu-header">
+                      <h2>Menu</h2>
+                      <button class="close-menu">&times;</button>
+                  </div>
+                  <div class="mobile-menu-items">
+                      <ul>
+                          <li><a href="/buy">Buy</a></li>
+                          <li><a href="/rent">Rent</a></li>
+                          <li><a href="/sell">Sell</a></li>
+                          <li><a href="/homeloans">Home Loans</a></li>
+                          <li><a href="/findagent">Find an Agent</a></li>
+                          <li><a href="/rentals">Manage Rentals</a></li>
+                          <li><a href="/advertise">Advertise</a></li>
+                          <li><a href="/help">Help</a></li>
+                          <li><a href="/signup">Sign In</a></li>
+                      </ul>
+                  </div>
+              </div>
+          
+              <nav>
+                  <div class="nav-content">
+                      <div class="mobile-nav">
+                          <div style="display: flex;  align-items: center; justify-content: center;"><i class="fa-solid fa-bars bars" id="menu-toggle" style="color: #000; font-size: 1rem;"></i></div>
+                          <div class="logo-con"><a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a></div>
+                          <div><a class="login-btn" href="/signup">                            <i class="fa-regular fa-user" style="color: #000; font-size: 1rem;"> <span style="font-size: 10px;">Account</span></i>
+</a></div>
+                      </div>
+                      <ul class="first-ul">
+                          <li><a href="/buy">Buy</a></li>
+                          <li><a href="/rent">Rent</a></li>
+                          <li><a href="/sell">Sell</a></li>
+                          <li><a href="/homeloans">Home Loans</a></li>
+                          <li><a href="/findagent">Find an Agent</a></li>
+                      </ul>
+                      <div class="logo-con desk"><a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a></div>
+                      <div class="hide-major">
+                          <ul class="second-ul">
+                              <li><a href="/rentals">Manage Rentals</a></li>
+                              <li><a href="/advertise">Advertise</a></li>
+                              <li><a href="/help">Help</a></li>
+                              <li class="login-text"><a href="/signup">Sign In</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </nav>
+        
+
+    <div class="zest">
+      <h1>What is a Zestimate?</h1>
+      <br />
+      <p>
+        The Zestimate® home valuation model is Zillow’s estimate of a home’s market value. A Zestimate incorporates public, MLS and user-submitted data into Zillow’s proprietary formula, also taking into account home facts, location and market trends. It is not an appraisal and can’t be used in place of an appraisal.
+      </p>
+    </div>
+
+    <br />
+
+    <div class="zest-2">
+      <h3>How accurate is the Zestimate?</h3>
+      <p>The nationwide median error rate for the Zestimate for on-market homes is 2.4%, while the Zestimate for off-market homes has a median error rate of 7.49%. The Zestimate’s accuracy depends on the availability of data in a home’s area. Some areas have more detailed home information available — such as square footage and number of bedrooms or bathrooms — and others do not. The more data available, the more accurate the Zestimate value will be. </p>
+
+      <h3>Active listings accuracy  </h3>
+
+      <div class="tab-container">
+        <div class="tab active" onclick="showTab('metro1', 'tab-content1', this)">Top Metro Areas</div>
+        <div class="tab" onclick="showTab('states1', 'tab-content1', this)">States</div>
+        <div class="tab" onclick="showTab('national1', 'tab-content1', this)">National</div>
+    </div>
+    
+    <!-- First Tab Content -->
+    <div id="metro1" class="tab-content1 active">
+        <img src="/image/topmetro.png">
+    </div>
+    
+    <div id="states1" class="tab-content1">
+        <img src="/image/states.png">
+    </div>
+    
+    <div id="national1" class="tab-content1">
+        <img src="/image/national.png">
+    </div>
+    
+    <!-- SECOND TAB SLIDESHOW -->
+    <h3>Off Market</h3>
+    <div class="tab-container">
+        <div class="tab active" onclick="showTab('metro2', 'tab-content2', this)">Top Metro Areas</div>
+        <div class="tab" onclick="showTab('states2', 'tab-content2', this)">States</div>
+        <div class="tab" onclick="showTab('national2', 'tab-content2', this)">National</div>
+    </div>
+    
+    <!-- Second Tab Content -->
+    <div id="metro2" class="tab-content2 active">
+        <img src="/image/topmetro.png">
+    </div>
+    
+    <div id="states2" class="tab-content2">
+        <img src="/image/states.png">
+    </div>
+    
+    <div id="national2" class="tab-content2">
+        <img src="/image/national.png">
+    </div>
+      <br />
+      <p>Note: The Zestimate’s accuracy is computed by comparing the final sale price to the Zestimate that was published on or just prior to the sale date.</p>
+
+      <div class="notes">
+     
+      <h3>How is the Zestimate calculated?</h3>
+      <p>Zillow publishes Zestimate home valuations for 104 million homes across the country, and uses state of the art statistical and machine learning models that can examine hundreds of data points for each individual home.</p>
+      <p>To calculate a Zestimate, Zillow uses a sophisticated neural network-based model that incorporates data from county and tax assessor records and direct feeds from hundreds of multiple listing services and brokerages. The Zestimate also incorporates:</p>
+      <ul>
+        <li>Home characteristics including square footage, location or the number of bathrooms.</li>
+        <li>On-market data such as listing price, description, comparable homes in the area and days on the market</li>
+        <li>Off-market data — tax assessments, prior sales and other publicly available records</li>
+        <li>Market trends, including seasonal changes in demand</li>
+      </ul>
+      <p>Currently, we have data for over 110 million U.S. homes and we publish Zestimates for 104 million of them.</p>
+    </div>
+    </div>
+
+    <div class="faq">
+      <div class="drop">
+        <h4>What changes are in the latest Zestimate?</h4>
+        <p>The latest Zestimate model is our most accurate Zestimate yet. It’s based on a neural network model and uses even more historical data to produce off-market home valuations. This means the Zestimate is more responsive to market trends & seasonality that may affect a home’s market value. We also reduced overall errors and processing time in the Zestimate.</p>
+      </div>
+
+      <div class="drop">
+        <h4>My Zestimate seems too low or too high. What gives?</h4>
+        <p>The amount of data we have for your home and homes in your area directly affects the Zestimate’s accuracy, including the amount of demand in your area for homes. If the data is incorrect or incomplete, update your home facts — this may affect your Zestimate.
+        </p>
+        <p>To ensure the most accurate Zestimate, consider reporting any home updates to your local tax assessor. Unreported additions, updates and remodels aren’t reflected in the Zestimate.</p>
+        <p>Check that your tax history and price history (the sale price and date you bought your home) are accurate on Zillow. If data is missing or incorrect, let us know.</p>
+        <p>Be aware that the model that creates the Zestimate factors in changing market trends, including seasonal fluctuations in demand. So in some cases that may be the reason for a change in your Zestimate.</p>
+      </div>
+
+      <div class="drop">
+        <h4>I just listed my home for sale. Why did my Zestimate change?</h4>
+      </div>
+
+      <div class="drop">
+        <h4>My home is on the market. Why is the Zestimate so far off?</h4>
+      </div>
+
+      <div class="drop">
+        <h4>I just changed my home facts. When will my Zestimate update?</h4>
+      </div>
+
+      <div class="drop">
+        <h4>How are changes to my home facts (like an additional bedroom or bathroom) valued?</h4>
+        <p></p>
+      </div>
+
+      <div class="drop">
+        <h4>Is the Zestimate an appraisal?</h4>
+      </div>
+
+      <div class="drop">
+        <h4>Why do I see home values for the past?</h4>
+      </div>
+
+      <div class="drop">
+        <h4>Do you ever change historical Zestimates?</h4>
+      </div>
+
+      <div class="drop">
+        <h4>Does the Zestimate algorithm ever change?</h4>
+      </div>
+
+      <div class="drop">
+        <h4>How often are Zestimates for homes updated?</h4>
+      </div>
+    <div class="drop">
+      <h4>Are foreclosure sales included in the Zestimate algorithm?</h4>
+  </div>
+  <div class="drop">
+    <h4>Who calculates the Zestimate? Can someone tamper with my home’s Zestimate?</h4>
+</div>
+<div class="drop">
+  <h4>Can the Zestimate be updated?</h4>
+</div>
+<div class="drop">
+  <h4>Does Zillow delete Zestimates? Can I have my Zestimate reviewed if I believe there are errors?</h4>
+</div>
+<div class="drop">
+  <h4>I don’t know of any homes that have sold recently in my area. How are you calculating my Zestimate?</h4>
+</div>
+<div class="drop">
+  <h4>I’m trying to sell my home and I think my Zestimate should be higher.</h4>
+</div>
+<div class="drop">
+  <h4>Can I use the Zestimate to get a loan?</h4>
+</div>
+<div class="drop">
+  <h4>What’s the Estimated Sale Range?</h4>
+</div>
+<div class="drop">
+  <h4>How can real estate professionals work with the Zestimate?</h4>
+</div>
+</div>
+
+<footer class="footer-wrapper">
+  <div class="footer-container">
+    <div class="links-row">
+         <a href="/about">About</a>
+        <a href="/zestimate">Zestimates</a>
+        <a href="/research">Research</a>
+        <a href="/careers">Careers</a>
+        <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+        <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+        <a href="/help">Help</a>
+        <a href="/advertise">Advertise</a>
+        <a href="/fair">Fair Housing Guide</a>
+        <a href="/advocacy">Advocacy</a>
+    </div>
+
+    <div class="links-row">
+        <a href="/terms">Terms of use</a>
+        <a href="/privacy">Privacy Portal</a>
+        <a href="/cookie">Cookie Preference</a>
+        <a href="/learn">Learn</a>
+        <a href="/ai">AI</a>
+        <a href="/mobile">Mobile Apps</a>
+    </div>
+
+    <div class="links-row">
+     <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+        <a  href="https://streeteasy.com/">StreetEasy</a>
+        <a  href="https://hotpads.com/">HotPads</a>
+        <a  href="https://showingtimeplus.com/">Out East</a>
+        <a  href="https://outeast.com/">ShowingTime+</a>
+    </div>
+
+    <div class="do-not-sell">
+      <a href="#">Do Not Sell or Share My Personal Information→</a>
+    </div>
+
+    <div class="accessibility-notice">
+      Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please <a href="#">let us know</a>.
+    </div>
+
+    <div class="legal-info">
+      Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in multiple states. Zillow (Canada), Inc. holds real estate brokerage <a href="#">licenses</a> in multiple provinces.<br>
+      <a href="#">§ 442-H New York Standard Operating Procedures</a><br>
+      <a href="#">§ New York Fair Housing Notice</a><br>
+      TREC: <a href="#">Information about brokerage services</a>, <a href="#">Consumer protection notice</a><br>
+      California DRE #1522444<br>
+      <a href="#">Contact Zillow, Inc. Brokerage</a>
+    </div>
+
+    <div class="legal-info">
+      For listings in Canada, the trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.
+    </div>
+
+    <div class="app-stores">
+      <a href="#"><img src="/image/apple-icon.svg" alt="Download on the App Store"></a>
+      <a href="#"><img src="/image/google-icon.svg" alt="Get it on Google Play"></a>
+    </div>
+    <div class="bottom-row">
+      <img src="/image/blue-logo.jpg" alt="Zillow logo" class="zillow-logo">
+      <span>Follow us:</span>
+      <div class="social-icons">
+        <!-- Social media icons would go here -->
+      </div>
+      <span>© 2006-2025 Zillow</span>
+      <img src="./image/home-icon.png" alt="Equal Housing Opportunity" class="equal-housing">
+    </div>
+  </div>
+</footer>
+<img class="footer-art" src="/image/footer-art.svg" alt="">
+    <script>
+ function showTab(tabId, groupClass, clickedTab) {
+        // Hide all tabs in the same group
+        document.querySelectorAll('.' + groupClass).forEach(tab => tab.classList.remove('active'));
+
+        // Show the selected tab
+        document.getElementById(tabId).classList.add('active');
+
+        // Remove active class from all tabs in the group
+        clickedTab.parentElement.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+
+        // Set clicked tab as active
+        clickedTab.classList.add('active');
+    }
+    </script>
+        <script src="https://kit.fontawesome.com/e1fbe49b44.js" crossorigin="anonymous"></script>
+        <script src="account.js"></script>  
+<script>
+            // Mobile Menu Toggle
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('active');
+            document.querySelector('.overlay').style.display = 'block';
+        });
+
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.overlay').style.display = 'none';
+        });
+
+        document.querySelector('.overlay').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            this.style.display = 'none';
+        });
+
+  </script>
+
+  </body>
+</html>

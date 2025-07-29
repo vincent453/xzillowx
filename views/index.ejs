@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>XZillowx: Real Estate, Apartments, Mortgages & Home Values</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon">
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Gideon Roman -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
+    <style>
+
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  header img {
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .search-container {
+      position: relative;
+      max-width: 800px;
+     
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .search-input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .search-button {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .button {
+      background-color: #0068d9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 15px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(246, 246, 250);
+      width: 90%;
+      max-width: 500px;
+      border-radius: 20px;
+      z-index: 1001;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .modal-title {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .close-button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .modal-content {
+      padding: 20px;
+    }
+
+    .intro-section {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    .intro-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .intro-text {
+      color: #444;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .form-section {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .form-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-field {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .required {
+      color: red;
+    }
+
+    .form-select,
+    .form-input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: white;
+    }
+
+    .income-input,
+    .debt-input {
+      position: relative;
+    }
+
+    .income-input input,
+    .debt-input input {
+      padding-left: 30px;
+    }
+
+    .currency-symbol {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #333;
+      font-weight: bold;
+    }
+
+    .time-period {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #777;
+    }
+
+    .helper-text {
+      font-size: 14px;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 15px;
+      background-color: #5d88ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .submit-button:hover {
+      background-color: #4a6ecc;
+    }
+
+    .home-images {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .home-image {
+      width: 48%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .home-image img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .debt-info {
+      font-size: 13px;
+      color: #666;
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    </style>
+    <body>
+      <div class="overlay"></div>
+      <div class="mobile-menu">
+          <div class="mobile-menu-header">
+              <h2>Menu</h2>
+              <button class="close-menu">&times;</button>
+          </div>
+          <div class="mobile-menu-items">
+              <ul>
+                  <li><a href="/buy">Buy</a></li>
+                  <li><a href="/rent">Rent</a></li>
+                  <li><a href="/sell">Sell</a></li>
+                  <li><a href="/homeloans">Home Loans</a></li>
+                  <li><a href="/findagent">Find an Agent</a></li>
+                  <li><a href="/rentals">Manage Rentals</a></li>
+                  <li><a href="/advertise">Advertise</a></li>
+                  <li><a href="/help">Help</a></li>
+                  <li><a href="/signup">Sign In</a></li>
+              </ul>
+          </div>
+      </div>
+  
+      <nav>
+        <div class="nav-content">
+            <div class="mobile-nav">
+                <div style="display: flex;  align-items: center; justify-content: center;"><i class="fa-solid fa-bars bars" id="menu-toggle" style="color: #000; font-size: 1rem;"></i></div>
+                <div class="logo-con">
+                    <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+                </div>
+                 <div class="user-dropdown" style="display: flex; justify-content: center; align-items: center;">
+                    <% if (user) { %>
+                        <button class="dropdown-btn">
+                            <i class="fa-regular fa-user" style="color: #000; font-size: 1rem;"> <span style="font-size: 10px;">Account</span></i>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile"><%= user.username %> Account</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    <% } else { %>
+                        <a class="login-btn" style="color: #000; text-decoration: none;" href="/signup">Sign in</a>
+                    <% } %>
+                </div>
+            </div>
+    
+            <ul class="first-ul">
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/rent">Rent</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/homeloans">Home Loans</a></li>
+                <li><a href="/findagent">Find an Agent</a></li>
+            </ul>
+    
+            <div class="logo-con desk">
+                <a href="/"><img class="logo" src="/image/logo.png" alt="Logo"><h2 class="xzillow-logo">XZillow</h2></a>
+            </div>
+    
+            <div class="hide-major">
+                <ul class="second-ul">
+                    <li><a href="/rentals">Manage Rentals</a></li>
+                    <li><a href="/advertise">Advertise</a></li>
+                    <li><a href="/help">Help</a></li>
+                    <% if (user) { %>
+                        <li class="login-text user-dropdown">
+                              <button class="dropdown-btn"  style="display: flex; justify-content: center; align-items: center;">
+                                <i style="color: #000;" class="fa-regular fa-user"></i>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/profile"><%= user.username %> Account</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    <% } else { %>
+                        <li class="login-text"><a href="/signup">Sign In</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container">
+      <div class="banner-container">
+
+
+        <div class="banner-content">
+        
+            <div class="main-content">
+                <div class="heading">
+                <h1>Agents. Tours. Loans. Homes.</h1>
+            </div>
+            <div class="search-container">
+              <input type="text" class="search-input" placeholder="Enter an address, neighborhood, city, or ZIP code">
+              <button class="search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      
+      <div class="other-navbar">
+          <div>
+            <div class="mover">
+            <div class="other-logo"><img src="./image/logo.png"><h2>XZillowx</h2></div>
+                  <div class="search-container">
+          <input style="width: 800px;" type="text" class="search-input" placeholder="Enter an address, neighborhood, city, or ZIP code">
+          <button class="search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="align-everything">
+      <div class="align">
+      <div class="body-content">
+        <div class="center">
+      <div class="recommendation">
+        <div class="expand">
+        <div class="left-side">
+          <h5>Get home recommendations</h5>
+          <p>Sign in for a more personalized experience.</p>
+          <a href="/signup"><button>Sign in</button></a>
+        </div>
+        <div class="right-side">
+          <img src="./image//recomended-house.jpg" />
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="container">
+    
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal" id="buyAbilityModal">
+          <div class="modal-header">
+            <div class="modal-title">BuyAbility℠</div>
+            <button class="close-button" id="closeModalBtn">&times;</button>
+          </div>
+          <div class="modal-content">
+            <div class="intro-section">
+              <h2 class="intro-title">Buying a home is a big move. We're here to help you every step of the way.</h2>
+              <p class="intro-text">Let's figure out what you can afford and track how it changes over time. If you're not sure of something, it's okay to take your best guess.</p>
+            </div>
+    
+            <div style="background-color: #ffff;" class="form-section">
+              <h3 class="form-title">Tell us about your plans</h3>
+              <form id="buyAbilityForm">
+                <div class="form-field">
+                  <label class="form-label">Where do you plan to buy a home? <span class="required">*</span></label>
+                  <select class="form-select" required>
+                    <option value="" selected disabled>Select a state</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <!-- Add all 50 states here -->
+                    <option value="WY">Wyoming</option>
+                  </select>
+                  <p class="helper-text">Enter the state you plan to buy in.</p>
+                  <label class="form-label">How much have you saved for a down payment?
+                    ? <span class="required">*</span></label>
+                  <div class="income-input" style="position: relative;">
+                    <span class="currency-symbol">$</span>
+                    <input type="number" class="form-input" required min="0">
+                    </div>
+                 
+                  <label class="form-label">How much are you comfortable spending per month?
+                    ? <span class="required">*</span></label>
+                  <div class="income-input" style="position: relative;">
+                    <span class="currency-symbol">$</span>
+                    <input type="number" class="form-input" required min="0">
+                  </div>
+                
+                
+                <!-- Financial information section -->
+                <div style="background-color: #ffff;" class="form-section">
+                  <h3 class="form-title">Tell us about your finances</h3>
+                  
+                  <div class="form-field">
+                    <label class="form-label">What is your annual income before taxes? <span class="required">*</span></label>
+                    <div class="income-input" style="position: relative;">
+                      <span class="currency-symbol">$</span>
+                      <input type="number" class="form-input" required min="0">
+                      <span class="time-period">/year</span>
+                    </div>
+                  </div>
+                  
+                  <div class="form-field">
+                    <label class="form-label">What is the minimum you're required to pay in monthly debt payments? <span class="required">*</span></label>
+                    <div class="debt-input" style="position: relative;">
+                      <span class="currency-symbol">$</span>
+                      <input type="number" class="form-input" required min="0">
+                      <span class="time-period">/month</span>
+                    </div>
+                    <p class="debt-info">This includes minimum payments for credit card debt, student loans, car loans, alimony, or child support. This may be different from what you actually pay per month.</p>
+                  </div>
+                </div>
+                
+                <button type="submit" class="submit-button">See what you can afford</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+          </div>
+        </div>
+      </div>
+    
+      <div class="center-home">
+        <div class="find-home">
+          <div class="home-text">
+            <h5>Find homes you can afford with BuyAbility<sup class="sup">SM</sup></h5>
+            <p>Answer a few questions. We'll highlight homes you're likely to qualify for.</p>
+          </div>
+      </div>
+    </div>
+      <div class="space-box">
+      
+        <div class="box-container">
+          <div class="boxes">
+ 
+            <div class="last-box">
+              <div class="first-box">
+                <div class="radius-box">
+                  <div class="logo-cont"><img src="./image/logo.png"><h2>XZillowx</h2><span> Home Loans</span></div>
+                  
+                  <div class="price-content">
+                    <div class="price-box">
+                  <div class="target-price">
+                    <div class="money-left">
+                      <h5>$ - -</h5>
+                      <p>Suggested target price</p>
+                    </div>
+                  </div>
+                  <div class="buy-ability">
+                    <div class="money-right">
+                      <h5>$ - -</h5>
+                      <p>BuyAbility℠</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="payment-content">
+                <div class="payment-box">
+                  <div class="mo-payment">
+                    <div class="payment-left">
+                      <h5>$ - -</h5>
+                      <p>Mo. payment</p>
+                    </div>
+                  </div>
+                  <div class="today-rate">
+                    <div class="rate-left">
+                      <h5>- - %</h5>
+                      <p>Today's rate</p>
+                    </div>
+                  </div>
+                  <div class="APR">
+                    <div class="apr-left">
+                      <h5>- - %</h5>
+                      <p>APR</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              </div>
+              <button id="openModalBtn" class="btn">Let's get started</button>
+            </div>
+            <div class="within">
+              <div class="box-1">
+                <img src="./image/home-2.jpg" alt="">
+                <button class="r-button">Within BuyAbility</button>
+                <div class="skeleton">
+                    <div class="all ske-box-1"></div>
+                  <div class="all ske-box-2"></div>
+                  <div class="all ske-box-3"></div>
+                </div>
+              </div>
+              <div class="box-1">
+                <img src="./image/home-1.jpg" alt="">
+                <button class="r-button">Within BuyAbility</button>
+                <div class="skeleton">
+                  <div class="all ske-box-1"></div>
+                  <div class="all ske-box-2"></div>
+                  <div class="all ske-box-3"></div>
+                </div>
+              </div>
+              <div class="box-1">
+                <img src="./image/home-3.jpg" alt="">
+                <button class="r-button">Within BuyAbility</button>
+                <div class="skeleton">
+                  <div class="all ske-box-1"></div>
+                  <div class="all ske-box-2"></div>
+                  <div class="all ske-box-3"></div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        </div> 
+
+    
+      <div class="buy-home">
+        <div class="home-content">
+          <div class="buyhome-card">
+            <div class="buyhome-img">
+              <img src="./image/buy-home-1.webp" alt="">
+            </div>
+            <div>
+            <h4>Buy a home</h4>
+            <p>Find your place with an immersive photo experience and the most listings, including things you won’t find anywhere else.</p>
+            <a href="/buy"><button>Browse homes</button></a>
+            
+          </div>
+        </div>
+          <div class="buyhome-card">
+            <div class="buyhome-img">
+              <img src="./image/buy-home-2.jpg" alt="">
+            </div>
+            <div>
+            <h4>Sell a home</h4>
+            <p>No matter what path you take to sell your home, we can help you navigate a successful sale.</p>
+            <a href="/sell"><button>See your options</button></a>
+          </div>
+        </div>
+        <div class="buyhome-card">
+          <div class="buyhome-img">
+            <img src="./image/buy-home-2.jpg" alt="">
+          </div>
+          <div>
+          <h4>Rent a home</h4>
+          <p>We’re creating a seamless online experience – from shopping on the largest rental network, to applying, to paying rent.</p>
+          <a href="/rent"><button>Find rentals</button></a>
+        </div>
+      </div>
+        </div>
+      </div>
+      
+      <footer class="footer-wrapper">
+        <div class="footer-container">
+          <div class="recommendations-section">
+            <h2>About Zillow's Recommendations</h2>
+            <p>Recommendations are based on your location and search activity, such as the homes you've viewed and saved and the filters you've used. We use this information to bring similar homes to your attention, so you don't miss out.</p>
+          </div>
+    
+          <div class="nav-sections">
+            <div class="nav-section">
+              <h3 onclick="mybutton()">Real Estate  <img class="myImage" src="./image/dropdown.png" alt=""></h3>
+              <ul class="dropdown-item first-text-box" id="hide-show">
+              <li><p><a href="/browse/homes">Browse all homes</a></p></li>
+                          <li><p><a href="#">Albuquerque real estate</a></p></li>
+                          <li><p><a href="#">Atlanta real estate</a></p></li>
+                          <li><p><a href="#">Austin real estate</a></p></li>
+                          <li><p><a href="#">Baltimore real estate</a></p></li>
+                          <li><p><a href="#">Boston real estate</a></p></li>
+                          <li><p><a href="#">Calgary real estate</a></p></li>
+                          <li><p><a href="#">Charlotte real estate</a></p></li>
+                          <li><p><a href="#">Chicago real estate</a></p></li>
+                          <li><p><a href="#">Cleveland real estate</a></p></li>
+                          <li><p><a href="#">Colorado Springs real estate</a></p></li>
+                          <li><p><a href="#">Columbus real estate</a></p></li>
+                          <li><p><a href="#">Dallas real estate</a></p></li>
+                          <li><p><a href="#">Denver real estate</a></p></li>
+                          <li><p><a href="#">Detroit real estate</a></p></li>
+                          <li><p><a href="#">Edmonton real estate</a></p></li>
+                          <li><p><a href="#">El Paso real estate</a></p></li>
+                          <li><p><a href="#">Fort Worth real estate</a></p></li>
+                          <li><p><a href="#">Fresno real estate</a></p></li>
+                          <li><p><a href="#">Houston real estate</a></p></li>
+                          <li><p><a href="#">Indianapolis real estate</a></p></li>
+                          <li><p><a href="#">Jacksonville real estate</a></p></li>
+                          <li><p><a href="#">Kansas City real estate</a></p></li>
+                          <li><p><a href="#">Las Vegas real estate</a></p></li>
+                          <li><p><a href="#">Long Beach real estate</a></p></li>
+                          <li><p><a href="#">Los Angeles real estate</a></p></li>
+                          <li><p><a href="#">Louisville real estate</a></p></li>
+                          <li><p><a href="#">Memphis real estate</a></p></li>
+                          <li><p><a href="#">Mesa real estate</a></p></li>
+                          <li><p><a href="#">Miami real estate</a></p></li>
+                          <li><p><a href="#">Milwaukee real estate</a></p></li>
+                          <li><p><a href="#">Minneapolis real estate</a></p></li>
+                          <li><p><a href="#">Nashville real estate</a></p></li>
+                          <li><p><a href="#">New Orleans real estate</a></p></li>
+                          <li><p><a href="#">New York real estate</a></p></li>
+                          <li><p><a href="#">Oakland real estate</a></p></li>
+                          <li><p><a href="#">Oklahoma real estate</a></p></li>
+                          <li><p><a href="#">Omaha real estate</a></p></li>
+                          <li><p><a href="#">Ottawa real estate</a></p></li>
+                          <li><p><a href="#">Philadelphia real estate</a></p></li>
+                          <li><p><a href="#">Phoenix real estate</a></p></li>
+                          <li><p><a href="#">Portland real estate</a></p></li>
+                          <li><p><a href="#">Raleigh real estate</a></p></li>
+                          <li><p><a href="#">Sacramento real estate</a></p></li>
+                          <li><p><a href="#">San Antonio real estate</a></p></li>
+                          <li><p><a href="#">San Diego real estate</a></p></li>
+                          <li><p><a href="#">San Francisco real estate</a></p></li>
+                          <li><p><a href="#">San Jose real estate</a></p></li>
+                          <li><p><a href="#">Seattle real estate</a></p></li>
+                          <li><p><a href="#">Toronto real estate</a></p></li>
+                          <li><p><a href="#">Tucson real estate</a></p></li>
+                          <li><p><a href="#">Tulsa real estate</a></p></li>
+                          <li><p><a href="#">Vancouver real estate</a></p></li>
+                          <li><p><a href="#">Virginia Beach real estate</a></p></li>
+                          <li><p><a href="#">Washington DC real estate</a></p></li>
+                          <li><p><a href="#">Wichita real estate</a></p></li>
+              </ul>
+            </div>
+            <div class="nav-section">
+              <h3 onclick="mybutton2()">Rentals  <img class="myImage2" src="./image/dropdown.png" alt=""></h3>
+              <ul class="dropdown-item second-box" >
+                <li><p><a href="/browse/b">Rental Buildings</a></p></li>
+                        <li><p><a href="#">Atlanta apartments for rent</a></p></li>
+                        <li><p><a href="#">Austin apartments for rent</a></p></li>
+                        <li><p><a href="#">Baltimore apartments for rent</a></p></li>
+                        <li><p><a href="#">Boston apartments for rent</a></p></li>
+                        <li><p><a href="#">Bronx NYC apartments for rent</a></p></li>
+                        <li><p><a href="#">Brooklyn NYC apartments for rent</a></p></li>
+                        <li><p><a href="#">Charlotte apartments for rent</a></p></li>
+                        <li><p><a href="#">Chicago apartments for rent</a></p></li>
+                        <li><p><a href="#">Dallas apartments for rent</a></p></li>
+                        <li><p><a href="#">Denver apartments for rent</a></p></li>
+                        <li><p><a href="#">Houston apartments for rent</a></p></li>
+                        <li><p><a href="#">Jersey City apartments for rent</a></p></li>
+                        <li><p><a href="#">Long Beach apartments for rent</a></p></li>
+                        <li><p><a href="#">Manhattan NYC apartments for rent</a></p></li>
+                        <li><p><a href="#">Miami apartments for rent</a></p></li>
+                        <li><p><a href="#">Minneapolis apartments for rent</a></p></li>
+                        <li><p><a href="#">New York City apartments for rent</a></p></li>
+                        <li><p><a href="#">Oakland apartments for rent</a></p></li>
+                        <li><p><a href="#">Oklahoma City apartments for rent</a></p></li>
+                        <li><p><a href="#">Philadelphia apartments for rent</a></p></li>
+                        <li><p><a href="#">Queens NYC apartments for rent</a></p></li>
+                        <li><p><a href="#">Sacramento apartments for rent</a></p></li>
+                        <li><p><a href="#">San Francisco apartments for rent</a></p></li>
+                        <li><p><a href="#">Seattle apartments for rent</a></p></li>
+                        <li><p><a href="#">Washington DC apartments for rent</a></p></li>
+                        <li><p><a href="#">Atlanta houses for rent</a></p></li>
+                        <li><p><a href="#">Austin houses for rent</a></p></li>
+                        <li><p><a href="#">Boston houses for rent</a></p></li>
+                        <li><p><a href="#">Charlotte houses for rent</a></p></li>
+                        <li><p><a href="#">Columbus houses for rent</a></p></li>
+                        <li><p><a href="#">Fort Worth houses for rent</a></p></li>
+                        <li><p><a href="#">Fresno houses for rent</a></p></li>
+                        <li><p><a href="#">Houston houses for rent</a></p></li>
+                        <li><p><a href="#">Indianapolis houses for rent</a></p></li>
+                        <li><p><a href="#">Jacksonville houses for rent</a></p></li>
+                        <li><p><a href="#">Las Vegas houses for rent</a></p></li>
+                        <li><p><a href="#">Memphis houses for rent</a></p></li>
+                        <li><p><a href="#">Milwaukee houses for rent</a></p></li>
+                        <li><p><a href="#">Nashville houses for rent</a></p></li>
+                        <li><p><a href="#">Oakland houses for rent</a></p></li>
+                        <li><p><a href="#">Oklahoma City houses for rent</a></p></li>
+                        <li><p><a href="#">Philadelphia houses for rent</a></p></li>
+                        <li><p><a href="#">Phoenix houses for rent</a></p></li>
+                        <li><p><a href="#">Portland houses for rent</a></p></li>
+                        <li><p><a href="#">San Antonio houses for rent</a></p></li>
+                        <li><p><a href="#">San Francisco houses for rent</a></p></li>
+                        <li><p><a href="#">San Jose houses for rent</a></p></li>
+                        <li><p><a href="#">Tampa houses for rent</a></p></li>
+                        <li><p><a href="#">Tucson houses for rent</a></p></li>
+                        <li><p><a href="#">Washington DC houses for rent</a></p></li>
+              </ul>
+            </div>
+            
+            <div class="nav-section">
+              <h3 onclick="mybutton3()">Mortgage Rates  <img class="myImage3" src="./image/dropdown.png" alt=""></h3>
+              <ul class="dropdown-item third-box">
+              <li><p><a href="/mortgagerates">Current mortgage rates</a></p></li>
+                        <li><p><a href="#">Alaska mortgage rates</a></p></li>
+                        <li><p><a href="#">Alabama mortgage rates</a></p></li>
+                        <li><p><a href="#">Arkansas mortgage rates</a></p></li>
+                        <li><p><a href="#">Arizona mortgage rates</a></p></li>
+                        <li><p><a href="#">California mortgage rates</a></p></li>
+                        <li><p><a href="#">Colorado mortgage rates</a></p></li>
+                        <li><p><a href="#">Connecticut mortgage rates</a></p></li>
+                        <li><p><a href="#">Delaware mortgage rates</a></p></li>
+                        <li><p><a href="#">Florida mortgage rates</a></p></li>
+                        <li><p><a href="#">Georgia mortgage rates</a></p></li>
+                        <li><p><a href="#">Hawaii mortgage rates</a></p></li>
+                        <li><p><a href="#">Iowa mortgage rates</a></p></li>
+                        <li><p><a href="#">Idaho mortgage rates</a></p></li>
+                        <li><p><a href="#">Illinois mortgage rates</a></p></li>
+                        <li><p><a href="#">Indiana mortgage rates</a></p></li>
+                        <li><p><a href="#">Kansas mortgage rates</a></p></li>
+                        <li><p><a href="#">Kentucky mortgage rates</a></p></li>
+                        <li><p><a href="#">Louisiana mortgage rates</a></p></li>
+                        <li><p><a href="#">Massachusetts mortgage rates</a></p></li>
+                        <li><p><a href="#">Maryland mortgage rates</a></p></li>
+                        <li><p><a href="#">Maine mortgage rates</a></p></li>
+                        <li><p><a href="#">Michigan mortgage rates</a></p></li>
+                        <li><p><a href="#">Minnesota mortgage rates</a></p></li>
+                        <li><p><a href="#">Missouri mortgage rates</a></p></li>
+                        <li><p><a href="#">Mississippi mortgage rates</a></p></li>
+                        <li><p><a href="#">Montana mortgage rates</a></p></li>
+                        <li><p><a href="#">North Carolina mortgage rates</a></p></li>
+                        <li><p><a href="#">North Dakota mortgage rates</a></p></li>
+                        <li><p><a href="#">Nebraska mortgage rates</a></p></li>
+                        <li><p><a href="#">New Hampshire mortgage rates</a></p></li>
+                        <li><p><a href="#">New Jersey mortgage rates</a></p></li>
+                        <li><p><a href="#">New Mexico mortgage rates</a></p></li>
+                        <li><p><a href="#">Nevada mortgage rates</a></p></li>
+                        <li><p><a href="#">New York mortgage rates</a></p></li>
+                        <li><p><a href="#">Ohio mortgage rates</a></p></li>
+                        <li><p><a href="#">Oklahoma mortgage rates</a></p></li>
+                        <li><p><a href="#">Oregon mortgage rates</a></p></li>
+                        <li><p><a href="#">Pennsylvania mortgage rates</a></p></li>
+                        <li><p><a href="#">Rhode Island mortgage rates</a></p></li>
+                        <li><p><a href="#">South Carolina mortgage rates</a></p></li>
+                        <li><p><a href="#">South Dakota mortgage rates</a></p></li>
+                        <li><p><a href="#">Tennessee mortgage rates</a></p></li>
+                        <li><p><a href="#">Texas mortgage rates</a></p></li>
+                        <li><p><a href="#">Utah mortgage rates</a></p></li>
+                        <li><p><a href="#">Virginia mortgage rates</a></p></li>
+                        <li><p><a href="#">Vermont mortgage rates</a></p></li>
+                        <li><p><a href="#">Washington mortgage rates</a></p></li>
+                        <li><p><a href="#">Wisconsin mortgage rates</a></p></li>
+                        <li><p><a href="#">West Virginia mortgage rates</a></p></li>
+                        <li><p><a href="#">Wyoming mortgage rates</a></p></li>
+                    
+              </ul>
+            </div>
+            
+            <div class="nav-section">
+              <h3 onclick="mybutton4()">Browse Homes  <img class="myImage4" src="./image/dropdown.png" alt=""></h3>
+              <ul class="dropdown-item fourth-box" style="overflow-wrap: break-word;">
+                <li><p><a href="/browse/homes">California</a></p></li>
+                        <li><p><a href="#">Texas</a></p></li>
+                        <li><p><a href="#">New York</a></p></li>
+                        <li><p><a href="#">Florida</a></p></li>
+                        <li><p><a href="#">Illinois</a></p></li>
+                        <li><p><a href="#">Pennsylvania</a></p></li>
+                        <li><p><a href="#">Ohio</a></p></li>
+                        <li><p><a href="#">Michigan</a></p></li>
+                        <li><p><a href="#">Georgia</a></p></li>
+                        <li><p><a href="#">North Carolina</a></p></li>
+                        <li><p><a href="#">New Jersey</a></p></li>
+                        <li><p><a href="#">Virginia</a></p></li>
+                        <li><p><a href="#">Washington</a></p></li>
+                        <li><p><a href="#">Massachusetts</a></p></li>
+                        <li><p><a href="#">Indiana</a></p></li>
+                        <li><p><a href="#">Arizona</a></p></li>
+                        <li><p><a href="#">Tennessee</a></p></li>
+                        <li><p><a href="#">Missouri</a></p></li>
+                        <li><p><a href="#">Maryland</a></p></li>
+                        <li><p><a href="#">Wisconsin</a></p></li>
+                        <li><p><a href="#">Minnesota</a></p></li>
+                        <li><p><a href="#">Colorado</a></p></li>
+                        <li><p><a href="#">Alabama</a></p></li>
+                        <li><p><a href="#">South Carolina</a></p></li>
+                        <li><p><a href="#">Louisiana</a></p></li>
+                        <li><p><a href="#">Kentucky</a></p></li>
+                        <li><p><a href="#">Oregon</a></p></li>
+                        <li><p><a href="#">Oklahoma</a></p></li>
+                        <li><p><a href="#">Connecticut</a></p></li>
+                        <li><p><a href="#">Iowa</a></p></li>
+                        <li><p><a href="#">Mississippi</a></p></li>
+                        <li><p><a href="#">Arkansas</a></p></li>
+                        <li><p><a href="#">Kansas</a></p></li>
+                        <li><p><a href="#">Utah</a></p></li>
+                        <li><p><a href="#">Nevada</a></p></li>
+                        <li><p><a href="#">New Mexico</a></p></li>
+                        <li><p><a href="#">West Virginia</a></p></li>
+                        <li><p><a href="#">Nebraska</a></p></li>
+                        <li><p><a href="#">Idaho</a></p></li>
+                        <li><p><a href="#">Hawaii</a></p></li>
+                        <li><p><a href="#">Maine</a></p></li>
+                        <li><p><a href="#">New Hampshire</a></p></li>
+                        <li><p><a href="#">Rhode Island</a></p></li>
+                        <li><p><a href="#">Montana</a></p></li>
+                        <li><p><a href="#">Delaware</a></p></li>
+                        <li><p><a href="#">South Dakota</a></p></li>
+                        <li><p><a href="#">Alaska</a></p></li>
+                        <li><p><a href="#">North Dakota</a></p></li>
+                        <li><p><a href="#">Vermont</a></p></li>
+                        <li><p><a href="#">Washington, DC</a></p></li>
+                        <li><p><a href="#">Wyoming</a></p></li>
+                        <li><p><a href="#">Puerto Rico</a></p></li>
+                        <li><p><a href="#">Virgin Islands</a></p></li>
+           </ul>
+           </div>
+           </div>
+    
+          <div class="links-row">
+               <a href="/about">About</a>
+              <a href="/zestimate">Zestimates</a>
+              <a href="/research">Research</a>
+              <a href="/careers">Careers</a>
+              <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+              <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+              <a href="/help">Help</a>
+              <a href="/advertise">Advertise</a>
+              <a href="/fair">Fair Housing Guide</a>
+              <a href="/advocacy">Advocacy</a>
+          </div>
+    
+          <div class="links-row">
+              <a href="/terms">Terms of use</a>
+              <a href="/privacy">Privacy Portal</a>
+              <a href="/cookie">Cookie Preference</a>
+              <a href="/learn">Learn</a>
+              <a href="/ai">AI</a>
+              <a href="/mobile">Mobile Apps</a>
+          </div>
+    
+          <div class="links-row">
+           <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+              <a  href="https://streeteasy.com/">StreetEasy</a>
+              <a  href="https://hotpads.com/">HotPads</a>
+              <a  href="https://showingtimeplus.com/">Out East</a>
+              <a  href="https://outeast.com/">ShowingTime+</a>
+          </div>
+    
+          <div class="do-not-sell">
+            <a href="#">Do Not Sell or Share My Personal Information→</a>
+          </div>
+    
+          <div class="accessibility-notice">
+            Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please <a href="#">let us know</a>.
+          </div>
+    
+          <div class="legal-info">
+            Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in multiple states. Zillow (Canada), Inc. holds real estate brokerage <a href="#">licenses</a> in multiple provinces.<br>
+            <a href="#">§ 442-H New York Standard Operating Procedures</a><br>
+            <a href="#">§ New York Fair Housing Notice</a><br>
+            TREC: <a href="#">Information about brokerage services</a>, <a href="#">Consumer protection notice</a><br>
+            California DRE #1522444<br>
+            <a href="#">Contact Zillow, Inc. Brokerage</a>
+          </div>
+    
+          <div class="legal-info">
+            For listings in Canada, the trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.
+          </div>
+    
+          <div class="app-stores">
+            <a href="#"><img src="/image/apple-icon.svg" alt="Download on the App Store"></a>
+            <a href="#"><img src="/image/google-icon.svg" alt="Get it on Google Play"></a>
+          </div>
+          <div class="bottom-row">
+            <img src="/image/blue-logo.jpg" alt="Zillow logo" class="zillow-logo">
+            <span>Follow us:</span>
+            <div class="social-icons">
+              <!-- Social media icons would go here -->
+            </div>
+            <span>© 2006-2025 Zillow</span>
+            <img src="./image/home-icon.png" alt="Equal Housing Opportunity" class="equal-housing">
+          </div>
+        </div>
+      </footer>
+    
+   
+    </div>
+  </div>
+  <script
+  src="https://kit.fontawesome.com/e1fbe49b44.js"
+  crossorigin="anonymous"
+></script>
+  
+<script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('active');
+            document.querySelector('.overlay').style.display = 'block';
+        });
+
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.overlay').style.display = 'none';
+        });
+
+        document.querySelector('.overlay').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            this.style.display = 'none';
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  const userDropdown = document.querySelector(".user-dropdown");
+
+  if (dropdownBtn) {
+      dropdownBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          userDropdown.classList.toggle("active");
+      });
+
+      document.addEventListener("click", () => {
+          userDropdown.classList.remove("active");
+      });
+  }
+});
+        document.addEventListener("DOMContentLoaded", () => {
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  const userDropdown = document.querySelector(".user-dropdown");
+
+  if (dropdownBtn) {
+      dropdownBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          userDropdown.classList.toggle("active");
+      });
+
+      document.addEventListener("click", () => {
+          userDropdown.classList.remove("active");
+      });
+  }
+});
+
+const modal = document.getElementById('buyAbilityModal');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const buyAbilityForm = document.getElementById('buyAbilityForm');
+
+    // Function to open modal
+    function openModal() {
+      modal.style.display = 'block';
+      modalOverlay.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    }
+
+    // Function to close modal
+    function closeModal() {
+      modal.style.display = 'none';
+      modalOverlay.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    // Event listeners
+    openModalBtn.addEventListener('click', openModal);
+    closeModalBtn.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+      if (event.target === modalOverlay) {
+        closeModal();
+      }
+    });
+
+    // Handle form submission
+    buyAbilityForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Form submitted! This would typically proceed to the next step or process the data.');
+      // Here you would typically handle the form data, perhaps with AJAX
+    });
+
+  </script>
+    <script src="script.js"></script>
+    <script src="account.js"></script>  
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/67bf97b0d4d18b1910cdea64/1il26h2pu';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+      </script>
+      
+  </body>
+</html>
+
+

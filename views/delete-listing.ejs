@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Listing</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Delete Listing</h2>
+        <p>Are you sure you want to delete <strong><%= listing.title %></strong>?</p>
+
+        <button id="delete-btn" class="btn-danger">Delete</button>
+        <a href="/" class="btn">Cancel</a>
+    </div>
+
+    <script>
+        document.getElementById('delete-btn').addEventListener('click', async () => {
+            const response = await fetch('/api/listings/<%= listing._id %>', {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                alert('Listing deleted successfully');
+                window.location.href = '/';
+            } else {
+                alert('Error deleting listing: ' + data.error);
+            }
+        });
+    </script>
+</body>
+</html>

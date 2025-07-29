@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Reimagined - Careers and Culture</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/buy.css" />
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon" />
+    <!-- Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Gideon Roman -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Banner Section */
+      .banner-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .banner-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      .banner-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 2;
+      }
+
+      .banner-content {
+        position: relative;
+        z-index: 3;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0%;
+        color: white;
+        align-items: first baseline;
+        max-width: 600px;
+      }
+
+      .banner-title {
+        font-size: 3.5rem;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        font-family: "Lato", serif;
+        width: 20rem;
+      }
+
+      .banner-btn {
+        display: inline-block;
+        background-color: #1a73e8;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        font-weight: 500;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        width: fit-content;
+      }
+
+      .banner-btn:hover {
+        background-color: #1557b0;
+      }
+
+      /* Company Culture Section */
+      .culture-section {
+        text-align: center;
+        padding: 4rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .culture-heading {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        color: #333;
+      }
+
+      /* Benefits Section */
+      .benefits-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem 5rem;
+        position: relative;
+      }
+
+      .benefits-container {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        justify-content: center;
+      }
+
+      .benefits-image {
+        flex: 1;
+        max-width: 40%;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .benefits-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .benefits-content {
+        flex: 1;
+        max-width: 40%;
+      }
+
+      .benefits-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      .benefits-text {
+        margin-bottom: 1.5rem;
+        color: #555;
+        line-height: 1.7;
+      }
+
+      .learn-more-btn {
+        color: #1a73e8;
+        border: 1px solid #1a73e8;
+        background-color: transparent;
+        padding: 0.5rem 1.2rem;
+        border-radius: 4px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+      }
+
+      .learn-more-btn:hover {
+        background-color: #f0f7ff;
+      }
+
+      /* Blue Banner Section */
+      .blue-banner {
+        background-color: #0066ff;
+        color: white;
+        padding: 3rem 1rem;
+        text-align: center;
+      }
+
+      .blue-banner-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .blue-banner-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      .blue-banner-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.5;
+      }
+
+      .blue-banner-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .blue-banner-btn {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      .blue-banner-btn.primary {
+        background-color: white;
+        color: #0066ff;
+        border: none;
+      }
+
+      .blue-banner-btn.secondary {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+      }
+
+      /* Content Sections */
+      .content-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        background-color: white;
+      }
+
+      .content-block {
+        flex: 1;
+        min-width: 10%;
+        max-width: 30%;
+        padding: 3rem 2rem;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .content-title {
+        font-size: 1.9rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      .content-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        color: #555;
+      }
+
+      .content-image {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 1.5rem;
+      }
+
+      .content-btn {
+        display: inline-block;
+        padding: 0.5rem 5rem;
+        border: 1px solid #0066ff;
+        color: #0066ff;
+        background-color: transparent;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: all 0.3s;
+        text-align: center;
+      }
+
+      .content-btn:hover {
+        background-color: #f0f7ff;
+      }
+
+      /* What We Do Section */
+      .what-we-do {
+        text-align: center;
+        padding: 3rem 1rem;
+        background-color: #f1f2f3;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: #333;
+      }
+
+      .video-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        height: 20rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .video-description {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 0.9rem;
+        color: #555;
+        padding: 1rem;
+      }
+
+      .image-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+      }
+
+      .image-gallery img {
+        width: 70%;
+      }
+
+      .gallery-image {
+        width: 70px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      /* Recognition Section */
+      .recognition {
+        text-align: center;
+        padding: 3rem 1rem;
+        background-color: white;
+      }
+
+      /* Carousel Navigation */
+      .carousel-nav {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        left: 0;
+        right: 0;
+        bottom: 2rem;
+      }
+
+      .nav-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+      }
+
+      .nav-dot.active {
+        background-color: #1a73e8;
+      }
+
+      .carousel-arrows {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        padding: 0 1rem;
+      }
+
+      .arrow {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Social Media Section Styling */
+      .social-banner {
+        width: 100%;
+        height: 300px;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)
+          ),
+          url("/image/Zillowgrouplife_IG_Grid.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: relative;
+        background-color: red;
+      }
+
+      .social-handle {
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .instagram-button {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s;
+      }
+
+      .instagram-button:hover {
+        background-color: white;
+        color: #0a3d62;
+      }
+
+      /* Safety Advisory Section Styling */
+      .safety-section {
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+      }
+
+      .safety-header {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        color: #333;
+      }
+
+      .safety-content {
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .safety-content p {
+        margin-bottom: 15px;
+      }
+
+      .email-link {
+        color: #0066cc;
+        text-decoration: none;
+      }
+
+      .email-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Footer with timestamp */
+      .footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: #e9ecef;
+        padding: 5px 10px;
+        border-top-left-radius: 5px;
+        font-size: 12px;
+        color: #444;
+      }
+      .join {
+        color: #8ed1fc;
+        font-family: "Lato", serif;
+      }
+      @media (max-width: 900px) {
+        .benefits-container {
+          flex-direction: column;
+        }
+
+        .benefits-image,
+        .benefits-content {
+          max-width: 100%;
+        }
+
+        .banner-title {
+          font-size: 2rem;
+        }
+
+        .banner-content {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .content-section {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .content-block {
+          max-width: 100%;
+        }
+
+        .blue-banner-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <h2>Menu</h2>
+        <button class="close-menu">&times;</button>
+      </div>
+      <div class="mobile-menu-items">
+        <ul>
+          <li><a href="/buy">Buy</a></li>
+          <li><a href="/rent">Rent</a></li>
+          <li><a href="/sell">Sell</a></li>
+          <li><a href="/homeloans">Home Loans</a></li>
+          <li><a href="/findagent">Find an Agent</a></li>
+          <li><a href="/rentals">Manage Rentals</a></li>
+          <li><a href="/advertise">Advertise</a></li>
+          <li><a href="/help">Help</a></li>
+          <li><a href="/signup">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <nav>
+      <div class="nav-content">
+        <div class="mobile-nav">
+          <div>
+            <i
+              class="fa-solid fa-bars bars"
+              id="menu-toggle"
+              style="color: #000; font-size: 2rem"
+            ></i>
+          </div>
+          <div class="logo-con">
+            <a href="/"
+              ><img class="logo" src="/image/logo.png" alt="Logo" />
+              <h2 class="xzillow-logo">XZillow</h2></a
+            >
+          </div>
+          <div>
+            <a class="login-btn" href="/signup"
+              ><i
+                class="fa-regular fa-user"
+                style="color: #000; font-size: 2rem"
+              ></i
+            ></a>
+          </div>
+        </div>
+        <ul class="first-ul">
+          <li><a href="/buy">Buy</a></li>
+          <li><a href="/rent">Rent</a></li>
+          <li><a href="/sell">Sell</a></li>
+          <li><a href="/homeloans">Home Loans</a></li>
+          <li><a href="/findagent">Find an Agent</a></li>
+        </ul>
+        <div class="logo-con desk">
+          <a href="/"
+            ><img class="logo" src="/image/logo.png" alt="Logo" />
+            <h2 class="xzillow-logo">XZillow</h2></a
+          >
+        </div>
+        <div class="hide-major">
+          <ul class="second-ul">
+            <li><a href="/rentals">Manage Rentals</a></li>
+            <li><a href="/advertise">Advertise</a></li>
+            <li><a href="/help">Help</a></li>
+            <li class="login-text"><a href="/signup">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Banner Section with Video -->
+    <div class="banner-container">
+      <!-- Replace with your actual video file -->
+      <video class="banner-video" autoplay muted loop>
+        <source src="/image/Zillow_Careers_2024.mp4" type="video/mp4" />
+        <!-- Fallback image if video doesn't load -->
+        <img
+          src="/api/placeholder/1200/800"
+          alt="Real estate office environment"
+        />
+      </video>
+
+      <div class="banner-overlay"></div>
+
+      <div class="banner-content">
+        <h1 class="banner-title">
+          <span class="join">Join us</span> as we reimagine real estate.
+        </h1>
+        <button class="banner-btn">Search Jobs</button>
+      </div>
+    </div>
+
+    <!-- Company Culture Section -->
+    <section class="culture-section">
+      <h2 class="culture-heading">A company where employees thrive</h2>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+      <div class="carousel-wrapper">
+        <div class="benefits-container">
+          <div class="benefits-content">
+            <h3 class="benefits-title">Culture</h3>
+            <p class="benefits-text">
+              Our efforts to streamline the real estate transaction are
+              supported by a deep-rooted culture of innovation, our passion to
+              redefine the customer experience and a fundamental commitment to
+              engagement &amp; belonging. We place an emphasis on fostering a
+              culture that encourages people to share their ideas and be able to
+              access the support they need to turn those ideas into innovations
+              that drive our company forward.
+            </p>
+            <a href="#" class="learn-more-btn">Learn more</a>
+          </div>
+          <div class="benefits-image">
+            <img
+              src="/image/culture.webp"
+              alt="Employee enjoying company benefits"
+            />
+          </div>
+        </div>
+
+        <div class="benefits-container">
+          <div class="benefits-image">
+            <img src="/image/benefits.webp" alt="Work-life balance" />
+          </div>
+          <div class="benefits-content">
+            <h3 class="benefits-title">Benefits</h3>
+            <p class="benefits-text">
+              Our benefits are a promise of support and security for every
+              unique individual who chooses to call Zillow home, as well as that
+              employee’s family. We are committed to designing benefit programs
+              that create a sense of belonging; represent our dynamic,
+              innovative and inclusive culture; and care for our community
+              through every chapter of life’s incredible journey.
+            </p>
+            <a href="#" class="learn-more-btn">Learn more</a>
+          </div>
+        </div>
+
+        <div class="benefits-container">
+          <div class="benefits-content">
+            <h3 class="benefits-title">Flexible Work</h3>
+            <p class="benefits-text">
+              We’re setting the standard for work experiences of the future, in
+              which our employees are supported in doing their best work and
+              living a flexible, well-balanced life. Today, 97% of employees
+              have the flexibility to work wherever they are most productive: at
+              the office, at home or a combination of the two.
+            </p>
+            <a href="#" class="learn-more-btn">Learn more</a>
+          </div>
+          <div class="benefits-image">
+            <img src="/image/flexible.webp" alt="Career Growth" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Navigation Arrows -->
+      <div class="carousel-arrows">
+        <div class="arrow prev">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M15 6L9 12L15 18"
+              stroke="#555"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="arrow next">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M9 6L15 12L9 18"
+              stroke="#555"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Carousel Navigation Dots -->
+      <div class="carousel-nav">
+        <div class="nav-dot active"></div>
+        <div class="nav-dot"></div>
+        <div class="nav-dot"></div>
+      </div>
+    </section>
+    <!-- Blue Banner Section -->
+    <section class="blue-banner">
+      <div class="blue-banner-container">
+        <h1 class="blue-banner-title">
+          A culture of inclusivity and belonging.
+        </h1>
+        <p class="blue-banner-description">
+          We believe every employee should feel welcomed, respected, and
+          empowered to contribute. Creating an environment where diverse
+          perspectives are valued leads to better solutions and a stronger
+          community for everyone.
+        </p>
+        <div class="blue-banner-buttons">
+          <a href="#" class="blue-banner-btn primary">Explore Our Culture</a>
+          <a href="#" class="blue-banner-btn secondary">Careers</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+      <!-- Recruiting Block -->
+      <div class="content-block">
+        <h2 class="content-title">
+          We're committed to recruiting for representation.
+        </h2>
+        <p class="content-description">
+          We believe that inclusive teams with diverse perspectives create
+          better products and services. We are committed to increasing
+          representation across all dimensions of diversity, employing our
+          recruiting process with intention to engage a wide range of candidate
+          experiences.
+        </p>
+        <a href="#" class="content-btn"
+          >Learn more about our recruitment & hiring goals</a
+        >
+      </div>
+
+      <!-- Sustainability Block -->
+      <div class="content-block">
+        <h2 class="content-title">Sustainability</h2>
+        <p class="content-description">
+          We believe that inclusivity begins with the candidate experience.
+        </p>
+        <img
+          src="/image/Diverse_Leaders.webp"
+          alt="Sustainability illustration"
+          class="content-image"
+        />
+
+        <a href="#" class="content-btn"
+          >Learn about our sustainability efforts</a
+        >
+      </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do">
+      <h2 class="section-title">What we do</h2>
+      <p class="video-description">
+        We deliver innovative solutions in real estate technology that transform
+        how people find homes and help them make confident decisions. Our
+        products put our customers first.
+      </p>
+
+      <!-- Video Container -->
+      <div class="video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/bHh6CluvCmE"
+          frameborder="0"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+
+      <div class="video-description">
+        <p>
+          Zillow has always been known for our leadership and innovation, and
+          we’re continually looking for new ways to make it radically easier for
+          people to move. Today, our vision is to create “the housing super app”
+          — an integrated real estate experience that makes transactions more
+          accessible, more digital, more seamless, more inclusive and more
+          delightful to our customers.
+        </p>
+        <br />
+        <p>
+          The Zillow housing super app is an integrated digital experience in
+          which Zillow connects all the fragmented pieces of the moving process
+          and brings them together in one transaction platform. Start to finish,
+          our customers will be able to do everything within the Zillow
+          ecosystem.
+        </p>
+      </div>
+
+      <!-- Image Gallery -->
+      <div class="image-gallery">
+        <img
+          src="/image/Zillow_app_devices_screens.webp"
+          alt="Gallery image 1"
+          width="700"
+        />
+      </div>
+    </section>
+
+    <!-- Recognition Section -->
+    <section class="recognition">
+      <h2 class="section-title">Recognition</h2>
+    </section>
+
+    <div class="social-banner">
+      <h1 class="social-handle">@zillowgrouplife</h1>
+      <a href="#" class="instagram-button">Follow us on Instagram</a>
+    </div>
+
+    <!-- Empty Space -->
+    <div style="height: 100px"></div>
+
+    <!-- Safety Advisory Section -->
+    <section class="safety-section">
+      <h2 class="safety-header">Safety Awareness Advisory</h2>
+      <div class="safety-content">
+        <p>
+          To ensure your safety and security, please remember that Zillow never
+          asks candidates for personal information, identification documents, or
+          bank details during the interview process. Furthermore, Zillow does
+          not require candidates to make any purchases or process payments on
+          our behalf as a condition of any employment offer.
+        </p>
+
+        <p>
+          If you come across any suspicious activity or have concerns regarding
+          offers received, please do not hesitate to reach out to us at
+          <a href="mailto:careers@zillowgroup.com" class="email-link"
+            >careers@zillowgroup.com</a
+          >. Together, we can ensure a positive and secure experience for all.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer with timestamp like in the screenshot -->
+    <footer class="footer-wrapper">
+      <div class="footer-container">
+        <div class="links-row">
+          <a href="/about">About</a>
+          <a href="/zestimate">Zestimates</a>
+          <a href="/research">Research</a>
+          <a href="/careers">Careers</a>
+          <a href="/careers-us">Careers - U.S. Privacy Notice</a>
+          <a href="/careers-mex">Careers - Mexico Privacy Notice</a>
+          <a href="/help">Help</a>
+          <a href="/advertise">Advertise</a>
+          <a href="/fair">Fair Housing Guide</a>
+          <a href="/advocacy">Advocacy</a>
+        </div>
+
+        <div class="links-row">
+          <a href="/terms">Terms of use</a>
+          <a href="/privacy">Privacy Portal</a>
+          <a href="/cookie">Cookie Preference</a>
+          <a href="/learn">Learn</a>
+          <a href="/ai">AI</a>
+          <a href="/mobile">Mobile Apps</a>
+        </div>
+
+        <div class="links-row">
+          <a target="_blank" href="https://www.trulia.com/rent/">Trulia</a>
+          <a href="https://streeteasy.com/">StreetEasy</a>
+          <a href="https://hotpads.com/">HotPads</a>
+          <a href="https://showingtimeplus.com/">Out East</a>
+          <a href="https://outeast.com/">ShowingTime+</a>
+        </div>
+
+        <div class="do-not-sell">
+          <a href="#">Do Not Sell or Share My Personal Information→</a>
+        </div>
+
+        <div class="accessibility-notice">
+          Zillow Group is committed to ensuring digital accessibility for
+          individuals with disabilities. We are continuously working to improve
+          the accessibility of our web experience for everyone, and we welcome
+          feedback and accommodation requests. If you wish to report an issue or
+          seek an accommodation, please <a href="#">let us know</a>.
+        </div>
+
+        <div class="legal-info">
+          Zillow, Inc. holds real estate brokerage <a href="#">licenses</a> in
+          multiple states. Zillow (Canada), Inc. holds real estate brokerage
+          <a href="#">licenses</a> in multiple provinces.<br />
+          <a href="#">§ 442-H New York Standard Operating Procedures</a><br />
+          <a href="#">§ New York Fair Housing Notice</a><br />
+          TREC: <a href="#">Information about brokerage services</a>,
+          <a href="#">Consumer protection notice</a><br />
+          California DRE #1522444<br />
+          <a href="#">Contact Zillow, Inc. Brokerage</a>
+        </div>
+
+        <div class="legal-info">
+          For listings in Canada, the trademarks REALTOR®, REALTORS®, and the
+          REALTOR® logo are controlled by The Canadian Real Estate Association
+          (CREA) and identify real estate professionals who are members of CREA.
+          The trademarks MLS®, Multiple Listing Service® and the associated
+          logos are owned by CREA and identify the quality of services provided
+          by real estate professionals who are members of CREA. Used under
+          license.
+        </div>
+
+        <div class="app-stores">
+          <a href="#"
+            ><img src="/image/apple-icon.svg" alt="Download on the App Store"
+          /></a>
+          <a href="#"
+            ><img src="/image/google-icon.svg" alt="Get it on Google Play"
+          /></a>
+        </div>
+        <div class="bottom-row">
+          <img
+            src="/image/blue-logo.jpg"
+            alt="Zillow logo"
+            class="zillow-logo"
+          />
+          <span>Follow us:</span>
+          <div class="social-icons">
+            <!-- Social media icons would go here -->
+          </div>
+          <span>© 2006-2025 Zillow</span>
+          <img
+            src="./image/home-icon.png"
+            alt="Equal Housing Opportunity"
+            class="equal-housing"
+          />
+        </div>
+      </div>
+    </footer>
+    <img class="footer-art" src="/image/footer-art.svg" alt="" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".benefits-container");
+        const prevBtn = document.querySelector(".arrow.prev");
+        const nextBtn = document.querySelector(".arrow.next");
+        const dots = document.querySelectorAll(".nav-dot");
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.style.display = i === index ? "flex" : "none";
+          });
+
+          dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
+          });
+        }
+
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          showSlide(currentIndex);
+        }
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            currentIndex = index;
+            showSlide(currentIndex);
+          });
+        });
+
+        prevBtn.addEventListener("click", prevSlide);
+        nextBtn.addEventListener("click", nextSlide);
+
+        showSlide(currentIndex);
+
+        // Auto-slide every 5 seconds
+        setInterval(nextSlide, 7000);
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/e1fbe49b44.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="account.js"></script>
+    <script>
+      // Mobile Menu Toggle
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.add("active");
+          document.querySelector(".overlay").style.display = "block";
+        });
+
+      document
+        .querySelector(".close-menu")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.remove("active");
+          document.querySelector(".overlay").style.display = "none";
+        });
+
+      document.querySelector(".overlay").addEventListener("click", function () {
+        document.querySelector(".mobile-menu").classList.remove("active");
+        this.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
