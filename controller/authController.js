@@ -91,7 +91,7 @@ exports.forgotPassword = async (req, res) => {
         await user.save();
 
         // ✅ Send Reset Email
-        const resetUrl = `https://xzillowx.com/reset-password/${resetToken}`;
+        const resetUrl = `https://xzillowx.onrender.com/reset-password/${resetToken}`;
         const mailOptions = {
             from: `"XZillow Support" <${process.env.EMAIL_USER}>`,
             to: user.email,
